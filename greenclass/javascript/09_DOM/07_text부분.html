@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text(html)부분만 접근</title>
+    <style>
+        * { margin:0; padding:0; }
+        body { background:#F5EAEA}
+        body > div { width:400px; margin:150px auto; padding:2px; text-align:center; border:1px solid #fa190d}
+        h1 { margin:20px 0 }
+        h2 { color:#774f75; margin-bottom:30px; }
+        h1 img { width:150px; }
+        li { list-style:none; background:#fda4a4; color:#fff; line-height:50px; margin:2px; padding-left:20px;  }
+        .red { background:#fa190d; }
+        .sky { background:#7ec0ec; }
+        .orange { background:#ffba26;}
+        .line { text-decoration:underline overline;}
+
+        em { display: none; }
+    </style>
+</head>
+
+<body>
+    <div id="page">
+        <h1><img src="icon.svg" alt=""></h1>
+        <h2>text(html)부분만 접근</h2>
+        <ul>
+            <li id="one">리에주 <em>벨기에</em> 와플</li>
+            <li id="two">믹스 베리 요거트</li>
+            <li>머랭 쿠키</li>
+            <li id="three" class="orange">봉봉 오 쇼콜라</li>
+            <li class="sky">휠리 치즈 브프샌드위치</li>
+            <li>화이트 와인</li>
+        </ul>
+    </div>
+    <script>
+        const item1 = document.querySelector('#one');
+        const item2 = document.querySelector('#two');
+        const item3 = document.querySelector('#three');
+        const item4 = document.querySelector('.sky');
+        
+        const text1 = item1.textContent; // id one의 텍스트 부분을 변수 text1에 대입
+        console.log('textContent 무엇',text1);
+
+        const text2 = item1.innerText;
+        console.log('innerText 무엇',text2);
+
+        const text3 = item1.innerHTML;
+        const text4 = item2.innerHTML;
+        console.log('innerHTML은 무엇-안보이는 부분 있음',text3);
+        console.log('innerHTML은 무엇',text4);
+
+        const item3T = item3.innerText; // html tag까지 가져오기
+        const item4T = item4.innerText; // html tag까지 가져오기
+
+        item3.innerHTML = `<a href="https://cafe.naver.com/frontend2301" target='_blank'>${item3T}</a>`; // html tag도 추가하기
+        item4.innerHTML = `<a href="https://cafe.naver.com/frontend2301" target='_blank'>${item4T}</a>`; // html tag도 추가하기
+        /*
+            textContent - 숨김처리한 텍스트도 가져옴
+            innerText - 화면에 보이는 텍스트만 가져옴
+            innerHTML - html태그까지 그대로 가져옴(숨김처리여부 상관 x)
+        */
+    </script>
+</body>
+
+</html>

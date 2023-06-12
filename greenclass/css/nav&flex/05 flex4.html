@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>05 flex4</title>
+  <style>
+	#container-wrap1 { display: flex; height: 500px; border: 3px solid black;
+		justify-content: space-between; }
+		#container-wrap1 .flex-container { display: flex; flex-direction: column; width: 300px; border: 1px solid black; }
+		#container-wrap1 .flex-container > * { width:50px; background: #107bf1; }
+		#container-wrap1 .flex-container > div:last-of-type { background: #f54145; }
+		#container-wrap1 .d1 { justify-content: flex-end; }
+		#container-wrap1 .d2 { justify-content: center; align-items: center; }
+		#container-wrap1 .d3 { justify-content: space-between; align-items: center; }
+		#container-wrap1 .d4 { justify-content: space-around; }
+
+	#container-wrap2 { display: flex; height: 300px; border: 2px solid gray; justify-content: space-between; }
+		#container-wrap2 .flex-container { width: 300px; border: 3px solid black; display: flex; flex-wrap: wrap; /* 요소 밖으로 넘치지 않게 해주는 것 */ }
+		#container-wrap2 .flex-container > * { height: 25px; padding: 10px; background: skyblue; margin: 10px; }
+		#container-wrap2 .d1 { align-content: stretch; }
+		#container-wrap2 .d2 { align-content: flex-end; }
+		#container-wrap2 .d3 { align-content: center;  }
+		#container-wrap2 .d4 { align-content: space-around; }
+
+		/* 여러줄일때만 적용 align-content:
+			stretch; 기본값 / flex-start; / flex-end; /
+			center; / space-between; / space-around; */
+		
+  </style>
+ </head>
+ <body>
+	<div id="container-wrap1">
+		<div class="flex-container d1">
+			<div class="item1-1">item1-1</div>
+			<div class="item1-2">item1-2</div>
+			<div class="item1-3">item1-3</div>
+		</div>
+		<div class="flex-container d2">
+			<div class="item2-1">item2-1</div>
+			<div class="item2-2">item2-2</div>
+			<div class="item2-3">item2-3</div>
+		</div>
+		<div class="flex-container d3">
+			<div class="item3-1">item3-1</div>
+			<div class="item3-2">item3-2</div>
+			<div class="item3-3">item3-3</div>
+		</div>
+		<div class="flex-container d4">
+			<div class="item4-1">item4-1</div>
+			<div class="item4-2">item4-2</div>
+			<div class="item4-3">item4-3</div>
+		</div>
+	</div>
+	<div id="container-wrap2">
+		<div class="flex-container d1">
+			<div>item1-1</div>
+			<div>item1-2</div>
+			<div>item1-3</div>
+			<div>item1-4</div>
+			<div>item1-5</div>
+			<div>item1-6</div>
+		</div>
+		<div class="flex-container d2">
+			<div>item2-1</div>
+			<div>item2-2</div>
+			<div>item2-3</div>
+			<div>item2-4</div>
+			<div>item2-5</div>
+			<div>item2-6</div>
+		</div>
+		<div class="flex-container d3">
+			<div>item3-1</div>
+			<div>item3-2</div>
+			<div>item3-3</div>
+			<div>item3-4</div>
+			<div>item3-5</div>
+			<div>item3-6</div>
+		</div>
+		<div class="flex-container d4">
+			<div>item4-1</div>
+			<div>item4-2</div>
+			<div>item4-3</div>
+			<div>item4-4</div>
+			<div>item4-5</div>
+			<div>item4-6</div>
+		</div>
+	</div>
+	<h3></h3>
+	<h3></h3>
+	<h3></h3>
+	<h3></h3>
+	<h3></h3>
+ </body>
+</html>

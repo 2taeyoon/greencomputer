@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {background-color: rgb(200, 228, 144); }
+        body > div { width: 500px; margin: 200px auto; background: rgba(255,255,255, 0.3); text-align: center; padding: 20px; }
+        #p1 { font-size: 20px; }
+        #p2 {background-color: rgb(164, 196, 101); padding: 20px 0; }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>적정 몸무게 구하기</h1>
+        <p id="p1">
+            <script>
+                let name = prompt('당신의 이름은?');
+                let height = prompt('당신의 키는?');
+                let weight = prompt('당신의 몸무게는?');
+                // document.write( '이름 : ' + name + '<br/> 키 : ' + height + '<br/> 몸무게 : ' + weight );
+                document.write(`이름 : ${name} <br/> 키 : ${height}cm <br/> 몸무게 : ${weight}kg`);
+            </script>
+        <p id="p2">
+            <script>
+                // 적정체중 = (키-100) * 0.9 / 위아래로 3kg 이내
+                let normalWeight = (height-100) * 0.9; // 적정체중
+
+                let result = (weight >= normalWeight -3) && (weight <= normalWeight +3); // && 둘다 트루, || 하나만 트루도 가능
+                // document.write(result);
+                
+                let resultText = result ? '적정 체중입니다' : '적정 체중이 아닙니다'; // 삼항조건연산자(★중요★)
+                document.write('당신은 ' + resultText)
+                document.write(`<br/>적정 체중은 ${normalWeight}kg 입니다.`);
+            </script>
+        </p>
+    </div>
+</body>
+</html>

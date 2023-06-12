@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>13 color, gradient</title>
+ </head>
+ <style>
+	       /* height: 100vh; 바디가 짧을 때 to bottom 과 to top을 사용할 때는 height: vh 값을 바디에 넣어줘야 한다 */
+	body { background: linear-gradient(to bottom, purple, skyblue, midnightblue); padding-bottom: 100px; }
+
+	.box {
+		border: 1px solid #fff;
+		margin: 20px;
+		float:left;
+		width:350px;
+		height:350px;
+		font-size: 2rem; /* rem은 기본크기 16px, 2rem은 기본크기의 2배 */
+	}
+	.b1 { background: #FF4500; opacity: 0.5; }
+	.b2 { background: rgba(255, 69, 0, 0.5); color: #fff; }
+	.b3 { background-image: linear-gradient(to left, yellow, darkgreen); color: #fff; }
+	     /* to bottom(*디폴트값) to top, to left, to right */
+		 /* deg는 각도를 말하며 (yellow 40%, darkgreen)는 40% 지점부터 yellow가 보이게 설정한 것 */
+	.b4 { background-image: linear-gradient(225deg, yellow, darkgreen); color: #fff; }
+	.b5 { background-image: linear-gradient(yellow 40%, darkgreen 70%); }
+	.b6 { background-image: repeating-linear-gradient(yellow 10%, darkgreen 30%); }
+		/* clear: both; 는 적용된 모든 float를 제거해준다 */
+	.b7 { clear: both; background-image: radial-gradient(yellow, darkgreen, black); color: #fff; }
+	.b8 { height: 200px; background-image: radial-gradient(yellow, darkgreen, black); color: #fff; }
+		/* circle은 원형으로 만든다는 것 */
+	.b9 { height: 200px; background-image: radial-gradient(circle, yellow, darkgreen, black); color: #fff; }
+		/* border-radius는 모서리를 라운드로 처리하는데 50%를 주면 원형이 된다 
+			border-radius: 10px 20px 30px 40px; 10(좌상) 20(우상) 30(우하) 40(좌하) */
+	.b10 { clear: both; background-image: conic-gradient(yellow, darkgreen, black); border-radius: 50%; color: #fff; }
+
+	hr { clear: both; }
+	button {
+	padding: 100px 200px;
+	border: none;
+	background: linear-gradient(to bottom, rgba(255,154,158,1) 0%,rgba(229,133,197,1) 48%,rgba(254,207,239,1) 100%);
+	}
+	.bu { width: 500px; margin: 0 auto; }
+ </style>
+ <body>
+	<div class="box b1"> #FF4500; opacity: 0.3; </div>
+	<div class="box b2">rgba(255, 69, 0, 0.3);</div>
+	<div class="box b3">background-image: linear-gradient(to left, yellow, darkgreen);</div>
+	<div class="box b4">background-image: linear-gradient(225deg, yellow, darkgreen);</div>
+	<div class="box b5">linear-gradient(yellow 40%, darkgreen 70%);</div>
+	<div class="box b6">repeating-linear-gradient(yellow 10%, darkgreen 30%);</div>
+	<div class="box b7">clear: both; background-image: radial-gradient(yellow, darkgreen, black);</div>
+	<div class="box b8">height: 200px; background-image: radial-gradient(yellow, darkgreen, black);</div>
+	<div class="box b9">height: 200px; background-image: radial-gradient(circle, yellow, darkgreen, black);</div>
+	<div class="box b10"></div>
+	<hr/>
+	<div class="bu">
+		<button>BUTTON</button>
+	</div>
+ </body>
+</html>

@@ -1,0 +1,38 @@
+==리눅스 명령어
+$ pwd	-현재 위치 확인
+$ cd ..	-한단계 위 디렉토리로 이동
+$ cd ~	-최상위 디렉토리로 이동
+$ cd e:	-e드라이브로 이동
+$ cd 폴더명	-특정 폴더안으로 이동	
+$ ls 	-현재 위치해있는 디렉토리의 폴더, 파일보여줌
+$ ls -al	-숨김 파일, 폴더도 보여줌
+$ touch 파일명	-파일 생성(rm 파일명)
+$ mkdir 폴더명	-폴더 생성(rmdir 폴더명) 
+
+$ git init     -저장소(초기화)로 만든다
+
+$ git config --global user.email "깃허브이메일"   -깃허브 로그인 할때
+$ git config --global user.name "깃허브네임"     -깃허브주소
+$ git config user.email 	-이메일 확인
+
+==커밋 지정
+$ git add 파일명/ $ git add .(새로운(수정한) 모든 파일)
+$ git commit -m "메세지"
+
+
+$ git log		- 커밋(commit) 히스토리 조회
+$ git status	- 현재 상태 확인
+
+==github에 연결, 업로드
+$ git remote add origin repository주소.git
+$ git push -u origin main   (파일 올릴때 에러 나면 +main) /git은 master가 기본,github는 main이 기본
+
+
+
+$ git clone 주소(남의 것도 가능) / $ git clone 주소 . -폴더없이
+
+
+
+
+
+	 

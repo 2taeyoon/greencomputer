@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형 레이아웃2</title>
+  <link rel="stylesheet" href="basic.css">
+  <style>
+    /* 화면의 너비가 640px보다 컸을때 */
+    @media (min-width:640px){
+      #A:after { display:block; content:''; clear:both}
+        .box2 { float:left; width:70% }
+        .box3 { float:right; width:30% }
+    }
+
+    /* 화면의 너비가 1280px보다 컸을때 */
+    @media (min-width:1280px){
+      #A { width:1280px; margin:auto; }
+    }
+  </style>
+
+</head>
+<body>
+  <div class="box1">BOX1</div>
+  <div id="A">
+    <div class="box2">BOX2</div>
+    <div class="box3">BOX3</div>
+  </div>  
+  <div class="box4">BOX4</div>
+</body>
+</html>

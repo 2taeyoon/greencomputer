@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>13 form-회원가입</title>
+ </head>
+ <style>
+	body { background-color: #dffdff; }
+	h1 { text-align : center; }
+	h1 img { width : 250px; }
+	.fie { margin-bottom: 30px; }
+	#container {
+		width: 700px;
+		margin: auto;
+		background: white;
+		padding: 30px;
+	}
+	#container ul { margin: 0px; padding: 0; text-align: left; }
+	#container li { list-style: none; height: 50px; }
+	#container span { width: 120px; display: inline-block; text-align : center; }
+	input {
+		margin: 15px;
+		padding: 6px;
+		width: 150px;
+		border: 0;
+		border-bottom: 2px dotted gray;
+		outline: none;
+	}
+	button { 
+		background: #7de6ff;
+		border: none;
+		padding: 10px;
+		color: white;
+		cursor: pointer;
+	}
+	button:hover { background: #7b6cff }
+	input[type="radio"], [type="checkbox"] { width: 12px; }
+	.short { width: 150px; }
+	input[type="number"] { width: 50px; }
+	input:focus { border-bottom: 2px solid #000; background: #dffdff; }
+ </style>
+ <body>
+		<h1><img src="../logo/auction.png" alt="logo"></h1>
+		<div id="container">
+			<form method="get" action=""> <!--민감한 정보는 post, 그외는 get -->
+				<fieldset class="fie">
+					<legend>로그인 정보</legend>
+					<ul>
+						<li><span>아이디</span></span><input type="text" placeholder="아이디" maxlength="8" autofocus required></li>
+						<li><span>비밀번호</span><input type="password" placeholder="비밀번호" maxlength="10"></li>
+						<li><span>비밀번호확인</span><input type="password" placeholder="비밀번호확인" maxlength="10"></li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend>가입자 정보</legend>
+						<ul>
+							<li>
+								<label>
+									<span>이름</span>
+									<input type="text" placeholder="이름입력" maxlength="5" class="short" required>
+								</label>
+							</li>
+							<li>
+								<span>메일 주소</span>
+								<input type="email">
+							</li>
+							<li>
+								<span>메일 주소2</span>
+								<input type="text" class="short">@
+								<select>
+									<option>=== 선택 ===</option>
+									<option value="naver">naver.com</option>
+									<option value="daum">daum.net</option>
+									<option value="nate">nate.com</option>
+									<option value="kakao">kakao.com</option>
+									<option value="google">google.com</option>
+									<option>직접입력</option>
+								</select>
+							</li>
+
+							<li>
+								<span>전화번호</span>
+								<input type="tel" placeholder="숫자만 입력" class="short">
+							</li>
+
+							<li>
+								<span>생년월일</span>
+								<input type="date" class="short">
+							</li>
+							<li>
+								<span>성별</span>
+								<label><input type="radio" name="gender" checked>남자</label>
+								<label><input type="radio" name="gender">여자</label>
+								<label><input type="radio" name="gender">중성</label>						
+							</li>
+							<li>
+								<span>관심분야</span>
+								<label><input type="checkbox" name="fav" checked>주식</label>
+								<label><input type="checkbox" name="fav">부동산</label>
+								<label><input type="checkbox" name="fav">스포츠</label>
+								<label><input type="checkbox" name="fav">캠핑</label>
+								<label><input type="checkbox" name="fav">연예</label>
+								<label></label><input type="checkbox" name="fav">쇼핑</label>
+							</li>
+							<li>
+								<span>기부물품</span>
+								<input type="number" class="short" min="1" max="5" value="1">개
+							</li>
+							<li>
+								<span>기부경험</span>
+								소<input type="range" min="0" max="10">대
+							</li>
+							<li>
+								<span>업로드</span>
+								<input type="file" style="border:none;">
+							</li>
+							<li style="height:100px; margin-top: 30px;">
+								<span style="vertical-align:top">가입동기</span>
+								<textarea rows="5" cols="45">가입동기를 자세하게 입력해 주세요!</textarea>>
+							</li>						
+						</ul>
+				</fieldset>
+				<fieldset>
+				</fieldset>
+				<div style="text-align: center; margin-top: 20px;">
+					<button type="submit">확인</button>
+					<button type="reset">취소</button>
+				</div>
+			</form>
+		<p>select 는 무조건 option tag만 써야 한다</p>
+		<p>민감한 정보는 post, 그외는 get이며, input 사용하면 무조건 부모가 form이어야 한다</p>
+		<p>select는 선택창을 만드는 태그이며 option으로 선택 목록을 만들 수 있다 option value="서버에 데이터 넘기는 이름"</p>
+		<p>fieldset은 form tag 안에 테두리로 감싸는 것 legend tag는 fieldset 테두리에 글자를 생성</p>		
+		<p>span tag는 인라인 방식에 아무것도 없지만 스타일을 부여할 수 있다</p>
+		<p>form tag는 method="post" method="get" 입력, label tag는 input 영역을 지정할 수 있다</p>
+		<p>input type="text"는 텍스트 입력창 생성, input type="password" 비밀번호 입력창 생성</p>
+		<p>placeholder="입력창에 텍스트", size="글자수까지 가로사이즈를 늘려주는 것"</p>
+		<p>maxlength="글자수 제한", input type="submit"은 제출 버튼 생성</p>
+		<p>input type="checkbox"는 체크 박스 생성, input type="tel"은 전화 번호 창생성</p>
+		<p>input type="radio"는 하나만 선택할 수 있는 박스를 생성 하는데 name 값을 지정해야한다</p>
+		</div>
+ </body>
+</html>

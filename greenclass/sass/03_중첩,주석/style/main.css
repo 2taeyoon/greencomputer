@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/*
+    중첩 - 한줄짜리 주석(js등 프로그래밍 언어에서 주로 쓰임) - css파일을 컴파일 후엔 사라짐
+    &는 자신이 속한 상위를 선택자
+    css 단축 속성을 사용할 수 있는 태그들은(font, text, background 등) -Sass의 중첩을 이용하여 하위 속성을 그룹화 시킬 수 있다
+*/
+#wrap {
+  background: skyblue;
+  padding: 20px;
+}
+#wrap h1 {
+  color: red;
+}
+#wrap p {
+  color: white;
+}
+#wrap p span {
+  color: orange;
+  background: yellow;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  margin: 50px auto 0;
+}
+.btns button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+.btns .btn1 {
+  margin-right: 15px;
+  background-image: linear-gradient(135deg, #16a085 0%, #f4d03f 100%);
+}
+.btns .btn1:hover {
+  filter: brightness(1.2);
+}
+.btns .btn2 {
+  background-image: linear-gradient(135deg, #d558c8 0%, #24d292 100%);
+}
+.btns .btn2:hover {
+  filter: brightness(1.2);
+}
+
+.bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 400px;
+  margin: 100px auto 0;
+  border-radius: 60px;
+  transition: all 0.3s;
+  background-image: url("https://images.unsplash.com/photo-1656464868371-602be27fd4c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.bg:hover {
+  filter: brightness(1.5);
+  transform: scale(1.1);
+}
+.bg p {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "궁서체", serif;
+}/*# sourceMappingURL=main.css.map */

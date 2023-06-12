@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scrolling</title>
+    <style>
+        body { background: black;}
+        div { width:250px; height:250px; background: aliceblue; margin:10px;} 
+        .special { background:hotpink;} 
+        section { position:fixed; top:20px; right:50px;}
+        p { position:fixed; bottom:10px; right:50px; width:30px; height:30px; border:10px solid red; border-right-color: transparent; border-bottom-color: transparent; transform:rotate(45deg); cursor:pointer; }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="special"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <section>
+        <button class="scroll-to">300px위치로 스크롤</button>
+        <button class="scroll-by">100씩 계속 스크롤</button>
+        <button class="scroll-into">.special로 스크롤</button>
+    </section>
+    <p></p>
+    <script>
+        const btnTo = document.querySelector('.scroll-to')
+        const btnBy = document.querySelector('.scroll-by')
+        const btnInto = document.querySelector('.scroll-into')
+        const special = document.querySelector('.special')
+        const topP = document.querySelector('p')
+
+        btnTo.addEventListener('click', () => {
+            window.scrollTo({
+                top: 300, behavior: "smooth"
+            });
+        })
+        btnBy.addEventListener('click', () => {
+            window.scrollBy(0, 300);
+        })
+        btnInto.addEventListener('click', () => {
+            special.scrollIntoView({
+                block: "center",
+                behavior: "smooth"
+            })
+        })
+        topP.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0, behavior: "smooth"
+            });
+        })
+
+
+        /*
+            .scrollTo(x좌표,y좌표)   -문서의 지정된 위치로 스크롤, .scroll()과 동일
+        
+            .scrollBy(x,y)   -지정된 수치만큼 계속 스크롤
+        
+            A.scrollIntoView()  -A엘리먼트의 위치로 스크롤
+            - block  - 수직으로 스크롤링 될때 정렬 기준
+                (start(default) / end / center / nearest)
+            - inline - 수평으로 스크롤링 될때 정렬 기준
+            - behavior - smooth / auto(default)
+        */
+</script>
+</body>
+</html>

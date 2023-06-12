@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>01 css selector</title>
+  <style>
+	/* 전체 선택자 * : 모든 태그에 적용 */
+	* {	color: gray; }
+	/* 태그 선택자 - html 태그(문서에 공통적으로 적용) */
+	
+	p {	font-family: arial; }
+	li { list-style: none; }
+	
+	.sky { color: skyblue; }
+	.back { background: LightSalmon; }
+	/* 클라스 선택자 - 반복 사용 */
+	
+	/*자손(후손)선택자 - p 아래(하위레벨) 모든 하위 depth에 있는
+	클라스 dashline 만 선택*/
+	p.dashline{ border: 2px red dashed; }
+	
+	/* li에 적용된 클라스만 실행, 띄어쓰기X */
+	li.updownline{ text-decoration:underline overline; }
+	
+	/* 아이디 선택자 (#) - 문서당 1번만 적용 */
+	#warp { width:800px; margin:auto;}
+  </style>
+ </head>
+ <body>
+	<div>
+		<h1 class="dashline">기본선택자</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at tristique augue. Phasellus mollis finibus felis. Sed eu lacus massa. Nullam dignissim diam quis lectus placerat vestibulum eu eu nibh. Mauris id mauris at risus convallis cursus. Pellentesque tempor velit eget elit ultrices dictum. Suspendisse mollis varius ullamcorper. Etiam laoreet leo tempus massa auctor, id tristique urna egestas. Nullam sit amet semper justo. Proin imperdiet pulvinar blandit.
+			</p>
+			<p class="dashline">
+				Curabitur a augue condimentum, elementum odio vitae, aliquam diam. Nam pretium maximus massa, in aliquam neque scelerisque	 vitae. Duis tempus arcu sit amet ligula malesuada, id tempor sapien tempor. Nunc venenatis euismod condimentum. Sed pretiu	m venenatis dapibus. Sed congue tempus facilisis. Aliquam vel dolor ut massa tincidunt egestas eget eu quam. Duis tincidunt od	<div class="dashline">io elit, a congue</div> ligula vehicula vitae. Etiam volutpat nunc a felis iaculis egestas. Donec feugiat nulla a nisl iaculis gravi	da. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			</p>
+			<ul>
+				<li>Lorem <span class="updownline">ipsum dolor</span> sit amet</li>
+				<li>Lorem <span class="updownline">ipsum dolor</span> sit amet</li>	
+				<li class="updownline">Lorem ipsum dolor sit amet</li>
+				<li class="sky back">Lorem ipsum dolor sit amet</li>
+				<!-- 클라스를 동시에 여러개 적용할 때는 그냥 나열(띄어쓰기) -->
+				<li>Lorem ipsum dolor sit amet</li>
+			</ul>
+			<div id="wrap">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at tristique augue. Phasellus mollis finibus felis. Sed eu	 lacus massa. <strong class="back">Nullam dignissim diam quis</strong> lectus placerat vestibulum eu eu nibh. Mauris id mauris at risus convallis cursus	. Pellentesque tempor velit eget elit ultrices dictum. Suspendisse mollis varius ullamcorper. <span class="dashline">Etiam laoreet leo tempus massa auctor,</span> id tristique urna egestas. Nullam sit amet semper justo. Proin imperdiet pulvinar blandit.Curabitur a augue condimentum, elementum odio vitae, aliquam diam. Nam pretium maximus massa, in aliquam neque scelerisque vitae. Duis tempus arcu sit amet <span class="sky updownline">ligula malesuada,</span> id tempor sapien tempor. Nunc venenatis euismod condimentum. <span class="back">Sed pretiu	m venenatis dapibus.</span> Sed congue tempus facilisis. Aliquam vel dolor ut massa tincidunt egestas eget eu quam. Duis tincidunt od	io elit, a congue <i class="sky">ligula vehicula vitae.</i> Etiam volutpat nunc a felis iaculis egestas. Donec feugiat nulla a nisl iaculis gravi	da. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			</div>
+	</div>
+ </body>
+</html>

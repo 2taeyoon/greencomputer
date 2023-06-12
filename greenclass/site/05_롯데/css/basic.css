@@ -1,0 +1,91 @@
+@charset "UTF-8"; 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+* { box-sizing: border-box; }
+body { font-family:'Noto Sans KR', '맑은 고딕', Verdana, Geneva, Tahoma, sans-serif; color:#333; }
+a { color:inherit; }
+button { background: transparent; cursor: pointer; }
+
+/* HEADER */
+#header {}
+#header .top { border-bottom:1px solid #d4d4d4; }
+#header .top .wrap { max-width:1680px; height:70px; margin:auto;
+  display: flex; justify-content:space-between; padding:18px 60px; }
+#header h1 { }
+#header .util_menu { }
+#header .util_menu ul { padding-top:6px; }
+#header .util_menu li { position: relative; float:left;margin-left:16px; }
+#header .util_menu a { font-size:14px; color:#666; }
+#header .util_menu li + li::before { position:absolute; left:-8px; top:3px; content:''; width:1px; height:16px; background:#d4d4d4; }  
+
+#header .bottom {}
+#header .bottom .wrap { max-width:1680px; margin:auto; padding:0 60px;
+  display:flex }
+#header h2 { padding:24px 30px 0 0; font-size:20px; font-weight:700;}
+#header .gnb_menu {} 
+#header .gnb_menu > ul {}
+#header .gnb_menu > ul > li { float:left; padding:25px 15px 30px;  }
+#header .gnb_menu > ul > li > a { font-size:18px;}
+
+#header .util_menu ul:after, #header .gnb_menu > ul:after { display:block; content:''; clear:both; }
+
+
+/* contents */
+
+/* main_visual */
+.main_visual { }
+.main_visual div { width:100%; }
+.main_visual source, .main_visual img { width:100% }
+
+
+
+/* contents */
+#contents section { margin-top:150px;}
+.product { width: 1400px;  margin: 0 auto; }
+.product h3 { font-size:40px; color:#998465; }
+.product ul { display:flex; flex-wrap:wrap; justify-content: space-between; }
+.product li { width:450px; margin-top:50px; }
+.product li img { width:100%; }
+.product .title { margin-top:24px; font-size:22px; font-weight:600; }
+.product .title .cate { display:block; font-size:16px; font-weight:400; color:#666; margin-bottom:20px; }
+.product .more { display: inline-block; color:#998465; font-size:16px; padding-right:14px; margin-top:35px; background:url('../img/ico_arrow_beige.png') no-repeat right center; }
+
+/* banner */
+.e_shop_banner { position: relative;}
+.e_shop_banner div { width:100%; }
+.e_shop_banner source, .e_shop_banner img { width:100% }
+.e_shop_banner .text { 
+  position:absolute; top:0; left:0; width:100%; height:100%;
+  display:flex; align-items: center;
+} 
+.e_shop_banner .text p {  color:rgba(255,255,255,0.8);
+  width:1400px;  margin:0 auto; font-size:14px; line-height:2;
+} 
+
+
+/* footer */
+footer { margin-top:150px; background:#111; padding:0 60px; font-size: 14px; line-height:1.7; color:#999;}
+footer .wrap { max-width:1400px; margin: 0 auto;   }
+footer .top { position: relative; padding:50px 0; }
+footer .top .address { }
+footer .top .address  h4 { width:88px; height:85px; background: url('../img/pc_f_logo_wht.png'); text-indent:-9999px; margin-bottom:60px;}
+
+footer .top .f_menu { position:absolute; right:0; top:50px }
+footer .top .f_menu > * { float:left; padding:0 20px; font-size:13px }
+footer .top .f_menu > ul { position: relative; }
+footer .top .f_menu > ul li { line-height:2; }
+footer .top .f_menu > ul::before { position:absolute; left:0; content: ""; width:1px; height:250px; background: #666;  }
+footer .top .f_menu > ul:first-of-type { padding-right:70px;}
+
+
+
+
+footer .bottom { position: relative; border-top: 1px solid #333; }
+footer .bottom .wrap { display: flex; justify-content: space-between; align-items: center; padding: 36px 0; }
+footer .bottom .wrap > ul { display: flex; }
+footer .bottom .wrap > ul > li { position: relative; padding-right: 30px; font-size: 15px; }
+footer .bottom .wrap > ul > li:not(:last-of-type)::after { display: block; content: ""; position: absolute; top: 10px; right: 14px; width: 1px; height: 12px; background: #666; }
+footer .bottom .wrap > ul > .privacy { color: #fff; font-weight: 700; }
+
+.js_toggle { width: 260px; }
+.js_toggle .js_title_btn { width: 100%; padding: 0 14px; border: 1px solid #666; color: #999; font-size: 16px; font-weight: 600; line-height: 40px; text-align: left; background: url(../img/mb_ico_sel.png) no-repeat 100% 50% / 34px; }

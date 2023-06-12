@@ -1,0 +1,19 @@
+@charset "UTF-8";
+body { font-family:Verdana, Geneva, Tahoma, sans-serif; background: #d3d3d3; }
+a { color: blue; }
+
+header { background: #fff; }
+header > div { max-width: 1000px; margin: auto; height: 80px; }
+header > div > h1 { font-size: 3em; line-height: 80px; cursor: pointer; }
+
+main { background: #929090; padding: 50px 0; }
+main > div { background: #929090; }
+main span { font-size: 1.5em; }
+
+.box { display: flex; justify-content: space-between; width: 900px; margin: auto; }
+.box p { padding: 30px; }
+.box .enter, .box .over { width: 300px; padding: 30px; background: skyblue; }
+
+footer { padding: 30px 0; }
+footer > div { max-width: 1000px; margin: auto; text-align: right; }
+footer > div > small { color: #fff; }

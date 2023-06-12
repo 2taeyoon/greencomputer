@@ -1,0 +1,20 @@
+@charset "UTF-8"; 
+body { display:flex; justify-content:center; font-family:Verdana, Geneva, Tahoma, sans-serif; }
+
+.container { display:flex; flex-direction:column; max-width: 700px; min-width: 500px; align-items:center; row-gap:10px; margin-top:30px; }
+
+h1 { font-size:1.6em; margin-bottom:1em;}
+.container > button { width:500px; padding:10px 0;}
+
+.container ul { display:flex; flex-direction:column; row-gap:20px; width:100%; margin-bottom:30px; }
+.container ul li { display:flex; align-items:center; column-gap: 10px; padding:10px; background:#d6d6d6; border-radius:16px; }
+.container img { width:60px}
+.name { padding:10px 0; font-weight:bold; width:70% }
+.price { color:#999; font-size:14px; color:#f01d1d}
+
+input[type="checkbox"] { width:16px; height:16px}
+
+.total { font-size:20px;}
+.total_price { color:#1d21f0;font-size:26px; }
+
+

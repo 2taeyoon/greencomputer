@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>all</title>
+  <style>
+    * { margin:0; padding:0; }
+    body { background:#F5EAEA}
+    body > div { width:400px; margin:150px auto; padding:2px; text-align:center; border:1px solid #fa190d}
+    h1 { margin:20px 0 }
+    h2 { color:#774f75; margin-bottom:30px; }
+    h1 img { width:150px; }
+    li { list-style:none; background:#fda4a4; color:#fff; line-height:50px; margin:2px; padding-left:20px;  }
+    .red { background:#fa190d; }
+    .sky { background:#7ec0ec; }
+    .orange { background:#ffba26;}
+    .line { text-decoration:underline overline;}
+  </style>
+</head>
+
+<body>
+    <div id="page">
+        <h1><img src="icon.svg" alt=""></h1>
+        <h2>모든 선택이 가능</h2>
+        <ul>
+            <li>리에주 와플</li>
+            <li>믹스 베리 요거트</li>
+            <li class="red">머랭 쿠키</li>
+            <li class="red">봉봉 오 쇼콜라</li>
+            <li class="red">휠리 치즈 브프샌드위치</li>
+            <li class="red">화이트 와인</li>
+        </ul>
+    </div>
+    <script>
+        const el1 = document.querySelector('li.red');
+        el1.classList.add('line');
+    // querySelector(''); - 모든 선택 가능 (tag, id, class)
+    // 여러개 있을 때는 첫번째 것만 선택된다. 전체 선택은 querySelectorAll 이용
+
+    const el2 = document.querySelectorAll('li.red');
+    console.log(el2);
+    el2[1].style.backgroundColor = 'yellowGreen'; // [1] 2번째 le
+
+    for(let i=0; i < el2.length; i++){
+        el2[i].style.fontWeight = 'bold'; // 지정한 지역변수 모든 i
+        el2[i].style.color = 'yellow';
+        // el2[i].style.cssText = 'font-weight: bold';
+        // style.cssText - css 속성명을 사용해서 적용, 그러나 기존에 적용된 인라인 방식의 css가 사라짐
+        // style.속성 - 새로운 속성 추가
+    }
+    </script>
+</body>
+
+</html>

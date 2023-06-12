@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>02 하위선택자</title>
+ </head>
+ <style>
+	h3 { font-size: 20px; } /* 태그 선택자 - 문서 내의 모든 h3에 적용 */
+
+	/* 자손(후손) 선택자 - div 아래 (하위레벨) 모든 depth에 있는 모든 h3에 적용 */
+	div h3 { color: gray; }
+
+	/* 자식 선택자 - div의 바로 아래 depth에 있는 모든 h3에 적용 */
+	div > h3 { text-decoration: underline overline; }
+	div > ul > li > h3 { background: yellow; } /* div 바로 아래 모든 ul 형제들의 모든 li의 형제들의 모든 h3에 적용 */
+	div > ul > ol h3 { background: skyblue; }
+
+	/* li 태그에 적용된 클래스에 적용 */
+	li.oran { color: orange; }
+	ul.green span { background: lightgreen; }
+
+	/* 속성선택자 li에 class가 들어간 속성 전부 적용 */
+	li[class] {text-decoration: line-through; }
+ </style>
+ <body>
+	<h3>하위선택자</h3>
+	<div>
+		<h3 class="oran green">여행 준비물 챙기기-h3</h3>
+		<h3 class="oran green">여행 준비물 챙기기-h3-1</h3>
+		<ul>
+			<h3 class="oran green">여행 준비물 챙기기-h3</h3>
+			<li>비상식량</li>
+				<ol class="green">
+					<li>라면</li>
+					<li>초콜릿</li>
+					<li>건빵</li>
+					<li>사탕</li>
+					<li>생수</li>			
+				</ol>
+			<li><h3>세면도구</h3></li>
+				<ul class="green">
+					<li>비누</li>
+					<li class="oran">치약/칫솔</li>
+					<li>샴푸</li>
+					<li>수건</li>
+				</ul>
+			<li>옷</li>
+				<ol>
+					<li class="oran">상의/하의</li>
+						<ul class="green">
+							<li class="green">티셔츠</li>
+							<li><span>남방</span></li>
+							<li class="oran">니트</li>
+							<li><h3>추리닝</h3></li>
+						</ul>
+					<li>외투</li>
+					<li class="oran">속옷</li>		
+				</ol>
+			<li>약품</li>
+			<li class="green">기타등등..</li>
+		</ul>
+	</div>
+ </body>
+</html>

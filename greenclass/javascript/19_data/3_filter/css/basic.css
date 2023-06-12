@@ -1,0 +1,17 @@
+@charset "UTF-8"; 
+body { display:flex; justify-content:center; font-family:Verdana, Geneva, Tahoma, sans-serif; }
+
+.container { display:flex; flex-direction:column; max-width: 1200px; min-width: 800px; align-items:center; row-gap:10px; margin-top:30px; }
+
+h1 { font-size:1.6em; margin-bottom:1em;}
+.container > button { width:500px; padding:10px 0;}
+
+.container ul { display:flex; flex-wrap:wrap; }
+.container ul li { width:25%; padding:10px; text-align:center; margin: 20px 0; }
+.container img { width:100% }
+.name { padding:10px 0; font-weight:bold;}
+.price { color:#999; font-size:14px;}
+
+select { width:500px; padding:10px; border:0; outline:none; background:#d8e9f8; }
+
+

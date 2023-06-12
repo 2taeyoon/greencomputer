@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>03 flex2</title>
+  <style>
+  	.flex-container { border: 3px solid black; margin: 20px auto; }
+	.flex-container > div:nth-child(1) { background: lightpink; }
+	.flex-container > div:nth-child(2) { background: yellowgreen; }
+	.flex-container > div:nth-child(3) { background: lightskyblue; }
+
+	.flex-container { display: flex; }
+
+	.b1 > div { flex-basis: auto; }
+	.b1 .item1-1 { flex-basis: 0; }
+	.b1 .item1-3 { flex-basis: 300px; }
+	/* flex-basis: 플렉스 아이템의 기본너비 설정(width 비슷, flex-grow로 공간 배분 전)*/
+
+	.b2 .item2-1 { flex-grow: 3; }
+	.b2 .item2-2 { flex-grow: 1; }
+	.b2 .item2-3 { flex-basis: 0; }
+	/* flex-grow: 자식요소에서 공간을 배율로 지정 */
+
+	.b3 { width: 50%; }
+		.item3-1 { flex-basis: 30px; }
+		.item3-2 { flex-basis: 30%; }
+		.item3-3 { flex-basis: 400px; }
+
+	.b4 { width: 50%; }
+		.item4-1 { flex-basis: 30px; }
+		.item4-2 { flex-basis: 30%; }
+		.item4-3 { flex-basis: 400px; flex-shrink: 0; }
+		/* flex-shrink: 0; 0 or 1(기본)만 사용 (부모요소가 커지거나 작아져도 크기 유지) */
+
+	    /* flex: flex-grow flex-shrink flex-basis
+		-> flex: 1 1 0; (축약형 1)
+		-> flex: 1; (축약형 2) */
+  </style>
+ </head>
+ <body>
+ 	<h1>플렉스 아이템(자식요소) 속성들</h1>
+	<div class="flex-container b1">
+		<div class="item1-1">item1-1(flex-basis: 0px;)</div>
+		<div class="item1-2">item1-2</div>
+		<div class="item1-3">item1-3(flex-basis: 300px;)</div>
+	</div>
+	<div class="flex-container b2">
+		<div class="item2-1">item2-1(flex-grow: 3;)</div>
+		<div class="item2-2">item2-2(flex-grow: 1;)</div>
+		<div class="item2-3">item2-3(flex-basis: 0;)</div>
+	</div>
+	<div class="flex-container b3">
+		<div class="item3-1">item2-1()</div>
+		<div class="item3-2">item2-2()</div>
+		<div class="item3-3">item2-3()</div>
+	</div>
+	<div class="flex-container b4">
+		<div class="item4-1">item2-1()</div>
+		<div class="item4-2">item2-2()</div>
+		<div class="item4-3">item2-3()</div>
+	</div>
+	<h3>flex: flex-grow flex-shrink flex-basis</h3>
+	<h3>-> flex: 1 1 0; (축약형 1)</h3>
+	<h3>-> flex: 1; (축약형 2)</h3>
+ </body>
+</html>

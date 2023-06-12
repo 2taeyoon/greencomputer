@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sibling</title>
+    <style>
+        * { margin:0; padding:0; }
+        body { background:#F5EAEA}
+        body > div { width:400px; margin:150px auto; padding:2px; text-align:center; border:1px solid #fa190d}
+        h1 { margin:20px 0 }
+        h2 { color:#774f75; margin-bottom:30px; }
+        h1 img { width:150px; }
+        li { list-style:none; background:#fda4a4; color:#fff; line-height:50px; margin:2px; padding-left:20px;  }
+        .red { background:#fa190d; }
+        .sky { background:#7ec0ec; }
+        .orange { background:#ffba26;}
+        .line { text-decoration:underline overline;}
+    </style>
+</head>
+
+<body>
+    <div id="page">
+        <h1><img src="icon.svg" alt=""></h1>
+        <h2>형제 관계</h2>
+        <ul>
+            <li>리에주 와플</li><li>믹스 베리 요거트</li><li id="three">머랭 쿠키</li><li>봉봉 오 쇼콜라</li><li>휠리 치즈 브프샌드위치</li><li>화이트 와인</li>
+        </ul>
+    </div>
+<script>
+    const elStart = document.getElementById('three');
+    const elPrev = elStart.previousSibling;
+    const elNext = elStart.nextSibling;
+
+    elPrev.className = 'red';
+    elNext.classList.add('orange');
+
+    /*
+        A.previousSibling A보다 하나 이전 요소(형제관계중)
+        A.nextSibling A보다 하나 뒤 요소(형제관계중)
+        - (브라우저에 따라) 엔터도 하나의 node로 인식
+    */
+</script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Nike shoes</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+	* { box-sizing: border-box; margin:0; padding: 0; }
+	body { font-family: "Malgun Gothic", "맑은 고딕", sans-serif; }
+	li { list-style: none; }
+
+	img { width: 100%; }
+
+	#wrap { width: 860px; margin: 50px auto;}
+
+	.list { display: flex; flex-wrap: nowrap; }
+	.list li { flex:1; width: 33.33%; }
+
+	.item { border: 1px solid gray; margin: 20px; position: relative; overflow: hidden; }
+	.item:hover figure > img { transform: scale(1.2); }
+	.item figure { overflow: hidden;  }
+	.item figure > img { transition: all 0.3s; }
+	.item dl { padding: 10px;
+		border: 1px solid red; }
+		.item dt { font-size: 15px; font-weight: bold; margin-bottom: 20px; }
+		.category { color: #575757; font-size: 14px; }
+		.color { font-size: 12px; }
+		.price { font-size: 15px; font-weight: bold; margin-top: 10px; }
+		
+	.label { position: absolute; top: 10px; width: 100%; text-align: center; }
+		.label span { display: inline-block; width: 30px; height: 30px; border-radius: 50%; font-size: 14px; color: white; line-height: 27px; }
+		.label .sale { background: #fec50a; }
+		.label .new { background: #0a6cfe; }
+		.label .hot { background: red; }
+
+	.over { position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+		background: rgba(252, 73, 19, 0.8); transition: 0.3s ease-out 0.2s; display: none; }
+	.over img { width:70px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); opacity: 0; transition: 0.3s; }
+	.item:hover .over { top:0; display: block; }
+	.item:hover .over img { opacity: 1; }
+	
+</style>
+<body>
+	<div id="wrap">
+		<h2>Nike 키즈 신발</h2>
+		<ul class="list">
+			<li >
+				<div class="item">
+					<figure>
+						<img src="./img/nike.png" alt="nike">
+					</figure>
+					<dl>
+						<dt>에어 조던 7 레트로 SE</dt>
+						<dd class="category">남성 신발</dd>
+						<dd class="color">1개 색상</dd>
+						<dd class="price">389,000 원</dd>
+					</dl>
+					<div class="label">
+						<span class="new">New</span>
+						<span class="hot">Hot</span>
+					</div>
+					<div class="over">
+						<a href="https://www.nike.com/kr/t/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-6-%EB%A0%88%ED%8A%B8%EB%A1%9C-%EC%8B%A0%EB%B0%9C-pkEmCXoK/CT8529-162"><img src="./img/5402394_internet_link_hyperlink_url_web_icon (1).svg" alt=""></a>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="item">
+					<figure>
+						<img src="./img/nike2.png" alt="nike2">
+					</figure>
+					<dl>
+						<dt>에어 조던 6 레트로</dt>
+						<dd class="category">남성 신발</dd>
+						<dd class="color">1개 색상</dd>
+						<dd class="price">549,000 원</dd>
+					</dl>
+					<div class="label">
+						<span class="new">New</span>
+						<span class="sale">Sale</span>
+					</div>
+					<div class="over">
+						<a href="https://www.nike.com/kr/t/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-6-%EB%A0%88%ED%8A%B8%EB%A1%9C-%EC%8B%A0%EB%B0%9C-pkEmCXoK/CT8529-162"><img src="./img/5402394_internet_link_hyperlink_url_web_icon (1).svg" alt=""></a>
+					</div>
+				</div>			
+			</li>
+			<li>
+				<div class="item">
+					<figure>
+						<img src="./img/nike3.png" alt="nike3">
+					</figure>
+					<dl>
+						<dt>에어 조던 I 하이 G</dt>
+						<dd class="category">남성 골프화</dd>
+						<dd class="color">1개 색상</dd>
+						<dd class="price">169,000 원</dd>
+					</dl>
+					<div class="label">
+						<span class="sale">Sale</span>
+						<span class="hot">Hot</span>
+					</div>
+					<div class="over">
+						<a href="https://www.nike.com/kr/t/%EC%97%90%EC%96%B4-%EC%A1%B0%EB%8D%98-6-%EB%A0%88%ED%8A%B8%EB%A1%9C-%EC%8B%A0%EB%B0%9C-pkEmCXoK/CT8529-162"><img src="./img/5402394_internet_link_hyperlink_url_web_icon (1).svg" alt=""></a>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

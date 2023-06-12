@@ -1,0 +1,110 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Handlee&family=Noto+Sans+KR:wght@500;700&family=Phudu&display=swap');
+
+body { font-family:Verdana, Geneva, Tahoma, sans-serif; }
+.inner { position: relative; width:1180px; margin: 0 auto; }
+
+ul::after { content: ""; display: block; clear: both; }
+
+header { height: 100px; background: #343436; position: fixed; top: 0; width: 100%; z-index: 100; }
+header h1 {}
+header h1 a { display: block; position: absolute; width: 118px; height: 44px; top: 28px; left: 0; background: url('../img/logo_white_type_02.png'); font-size: 0;}
+
+/* #gnb { border: 1px solid red; } */
+#gnb > ul { padding-left: 250px; }
+#gnb > ul  > li { position: relative; float: left ; margin: 0 15px; }
+#gnb > ul > li > a { display: block; color: #fff; position: relative;
+    /*line-height: 100px; font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 600;*/
+    font: 600 19px/ 100px 'Barlow Condensed', sans-serif; letter-spacing: 1.5px; }
+
+#gnb > ul > li > a::after { position: absolute; content: ""; background: #be161e; width: 0%; height: 3px; top: 62px; left: 0; transition: 0.2s; }
+#gnb > ul > li:hover a::after { width:100%; }
+#gnb > ul > li:hover .sub { display: block; }
+
+.global-menu { position: absolute; top: 35px; right: 0; }
+.global-menu li { float: left; padding-left: 15px; }
+.global-menu a { color: #999; font-size: 13px; line-height: 30px; }
+.global-menu .join  a { display: block; color: #fff; background: #666; padding: 0px 15px; margin-left: 15px; }
+
+.sub { display: none; position: absolute; left:-25px; background: rgba(0,0,0,0.6); padding: 5px 30px; transition: 0.3s; }
+.sub > li { margin: 20px 0; display: flex; align-items: center; padding: 5px 0; }
+.sub > li > a { color: #fff; font-size: 15px; white-space: nowrap; }
+
+
+#visual { width: 100%; min-width: 1180px; height: 900px; overflow: hidden; margin-top: 100px; }
+#visual .slider { position: relative; width: 1920px; left: 50%; transform: translate(-50%); }
+
+main { margin-bottom: 500px; }
+
+/* main-product start */
+.main-product { padding: 150px 0; }
+.main-product > .inner { height: 620px; }
+
+.product-image { width:310px; padding-top: 90px; }
+.product-link { position: absolute; top: 0; right: 0; width: 480px; height: 620px; font-size:0;
+    background: url('../img/20180627183554751017.jpg'); }
+.poroduct-text { position: absolute; top: 0; left: 400px; max-width: 440px;}
+    .en-name { max-width: 440px; padding-top: 70px; color: #222; letter-spacing: 5px;
+        font: 700 80px / 84px 'Barlow Condensed', sans-serif; }
+    .ko-name { max-width: 440px; padding-top: 11px; color: #222; letter-spacing: -1.5px;
+        font: 600 26px / 32px 'Barlow Condensed', sans-serif; }
+    .info { max-width: 280px; padding-top: 29px; color: #666; word-break: keep-all;
+        font: 500 15px / 25px 'Barlow Condensed', sans-serif; }
+/* main-product end */
+/* benefit start */
+
+.benefit {}
+.benefit > .benefit-tomato {background: url('../img/main_benefit_obj_01.jpg');
+    width: 375px; height: 442px; margin-left: 100px; }
+.benefit > .benefit-content { background: url('../img/main_benefit_visual.jpg');
+    height: 520px; margin-top: -120px; padding-top: 90px; }
+
+.benefit > .benefit-content > h3 { color: #fff; font-size: 54px; letter-spacing: 2.16px; text-align: center;
+    font: 700 54px 'Barlow Condensed', sans-serif; }
+.benefit > .benefit-content > .h3-info { margin-top: 10px; color: #fff; font-size: 16px; line-height: 24px; opacity: 0.7; text-align: center; }
+.benefit ul { margin-top: 68px; padding: 0 45px; }
+.benefit li { float: left; width: 33.33%; }
+.benefit a { text-align: center; }
+
+.benefit .icon { display: block; }
+.benefit .icon-name { display: block; color: #fff; margin-top: 35px;
+    font: 600 28px 'Barlow Condensed', sans-serif; }
+.benefit .icon-info { display: block; white-space: pre-line; color: #fff; opacity: 0.7; margin-top: -5px;
+    font: 400 14px / 22px 'Barlow Condensed', sans-serif; }
+/* benefit end */
+
+.main-reward { padding-top: 75px; }
+.reward-title { position: relative; top: 35px; left: 0; width: 280px; height: 260px; border: solid black 5px; margin: 0 35px 0 0; }
+    .text-data { padding: 0 30px 30px 0; background: #fff; position: absolute; top: -5px; left: -5px; }
+    .akrobat { margin-top: -15px; color: #222; letter-spacing: 1.92px;
+    font: 600 32px / 52px 'Barlow Condensed', sans-serif; }
+    .akrobat > em { display: block; font-size: 52px; letter-spacing: 3.12px; }
+    .akrobat-info { margin-top: 20px; color: #666; font-size: 16px; line-height: 24px; white-space: pre-line; }
+    .akrobat-box { margin-top: 25px; }
+    .akrobat-box > div { width: 100px; height: 32px; color: #fff; font-size: 13px; line-height: 32px;
+        background: #222; text-align: center; margin-top: 25px; }
+
+.inner-flex { display: flex; }
+.wine-text { display: flex; width: calc(100% - 315px); flex-wrap: wrap; }
+.wine-text li { display: flex; width: 276px; height: 117px; align-items: flex-start; flex-direction: column; letter-spacing: 1px;  margin-top: 30px; }
+.wine-text li > P:nth-of-type(1) { color: #96603d; opacity: 0.4;
+    font: 600 18px 'Barlow Condensed', sans-serif; }
+.wine-text li > P:nth-of-type(2) { margin-top: 10px; color: #222;
+    font: 700 20px 'Barlow Condensed', sans-serif; }
+.wine-text li > P:nth-of-type(3) { height: 63px; margin-top: 10px; color: #666;
+    font: 500 16px / 21px 'Barlow Condensed', sans-serif; }
+
+.menu-02 { display: flex; padding-top: 130px; }
+.menu-02 > li { width: 1180px; padding: 30px; height: 160px; }
+    .back_color1 { background: #907354; }
+    .back_color2 { background: #434343; }
+    .back_color3 { background: #C30606; }
+
+.menu-02 > li > a { position: relative; height: 100%; display: block; }
+.menu-02 > li > a > .menu_font { font-size: 14px; line-height: 20px; color: #fff; margin-top: 8px; }
+.menu-02 > li > a > .arrow { position: absolute; width: 40px; height: 1px; background: #fff; transition: 0.3s; bottom: 0; }
+.menu-02 > li > a > .arrow::after { position: absolute; content: ""; display: block; width: 8px; height: 1px; background: #fff; right: -1px; transform: rotate(45deg); top: -3px; }
+.menu-02 > li > a > .menu_img { position: absolute; top: 50%; right: 50px; transform: translateY(-50%); transition: 0.3s; }
+
+.menu-02 > li:hover .menu_img { top: 40%; }
+.menu-02 > li:hover .arrow { width: 60px; }

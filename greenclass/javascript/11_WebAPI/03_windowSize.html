@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WindowSize</title>
+    <style>
+        .tag { display: inline-block; background:khaki; padding:16px; font-size: 30px; border:30px solid coral; }
+        span { font-size:16px; }
+        .box { position: absolute; top: 500px; left: 200px; width: 400px; height: 200px; border: 20px solid red; background: lightblue; }
+    </style>
+
+</head>
+<body>
+    <div class="tag">윈도우 사이즈</div>
+    <div class="box">박스 사이즈</div>
+    <script>
+        const tag = document.querySelector('.tag');
+        const box = document.querySelector('.box');
+        const rect = box.getBoundingClientRect();
+        console.log(rect);
+
+
+        function updateTag() {
+            tag.innerHTML = `
+            window.screen : ${window.screen.width},  ${window.screen.height} 
+            <span> -스크린(모니터) 가로길이, 변하지 않음</span><br>
+            window.outer : ${window.outerWidth},  ${window.outerHeight}
+            <span> -브라우저(주소창, 탭, 스크롤바 포함) 가로,세로길이</span><br> 
+            window.inner : ${window.innerWidth},  ${window.innerHeight}
+            <span> -브라우저(주소창, 탭, 스크롤바 포함❌) 가로,세로길이</span><br> 
+            document.client : ${document.documentElement.clientWidth},${document.documentElement.clientHeight}
+            <span>보더 안쪽만, background가 먹히는 영역</span><br><br>
+
+            clientWidth : ${tag.clientWidth}, ${tag.clientHeight}
+            <span>padding포함, border❌, 스크롤바❌</span><br>
+            offsetWidth : ${tag.offsetWidth}, ${tag.offsetHeight}
+            <span>padding포함,border포함, 스크롤바포함</span><br>`;
+            // window는 생략가능
+        }
+        
+        function boxSize(){
+            box.innerHTML = `<strong>Element.getBoundingClientRect()</strong><br/>엘리먼트의 크기, 뷰포트에 상대적인 위치 정보를 제공하는 메소드<br/><br/>
+            ${rect.bottom} - 화면 위에서부터 박스 아래쪽까지의 거리<br/>
+            ${rect.right} - 화면 왼쪽에서부터 박스 오른쪽까지의 거리<br/>
+            ${rect.x}, ${rect.y} 박스의 x, y좌표<br/>
+            ${rect.width}, ${rect.height} 박스의 가로넓이, 세로넓이<br/>`;
+        }
+        
+        window.addEventListener('resize', () => {
+            updateTag();
+        });
+        updateTag();
+        boxSize();
+
+    </script>
+</body>
+
+</html>

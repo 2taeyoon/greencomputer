@@ -1,0 +1,31 @@
+/*
+    @each 데이타 in $변수 { 반복내용 }
+*/
+
+$fruits: apple, banana, grape, mango;  //변수(배열??) 설정
+
+.fruits{
+    @each $fruit in $fruits {
+        $i: index($fruits,$fruit);  //index(배열이름, 아이템) -전체아이템의 수
+
+        li:nth-child(#{$i}) {
+            background-image:url('../img/#{$fruit}.png') ;
+        }
+    }
+
+    // #을 붙이는건 interpolation(보간법)
+    // 문자열이나 셀럭터 등에 변수를 같이 사용할 때 
+
+    li {
+        list-style: none;
+        width:200px; height:200px;
+        display: inline-block;
+        background: {
+            size: contain;
+            repeat:no-repeat;
+            position: center center;
+        }
+
+    }
+
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 buttons</title>
+<style>
+    * { margin: 0; padding: 0; }
+    body { font-family: sans-serif; }
+    body > div { padding: 30px 0 0 100px; border-bottom: 1px solid gray; height: 100px; box-sizing: border-box; }
+    h3 { display: inline-block; width: 120px; }
+    label { cursor: pointer; }
+    input[type="checkbox"] { display:none; }
+
+</style>
+</head>
+<body>
+    <!-- 햄버거 버튼 1 시작 -->
+    <div id="hamburgBtn1">
+        <h3>open/close</h3>
+        <input type="checkbox" id="ham-input1">
+        <label for="ham-input1">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <style>
+            #hamburgBtn1 label { position:relative; display: inline-block; width: 24px; height: 24px; vertical-align: middle; }
+            #hamburgBtn1 span { position:absolute; width: 24px; height: 2px; background-color: #000; transition: 0.5s; }
+
+            #hamburgBtn1 span:nth-child(1) { top: 4px; }
+            #hamburgBtn1 span:nth-child(2) { top:50%; transform: translateY(-50%); }
+            #hamburgBtn1 span:nth-child(3) { bottom: 4px; }
+            /* 체크박스가 체크되어 있을 때 bar 모양이 X로 변환 */
+            #ham-input1:checked + label > span:nth-child(1) { transform:rotate(45deg); margin: 7px 7px 0 0; /*transform-origin: right bottom;*/ }
+            #ham-input1:checked + label > span:nth-child(2) { width:0; }
+            #ham-input1:checked + label > span:nth-child(3) { transform:rotate(-45deg); margin: 0px 7px 7px 0; }
+        </style>
+    </div>
+    <!-- 햄버거 버튼 1 끝 -->
+    <!-- 햄버거 버튼 2 시작 -->
+    <div id="hamburgBtn2">
+        <h3>open/close</h3>
+        <input type="checkbox" id="ham-input2">
+        <label for="ham-input2">
+            <span></span>
+        </label>
+        <style>
+            #hamburgBtn2 label { position:relative; display: inline-block; width: 20px; height: 20px; vertical-align: middle; }
+            #hamburgBtn2 span { position: absolute; top:calc(50% - 1px); width:20px; height: 2px; background-color: #000; transition: 0.5s ease-out; }
+            #hamburgBtn2 span::before, #hamburgBtn2 span::after { position:absolute; content:""; width: 20px; height: 2px; background-color: #000; transition: 0.5s ease-out; }
+                /* absolute 하면 display 설정을 안해줘도 inline-block, block가 된다*/
+            #hamburgBtn2 span::before { top:-6px; }
+            #hamburgBtn2 span::after { top: 6px; }
+
+            #ham-input2:checked + label span::before { top:0; transform: rotate(225deg); background-color: rgb(52, 171, 207); }
+            #ham-input2:checked + label span { background:transparent; }
+            #ham-input2:checked + label span::after { top:0; transform: rotate(-225deg); background-color: rgb(52, 171, 207); }
+        </style>
+    </div>
+    <!-- 햄버거 버튼 2 끝 -->
+   <!-- 입체 버튼 시작 -->
+   <div id="upDownBtn">
+    <h3>입체 버튼</h3>
+    <input type="checkbox" id="upDown-input">
+    <label for="upDown-input">BUTTON</label>
+    <style>
+        #upDownBtn label { background-color: red; display: inline-block; color: #fff; padding: 10px 20px; border-radius: 8px; border-bottom: 5px solid rgb(173, 0, 0); }
+        #upDown-input:checked + label { border-bottom-width: 1px; transform: translateY(5px); background-color: blue; border-bottom: 5px solid rgb(2, 2, 201); }
+    </style>
+</div>
+    <!-- 입체 버튼 끝 -->
+   <!-- on/off 시작 -->
+   <div id="onOffBtn">
+    <h3>on/off</h3>
+    <input type="checkbox" id="onOff-input">
+    <label for="onOff-input">
+        <span>ON</span>
+        <span>OFF</span>
+        <span class="circleBtn"></span>
+    </label>
+    <style>
+        #onOffBtn label { position: relative; background: #c8c8c8; display: inline-block; width:100px; height: 40px; border-radius: 20px; vertical-align: middle; transition: 0.3s; }
+        #onOffBtn label span { position: absolute; top: 50%; transform: translateY(-50%); }
+        #onOffBtn label span:nth-child(1) { left: 10px; transition: 0.3s; }
+        #onOffBtn label span:nth-child(2) { right: 10px; transition: 0.3s; }
+        #onOffBtn .circleBtn { margin: 0 2px; border:2px solid #fff; width:32px; height: 32px; border-radius: 50%; background-color: dodgerblue; transition: 0.3s; }
+
+        #onOff-input:checked + label { background: #e68bb8; overflow: hidden; }
+        #onOff-input:checked + label span:nth-child(1) { font-weight: bold; }
+        #onOff-input:checked + label span:nth-child(2) { display: none; }
+        #onOff-input:checked + label span.circleBtn { background: #c56495; margin-left: 62px; }
+    </style>
+</div>
+    <!-- on/off 끝 -->
+    <!-- close/open 시작 -->
+    <div id="openBtn">
+        <h3>close/open</h3>
+        <input type="checkbox" id="open-input">
+        <label for="open-input">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+            <span>내 트위터 바로가기</span>
+        </label>
+        <style>
+            #openBtn label { display: inline-block; background-color: dodgerblue; width: 36px; height: 36px; border-radius: 5px; padding: 5px 0 0 5px; box-sizing:border-box; vertical-align: middle; transition: 0.3s; }
+            #openBtn svg { width: 26px; fill: #fff; }
+            #openBtn span { position:absolute; font-size: 14px; padding: 4px 0 0 11px; color: #fff; }
+
+            #open-input:checked + label { width: 180px; }
+        </style>
+    </div>
+    <!-- close/open 끝 -->
+    <!-- 3D Button 시작 -->
+    <div id="rotateBtn">
+        <h3>3D(rotate)</h3>
+        <input type="checkbox" id="rotate-input">
+        <label for="rotate-input">
+            <span><svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path d="M298.06,224,448,277.55V496a16,16,0,0,1-16,16H368a16,16,0,0,1-16-16V384H192V496a16,16,0,0,1-16,16H112a16,16,0,0,1-16-16V282.09C58.84,268.84,32,233.66,32,192a32,32,0,0,1,64,0,32.06,32.06,0,0,0,32,32ZM544,112v32a64,64,0,0,1-64,64H448v35.58L320,197.87V48c0-14.25,17.22-21.39,27.31-11.31L374.59,64h53.63c10.91,0,23.75,7.92,28.62,17.69L464,96h64A16,16,0,0,1,544,112Zm-112,0a16,16,0,1,0-16,16A16,16,0,0,0,432,112Z"/></svg></span>
+            <span><svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path d="M322.6 192C302.4 192 215.8 194 160 278V192c0-53-43-96-96-96C46.38 96 32 110.4 32 128s14.38 32 32 32s32 14.38 32 32v256c0 35.25 28.75 64 64 64h176c8.875 0 16-7.125 16-15.1V480c0-17.62-14.38-32-32-32h-32l128-96v144c0 8.875 7.125 16 16 16h32c8.875 0 16-7.125 16-16V289.9c-10.25 2.625-20.88 4.5-32 4.5C386.2 294.4 334.5 250.4 322.6 192zM480 96h-64l-64-64v134.4c0 53 43 95.1 96 95.1s96-42.1 96-95.1V32L480 96zM408 176c-8.875 0-16-7.125-16-16s7.125-16 16-16s16 7.125 16 16S416.9 176 408 176zM488 176c-8.875 0-16-7.125-16-16s7.125-16 16-16s16 7.125 16 16S496.9 176 488 176z"/></svg></span>
+        </label>
+        <style>
+            #rotateBtn { border-bottom: none; }
+            #rotateBtn label { position:relative; display: inline-block; width: 100px; height: 50px; vertical-align: middle; }
+            #rotateBtn label span { position:absolute; width:100%; height: 100%; transition: 0.5s; color:#fff; text-align: center; line-height: 50px;
+                backface-visibility: hidden; /* 3D로 회전된 요소의 뒷면을 숨김 */}
+            #rotateBtn label span:nth-child(1) { background:dodgerblue; transform: rotateX(0deg); }
+            #rotateBtn label span:nth-child(2) { background: orangered; transform: rotateX(180deg); }
+            #rotateBtn label span svg { position: absolute; top:50%; transform: translate(-50%, -50%); width: 40px; height: 40px; fill: #fff; }
+
+            #rotate-input:checked + label span:nth-child(1) { transform: rotateX(180deg); }
+            #rotate-input:checked + label span:nth-child(2) { transform: rotateX(0deg); }
+        </style>
+    </div>
+    <!-- 3D Button 끝 -->
+</body>
+</html>

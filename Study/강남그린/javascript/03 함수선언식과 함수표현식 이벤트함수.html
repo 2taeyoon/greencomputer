@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수선언식과 함수표현식 이벤트함수</title>
+</head>
+<style>
+    button { width: 300px; height: 200px;}
+    p.cc { color: red; }
+    img { width: 30%; }
+    img.event { width: 50%; }
+    hr{
+        border: solid 1px red;
+    }
+    body { -webkit-font-smoothing: antialiased; }
+</style>
+<script>
+    var num = 16;
+    function zoomIn(){
+    var _body = document.getElementsByTagName('body') [0]
+        _body.style.fontSize = num+'px'
+        num++;
+    }
+</script>
+<body>
+    <h3>이벤트함수</h3>
+    <img src="img/이벤트함수.jpg" alt="이벤트함수" class="event"><br/>
+    <button onclick="zoomIn()">font size up</button>
+    <p class="cc">내용물</p>
+    <img src="img/함수선언식.jpg" alt="함수선언식"><br/>
+    <h3>함수선언식</h3>
+    <p>함수선언식에서 호출은 순서가 상관없다</p>
+    <img src="img/함수표현식.jpg" alt="함수표현식"><br/>
+    <h3>함수표현식</h3>
+    <p>함수표현식에서 호출 순서는 매우 중요하다</p>
+</body>
+</html>

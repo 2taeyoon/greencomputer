@@ -1,0 +1,12 @@
+.meals { position: absolute; transform: translateX(-50%); left: 50%; width: 90%; max-width: 45rem; margin: 3rem auto; border-radius: 1rem; box-shadow: 0 0 10px 10px rgba(0,0,0,.3); color: #333;
+    animation: meals_up 0.8s ease-in;
+}
+
+@keyframes meals_up {
+    0% {
+        opacity: 0; transform: translateX(-50%) translateY(5rem);
+    }
+    100% {
+        opacity: 1; transform: translateX(-50%) translateY(0);
+    }
+}

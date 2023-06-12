@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sementic tag</title>
+    <style>
+        nav#green ul{ 
+            list-style: none;
+        }
+        
+        nav#green li{
+            float: left;
+            width: 12.5%;
+        }
+        a{
+            font-size: 15px;
+        }
+        footer{
+            background-color: #414141;
+            clear: both;
+        }
+        h2{
+            color: #fff;
+            text-align: center;
+        }
+        footer ul{
+            list-style: none;
+            clear: both;
+        }
+        footer li{
+            float: left;
+        }
+        footer p{
+            clear: both;
+        }
+        footer span{
+            display:block;
+            text-align: center;
+        }
+        footer ul.first{
+            width: 50%;
+            margin: auto;
+        }
+        footer ul.first li{
+            width: 20%;
+            font-size: 13px;
+            color: #fff;
+            line-height: 35px;
+        }
+        footer ul.sec{
+            width: 70%;
+            margin: auto;
+        }
+        footer ul.sec li{
+            width: 16.66667%;
+            font-size: 13px;
+            color: #fff;
+            line-height: 35px;
+        }
+        .divgo{color: blue;}
+        .divco{color: red;}
+        *{margin: 0; padding: 0;}
+        nav ul#menu{list-style: none;}
+        #navi{background-color: yellow;}
+        #navi>#menu{background-color: aqua; /*overflow: hidden;*/}
+        #navi>#menu>li{
+            float: left; width: 25%; text-align: center; background-color: bisque; position: relative;
+        }
+        #navi>#menu>li>ul{position: absolute; background-color: red; width: 100%;}
+        section{clear: both; height: 800px; background-color: blueviolet;}
+    </style>
+</head>
+<body>
+    <nav id="green">
+        <ul>
+            <li>그린소개</li>
+            <li>지점안내</li>
+            <li>교육과정</li>
+            <li>커뮤니티</li>
+            <li>포트폴리오</li>
+            <li>고객센터</li>
+            <li>취업센터</li>
+            <li>상담센터</li>
+        </ul>
+    </nav>
+    <footer>
+        <h2>&#40;주&#41;지아이티아카데미</h2>
+        <ul class="first">
+            <li>페이스북</li>
+            <li>카페</li>
+            <li>블로그</li>
+            <li>네이버TV</li>
+            <li>유튜브</li>
+        </ul>
+        <ul class="sec">
+            <li>이용약관</li>
+            <li>개인보호정책</li>
+            <li>제휴제안</li>
+            <li>오류신고</li>
+            <li>사이트맵</li>
+            <li>e그린원격평생교육원</li>
+        </ul>
+        <P>
+            <span>COMPANY INFO</span>
+            <span>대표자 : 김상곤</span>
+            <span>사업자등록번호 : 220-85-34964</span>
+            <span>통신판매업신고 : 2013-서울강남-01429호</span>
+            <span>주소 : 서울 강남구 테헤란로5길 24, 장연빌딩/ 3~7층</span>
+            <span>COPYRIGHT &copy; 2019 GIIACADEMY &#91;교습과정 및 비용&#93;</span>
+        </P>
+    </footer>
+    <nav id="navi">
+        <ul id="menu">
+            <li>메뉴1
+                <ul>
+                    <li>서브메뉴</li>
+                    <li>서브메뉴</li>
+                </ul>
+            </li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+            <li>메뉴4</li>
+        </ul>
+    </nav>
+    <section>
+        이미지슬라이드
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>position: absolute; 는 단독 행위를 하여 바디 기준으로 올라감. position: relative; 는 부모 기준으로 움직인다.</div>
+    <div>부모에 relative; 를 주고 자식에 absolute; 를 주면 바디 기준이 아니라 부모 기준으로 움직인다.</div>
+    <br>
+    <div class="divgo">float은 left right 등으로 사용하여 여러개의 단락을 일자로 정렬하는 것</div>
+    <div class="divgo">margin: auto; 블록 요소를 가운데 정렬할 떄 사용</div>
+    <div class="divgo">line-height: 는 글자의 수직 정렬</div>
+    <br>
+    <div>overflow: hidden 은 가로 세로가 있으면 재단선 처럼 잘라서 사용하는 것.
+    <br>가로 세로가 없으면 자식 요소에 의해서 블럭이 씌워진다</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="divco">&#91;clear: both;&#93;는 부모를 포함하여 자식 요소나 후손 요소가 가지고 있는 높이만큼 띄어서 유지한다.
+    <br>즉, 부모가 높이값이 없어도 자식과 후손 요소에 맞춰서 띄어진다. 원위치 시키는 것</div>
+    <br>
+    <div>태그 안에서 개별 선택 ex&#41; div&#62;p = div 안에 div의 자식인 p요소만 선택.
+        <div>태그 안에서 전체 선택 ex&#41; div공백p = div 안의 모든 자식 및 후손 p요소를 선택.</div>
+    </div>
+</body>
+</html>

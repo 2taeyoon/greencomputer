@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM(Document Object Model)</title>
+    <style>
+        * { margin:0; padding:0; }
+        body { background:#F5EAEA}
+        body > div { width:400px; margin:150px auto; padding:2px; border:5px solid rgba(250, 25, 13, 0.5); border-radius:16px; box-shadow:4px 4px 10px rgba(160, 46, 40, 0.5); }
+        h1 { margin:20px 0; text-align:center;  }
+        h2 { color:#774f75; margin-bottom:30px; text-align:center;  }
+        h1 img { width:150px; }
+        
+        form { padding:0 50px 20px}
+        label { display:block; font-size:18px; padding:20px 0 5px; }
+        input[type="text"],
+        input[type="password"] { width:100%; padding:10px;font-size:18px; border:none; border-radius:8px;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus { outline:none; background:#ffcbcb}
+        .submit { text-align:right; padding-top:20px;   }
+        input[type="submit"] { background: #f87823; padding:10px; color:#fff; border:none; border-radius:8px; cursor:pointer; }
+        input[type="submit"]:hover { background:#fa190d; transform:translate(2px, 2px); }
+
+        #feedback_wrap { height:30px; }
+        #feedback { background:url('../img/event_alarm.png') no-repeat; padding-left:30px;}
+    </style>
+</head>
+<body>
+    <div id="page">
+        <h1><img src="./icon.svg" alt=""></h1>
+        <h2>html EventHandler</h2>
+        <form action="">
+            <div id="feedback_wrap">
+                <div id="feedback"></div>
+            </div>
+
+            <label for="username">사용자 이름 :</label>
+            <input type="text" id="username" onblur="checkName()">
+
+            <label for="pw">비밀번호 :</label>
+            <input type="password" id="pw">
+
+            <div class="submit">
+                <input type="submit" value="LOG IN">
+            </div>
+        </form>
+    </div>
+    <script>
+        function checkName() {
+            const elName = document.getElementById('username')
+            const elMsg = document.getElementById('feedback')
+
+            if (elName.value.length < 5) {
+                elMsg.textContent = '이름은 5글자 이상 써주세요!'
+            }
+        }
+    </script>
+</body>
+</html>

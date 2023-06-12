@@ -1,0 +1,70 @@
+/*
+    믹스인- 함수와 비슷, 반복적, 재사용할 css스타일 그룹
+*/
+
+//mixin스타일 정의
+@mixin box-style() {
+    width: 150px;
+    height: 150px;
+    background: orange;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font: {
+        size: 2rem;
+        weight: bold
+    }
+}
+
+//인자지정(인자에 기본값도 설정)
+@mixin box-style2($bg-color: gray, $text-color: dingray) {
+    width: 150px;
+    height: 150px;
+    background: $bg-color;
+    color: $text-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font: {
+        size: 2rem;
+        weight: bold
+    }
+}
+
+@mixin border-line($width: 2px, $style: solid, $color: black) {
+    border: $width $style $color;
+}
+
+
+//믹스인 호출
+.b1 {
+    @include box-style;
+}
+
+.b2 {
+    @include box-style;
+    color: blue;
+}
+
+//믹스인 적용(인자가 지정된 상태), 인작을 안적어주면 기본값이 적용된다
+.b3 {
+    @include box-style2(pink, purple);
+    @include border-line(dotted);
+}
+
+.b4 {
+    @include box-style2(#a5cbf1);
+    @include border-line(10px, dotted, blue)
+}
+
+
+
+.wrap {
+    display: flex;
+    column-gap: 30px;
+    row-gap: 30px;
+    flex-wrap: wrap;
+}

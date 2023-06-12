@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>10 object-fit</title>
+ </head>
+ <style>
+	.car {
+		width: 400px;
+		height: 400px;
+		border: 2px solid black;
+		float: left;
+		margin: 20px;
+		}
+
+	.car1 { overflow: hidden; }
+	.car2 {  }
+	.car3 {  }
+	.car4 {  }
+
+	
+	.car img { width: 100%; height: 100%; }
+
+	.car1 img {  }
+	.car2 img { object-fit: fill; }
+	.car3 img { object-fit: cover; }
+	.car4 img { object-fit: contain; }
+ </style>
+ <body>
+  	object-fit: 속성을 사용하면 부모 요소 영역에서<br/>
+	자식요소로 지정한 이미지, 동영상들의 비율을 설정할 수 있다<br/>
+	object-fit 은 요소에 height, width를 100%로 설정해야 사용이 가능하다<br/>
+	object-fit: fill; 는 요소의 비율을 무시하고 꽉 채운다<br/>
+	object-fit: cover; 는 요소의 비율에 맞춰 여백 없이 꽉 채운다(요소가 잘린다)<br/>
+	object-fit: contain; 는 요소의 비율을 유지, 요소가 잘리지 않게 채워준다 (그래서 여백이 생김)<br/><br/>
+	<div class="car car1">
+		<img src="img/car1.jpg" alt="">	
+	</div>
+	<div class="car car2">
+		<img src="img/car1.jpg" alt="">	
+	</div>
+	<div class="car car3">
+		<img src="img/car1.jpg" alt="">	
+	</div>
+	<div class="car car4">
+		<img src="img/car1.jpg" alt="">	
+	</div>
+ </body>
+</html>

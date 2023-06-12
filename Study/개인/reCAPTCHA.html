@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>reCAPTCHA Demo</title>
+
+    <!-- reCAPTCHA 스크립트를 로드하고 onloadCallback 함수를 호출합니다 -->
+    <style>
+        body { width: 1024px; margin: 0 auto; }
+        form { width: 500px; margin: 50px auto; }
+    </style>
+    <script src="https://www.google.com/recaptcha/enterprise.js?onload=onloadCallback&render=explicit" async defer></script>
+    <script defer type="text/javascript">
+
+        function validateForm() {
+            var response = grecaptcha.getResponse();
+
+            if (response.length == 0){
+                alert("Please complete the reCAPTCHA verification.");
+                return false; // 폼 제출을 막습니다.
+            }
+            return true; // 폼 제출을 허용합니다.
+        };
+
+        var onloadCallback = function () {
+            grecaptcha.enterprise.render('captchaDiv', {
+                'sitekey': '6LcvfxMmAAAAAIx4oZ0vNKRTtZdtCydqeHtQJlGo',
+                'callback': cheackCaptcha,
+                'theme': 'dark',
+            });
+        };
+
+        function stopSubmit(e){
+            e.stopPropagation();
+            e.preventDefault();
+        }
+
+        var isCheack = false;
+        function cheackCaptcha(){
+            isCheack = true;
+        }
+
+        function submitOk(){
+            if(isCheack === false){
+                alert("'로봇이 아닙니다'를 체크해주세요.");
+                return false;
+            } else {
+                return alert("form action 및 php 미구현");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- captchaDiv 위젯을 통해 reCAPTCHA를 사용하여 폼을 제출하는 폼 -->
+    <form action="/" method="post" name="captchaForm" onsubmit="javascript:stopSubmit(event);">
+        <div id="captchaDiv"></div>
+        <input type="submit" onclick="javascript:submitOk();">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offset</title>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        article { position: relative; margin:50px;  }
+        h2 { padding:20px 0 ;}
+        p { position:absolute; top:0; left:0; width:0; height:0; border:10px solid red; transition: .5s; }
+        .offset2 img { height: 200px; }
+    </style>
+</head>
+<body>
+    <article class="offset1">
+        <h2>offset1</h2>
+        <img src="../img/pic13.png" alt="">
+        <p></p>
+        <script>
+            const offset1Img = document.querySelector('.offset1 img');
+            const offset1P = document.querySelector('.offset1 p');
+
+            offset1Img.onclick = function () {
+                const aaa = offset1Img.offsetWidth;
+                console.log(aaa)
+
+                offset1P.style = `width: ${aaa}px; 
+                            height:${this.offsetHeight}px;
+                            top:${this.offsetTop}px;
+                            left:${this.offsetLeft}px;
+                            `;
+            }
+        /*
+            A.offsetWidth     -A의 가로크기 (결과값은 정수. padding,border포함)
+            A.offsetTop       -offsetParent 기준으로 위에서 부터 얼마 떨어져있는지
+
+            A.offsetParent - A의 가장 가까운 조상요소(css설정 기준)
+        */
+        </script>
+    </article>
+    <article class="offset2">
+        <h2>offset2</h2>
+        <figure>
+            <img src="../img/pic14.png" alt="">
+            <img src="../img/pic15.png" alt="">
+            <img src="../img/pic16.png" alt="">
+            <img src="../img/pic17.png" alt="">
+        </figure>
+        <p></p>
+        <script>
+            function init() {
+                const offset2Img = document.querySelectorAll('.offset2 img');
+                const offset2P = document.querySelector('.offset2 p');
+
+                offset2Img.forEach(function (img) {
+                    img.onmouseover = function () {
+                        offset2P.style = `width:${this.offsetWidth}px;
+                                height:${this.offsetHeight}px;
+                                top:${this.offsetTop}px;
+                                left:${this.offsetLeft}px; `;
+                    }
+                })
+            }
+            init();
+
+        </script>
+    </article>
+</body>
+</body>
+</html>

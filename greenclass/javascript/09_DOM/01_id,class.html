@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM(Document Object Model)</title>
+  <style>
+    * { margin:0; padding:0; }
+    body { background:#F5EAEA}
+    body > div { width:400px; margin:150px auto; padding:2px; text-align:center; border:1px solid #fa190d}
+    h1 { margin:20px 0 }
+    h2 { color:#774f75; margin-bottom:30px; }
+    h1 img { width:150px; }
+    li { list-style:none; background:#fda4a4; color:#fff; line-height:50px; margin:2px; padding-left:20px;  }
+    .red { background:#fa190d; }
+    .sky { background:#7ec0ec; }
+    .orange { background:#ffba26;}
+  </style>
+</head>
+<body>
+  <div id="page">
+    <h1><img src="icon.svg" alt=""></h1>
+    <h2>id,class로 선택</h2>
+    <ul>
+      <li id="one">리에주 와플</li>
+      <li id="two">믹스 베리 요거트</li>
+      <li>머랭 쿠키</li>
+      <li class="red">봉봉 오 쇼콜라</li>
+      <li class="red">휠리 치즈 브프샌드위치</li>
+      <li class="red">화이트 와인</li>
+      <li class="red">화이트 와인2</li>
+      <li class="red">화이트 와인3</li>
+    </ul>
+  </div>
+  <script>
+    const elPage = document.getElementById('page');
+    elPage.style.backgroundColor = 'YellowGreen';
+    
+    document.getElementById('one').className = 'sky'
+    //id 'one'있는 부분에 클라스 sky를 추가한다
+
+    two.style.color = 'black';  //id는 그냥 사용해도 됨(클라스❌)
+    
+    const elRed = document.querySelector('.red');   //클라스가 여러번 적용되었을때는 첫번째만 가져옴
+    console.log('querySelector사용',elRed);
+    const elRed2 = document.getElementsByClassName('red');
+    console.log('getElementsByClassName사용',elRed2);
+    //class는 여러개가 있다는 것을 가정, 1개있을때도 배열형태로 가져옴
+
+    //elRed2.className = 'orange';  -❌ 
+    elRed2[1].className = 'orange';
+    //배열의 아이템(배열값)이 어떤건지 구체적으로 지정해야함
+    //className  - 기존 클라스는 없애고 새로 바꿈 
+
+    elRed2[elRed2.length-1].className='sky';
+    //적용된 클라스 중에 제일 마지막 꺼에 적용
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>

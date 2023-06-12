@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>12 form tag</title>
+ </head>
+ <style>
+	body { background-color: #cceeff; }
+	#wrap { background-color: #fff; width: 700px; margin: 100px auto; height:500px; text-align: center; }
+	input { padding: 15px; margin: 10px; font-size:16px; }
+ </style>
+ <body>
+	<div id="wrap" autocomplete="off">
+		<h1><img src="logo/daumimg.jpg" alt="logo"</h1>
+
+		<form method="post" action="">
+		<input type="text" placeholder="아이디" size="40" maxlength="10"><br/>
+		<input type="password" placeholder="비밀번호" size="40" maxlength="10"><br/>
+		<input type="submit" style="width:330px; background: #ABC600; border: 0"><br/>
+		<label><input type="checkbox">로그인 상태 유지</label>
+	</form>
+	</div>
+	<p>form tag는 method="post" method="get" 입력,</p>
+	<p>input type="text"는 텍스트 입력창 생성, input type="password" 비밀번호 입력창 생성</p>
+	<p>placeholder="입력창에 텍스트", size="글자수까지 가로사이즈를 늘려주는 것"</p>
+	<p>maxlength="글자수 제한", input type="submit"은 제출 버튼 생성</p>
+	<p>input type="checkbox"는 체크 박스 생성</p>
+
+ </body>
+</html>

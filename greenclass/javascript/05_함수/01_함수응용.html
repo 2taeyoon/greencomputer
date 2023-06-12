@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 응용</title>
+    <style>
+        body {background-color: rgb(200, 228, 144); }
+        body > div { width: 500px; margin: 200px auto; background: rgba(255,255,255, 0.3); text-align: center; padding: 20px; }
+        #p1 { font-size: 20px; }
+        #p2 {background-color: rgb(164, 196, 101); padding: 20px 0; }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>두개의 숫자를 곱한값과 더한값</h1>
+        <p id="p1">
+            <script>
+                let num1 = prompt('첫번째 숫자는?');
+                let num2 = prompt('두번째 숫자는?');
+                document.write(`첫번째 숫자 : ${num1} <br/>두번째 숫자 : ${num2}`);
+            </script>
+        <p id="p2">
+            <script>
+                function calculat(){
+                    let plus = Number(num1) + Number(num2);
+                    let multi = num1 * num2;
+                    document.write(`num1과 num2를 더한 값은? ${plus}<br/> num1과 num2를 곱한 값은? ${multi}`); }
+                    calculat();
+            </script>
+        </p>
+    </div>
+</body>
+</html>

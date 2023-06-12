@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>11 hyperlinke</title>
+ </head>
+ <style>
+ 	h1{margin-top: 50px; text-align: center; background-color: yellow;}
+ 	a:link { color: #009966; text-decoration: none; } /* 방문 전 링크 상태, text-decoration 언더라인 */
+	a:visited { color: red; } /* 방문 후 링크 상태 */
+	a:hover { color: black; text-decoration: underline;} /* 마우스를 올려놨을 때 활성화 */
+	a:active { background: yellow; font-weight: bold; cursor: no-drop;} /* 마우스를 클릭을 했을 때 활성화 */
+	img { border:none; margin-right: 30px; height: 60px;}
+	body {background-color: #99ffcc;}
+	hr { margin: 300px 0; ]
+	.menu li { margin-top: 10px; }
+	.menu a { background-color: #0099ff; cursor: point;}
+ </style>
+ <body>
+	<h1>다양한 hyperlink</h1>
+	<ol class="menu">
+		<li><a href="#shopping">내가 자주가는 사이트들</a></li>
+		<li><a href="#practice">쇼핑 사이트</a></li>
+		<li><a href="#etc">기타 링크들</a></li>
+		<a href="09 image text.html#bottom">image text 문서의 밑으로 가기</a>
+	</ol>
+	<hr id="shopping"/>
+	<!-- 문서 내에서 링크 -->
+	<h2>내가 자주가는 사이트들</h2>
+	<ul>
+		<li><a href="https://www.naver.com/">네이버</a></li>	
+		<li><a href="https://blog.hwahae.biz/?gclid=EAIaIQobChMIo-jriJD4_AIV4pJmAh2uYQVKEAAYASAAEgIAfPD_BwE">화해</a></li>
+		<li><a href="https://www.samsung.com/sec/" target="_blank">삼성 갤럭시 스토어(새탭으로 열기)</a></li>
+											<!-- target="_blank"는 새탭으로 열기 -->
+		<li><a href="https://www.amazon.com/">아마존</li></a>
+		<li><a href="https://ceo.baemin.com/">배달의 민족</li></a>
+		<li><a href="https://www.apple.com/kr">애플 스토어</li></a>
+	</ul>
+	<hr id="practice"/>
+	<h2>쇼핑 사이트</h2>
+	<h2><a href="https://ceo.baemin.com/"><img src="logo/baeming.png" alt="배민" title="배달의 민족"></a></h2>
+	<h2><a href="https://www.auction.co.kr/"><img src="logo/auction.png" alt="옥션" title="옥션"></a></h2>
+	<h2><a href="https://www.gmarket.co.kr/"><img src="logo/gmarket.png" alt="지마켓" title="지마켓"></a></h2>
+	<hr/>
+	<a name="etc"></a>
+	<h2>기타 링크들</h2>
+	<a href="img/dog.jpg">강아지 사진</a><br/>
+	<a href="img/free.zip">압축 파일</a><br/>
+	<a href="img/video.mp4">동영상</a>
+	<p><a href="#">▲ top</a></p>\
+	<h2>a tag의 가상링크 # - 화면의 제일 윗 부분으로 올라가는 기본 속성</h2>
+	<h2>원하는 태그에 id를 설정하고 다른 a tag의 링크에 #id 이름을 지정하면 페이지 내에서 이동한다.</h2>
+	<h2>a tag에 zip, mp4, mp3. jpg 등 추가 할 수 있다</h2>
+	<hr/>
+ </body>
+</html>

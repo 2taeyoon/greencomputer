@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
+
+body { animation: sky 20s infinite linear;
+    font-family:Verdana, Geneva, Tahoma, sans-serif; }
+
+h1 { position: absolute; width: 1000px; top: 50%; left: 50%; transform: translate(-50%, 150px);
+    font: 70px 'Codystar', cursive; text-align: center; color: #fff; }
+section { position: absolute; width: 1000px; height: 400px; left:50%; top: 50%;
+    transform: translate(-50%, -70%); }
+
+section .sky {}
+section .sky .sun { position: absolute; left:50%; top:-150px; margin-left: -100px;
+    animation: sun 20s infinite linear; transform-origin: center 550px; }
+section .sky .cloud1 { position: absolute; left:-30; top:-20px; animation: flow 15s infinite linear; }
+section .sky .cloud2 { position: absolute; left:0; top:0; animation: flow 20s infinite linear; }
+
+section .town {}
+section .town .circle { position: absolute; left:330px; bottom: 120px;
+    animation: rotate 20s infinite linear; }
+section .town .town_night { position: absolute; left:40px; bottom:0; }
+section .town .town_day { position: absolute; left:40px; bottom:0; animation: day 20s infinite linear; }
+
+section .people {}
+section .people .man { position: absolute; left:0; bottom: 0; animation: flow 10s infinite linear;}
+section .people .family { position: absolute; left:0; bottom: 0; animation: flow 20s infinite linear; }
+
+@keyframes sky {
+    0% { background: #503a83; } /* 새벽 */
+    25% { background: #2e5b9e; } /* 낮 */
+    50% { background: #41bef0; } /* 완전 대낮 */
+    75% { background: #2c1e4e; } /* 완전 밤 */
+    100% { background: #503a83; } /* 새벽 */
+}
+
+@keyframes rotate {
+    0% { transform:rotate(0); }
+    100% { transform:rotate(360deg); }
+}
+
+@keyframes sun {
+    0% { opacity:0; transform: rotate(-90deg); } /* 새벽 */
+    25% { opacity:1; transform: rotate(-30deg);} /* 낮 */
+    50% { opacity:1; transform: rotate(30deg); } /* 완전 대낮 */
+    75% { opacity:0; transform: rotate(90deg); } /* 완전 밤 */
+    100% { opacity:0; transform: rotate(-90deg); } /* 새벽 */
+}
+
+@keyframes day {
+    0% { opacity:0; } /* 새벽 */
+    25% { opacity:1; } /* 낮 */
+    50% { opacity:1; } /* 완전 대낮 */
+    75% { opacity:0; } /* 완전 밤 */
+    100% { opacity:0;  } /* 새벽 */
+}
+
+@keyframes flow {
+    0% { opacity:0; left:0; }
+    10% { opacity:1; }
+    90% { opacity:1; }
+    100% { opacity:0; left:90%; }
+}

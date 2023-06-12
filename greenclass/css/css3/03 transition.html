@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>03 trasition</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+ </head>
+ <style>
+	* { margin: 0; padding: 0; }
+	h1 { margin-bottom: 30px; }
+	li { list-style: none; }
+	body { font-family: 'Verdana', 'Geneve', 'Tahoma', 'Arial', sans-serif; color: DarkSlateGray; padding: 50px; }
+	a { text-decoration: none; color: inherit; }
+		/* inherit - 부모 요소에서 설정한 속성을 이어 받는다. */
+	li > a { display: block; padding: 15px; }
+
+	.current { background: yellowgreen; color: white; font-weight: bold; }
+
+	ul { margin-bottom: 50px; border: 1px solid gray; background: #ececec }
+
+	.ex1 { width: 250px; border: 1px solid gray; background: #ececec}
+	.ex1 > li { height: 50px; }
+	.ex1 > li > a { border-bottom: 1px solid gray; transition: 0.3s; }
+	.ex1 > li > a:hover { background: darkslategray; color: white; }
+	.ex1 > li:last-child a { border-bottom: none; }
+
+	.ex2 > li { float: left; }
+	.ex2 > li:first-child { float: right; }
+	.ex2 > li > a { transition: 0.5 ease-in; }
+	.ex2 > li > a:hover { background: darkslategray; color: white; }
+	.ex2::after { display: block; clear: both; content:""; }
+
+	.ex3 > ul { height: 15px; }
+	.ex3 > li { float: left; }
+	.ex3 > li > a { line-height: 50px; padding: 0 15px; }
+	.ex3::after { display: block; clear: both; content:""; }	
+	.ex3 a span { display: block; height: 3px; background: darkslategray;
+	margin-top: -15px; width: 0%; transition: 0.3s ease-out; }
+	.ex3 a:hover span { width: 100%; }
+
+	.ex4 > ul { height: 15px; }
+	.ex4 > li { float: left; }
+	.ex4::after { display: block; clear: both; content:""; }	
+	.ex4 > li > a { line-height: 50px; padding: 0 15px; transition: 1s; }
+	.ex4 > li > a:hover { color: yellowgreen; }
+	.ex4 a:after: { display: block; height: 3px; background: yellowgreen; margin-top: -15px; }
+	.ex4 > li > a::after { display: block; clear: both; content:""; width: 100%; height: 3px; 
+		background: yellowgreen; position: relative; top: -15px; opacity:0; transition: opacity 1s; }
+	.ex4 > li > a:hover::after { opacity:1; }
+		/* a:hoer:after 는 a 태그에 올려 놨을 때만 after를 생성한다 */
+
+	li.line a span { display: block; height: 3px; background: yellowgreen; margin-top: -15px; }
+	li > .line2 > a { color: blue; }
+	li > .line2 > a:after { display: block; clear: both; content:""; width: 100%; height: 3px;
+		background: red; position: relative; top: -15px; }
+ </style>
+ <body>
+	<h1>네비게이션 연습 - transition 추가</h1>
+	<h2>ex-1</h2>
+	<ul class="ex1">
+		<li class="current"><a href="#"><i class="fa-sharp fa-solid fa-envelope"></i>Mail</a></li>
+		<li><a href="#">News</a></li>
+		<li><a href="#">Life</a></li>
+		<li><a href="#">Entertainment</a></li>
+		<li><a href="#">Shopping</a></li>
+	</ul>
+	<h2>ex-2</h2>
+	<ul class="ex2">
+		<li><a href="#"><i class="fa-sharp fa-solid fa-envelope"></i>Mail</a></li>
+		<li><a href="#">News</a></li>
+		<li class="current"><a href="#">Life</a></li>
+		<li><a href="#">Entertainment</a></li>
+		<li><a href="#">Shopping</a></li>
+	</ul>
+	<h2>ex-3</h2>
+	<ul class="ex3">
+		<li class="#"><a href="#"><i class="fa-sharp fa-solid fa-envelope"></i>Mail<span></span></a></li>
+		<li><a href="#">News<span></span></a></li>
+		<li><a href="#">Life<span></span></a></li>
+		<li><a href="#">Entertainment<span></span></a></li>
+		<li><a href="#">Shopping<span></span></a></li>
+	</ul>
+	<h2>ex-4</h2>
+	<ul class="ex4">
+		<li><a href="#"><i class="fa-sharp fa-solid fa-envelope"></i>Mail</a></li>
+		<li><a href="#">News</a></li>
+		<li class="#"><a href="#">Life</a></li>
+		<li><a href="#">Entertainment</a></li>
+		<li><a href="#">Shopping</a></li>
+	</ul>
+ </body>
+</html>

@@ -1,0 +1,15 @@
+@charset "UTF-8";
+body { font-family:Verdana, Geneva, Tahoma, sans-serif; background: #d3d3d3; }
+
+header { background: #fff; }
+header > div { max-width: 1000px; margin: auto; height: 80px; }
+header > div > h1 { font-size: 3em; line-height: 80px; }
+
+main { background: #929090; }
+main > div { padding: 50px; text-align: center; }
+main > div > img { display: block; width: 500px; margin: 0 auto 50px; }
+button { }
+
+footer { padding: 30px 0; }
+footer > div { max-width: 1000px; margin: auto; text-align: right; }
+footer > div > small { color: #fff; }

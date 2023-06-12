@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>02 flex</title>
+  <style>
+  	body > div { width: 90%; height: 150px; margin:20px auto;
+	border: 3px solid #000; }
+	h3 { text-align: center; }
+	
+	/* 부모요소 */
+	.wrap { display: flex; }
+	.wrap > div { width: 100% } /* <- 자식 요소 */
+
+	.b2 { flex-direction: column-reverse; }
+	/* flex-direction: 은 자식요소의 방향을 나타낸다
+		row((가로)flex 적용 기본 상태) / row-reverse(시작점 가로 반대)
+		column((세로)flex 미적용 상태 / column-reverse(시작점 세로 반대) */
+
+	.b3 { flex-wrap: wrap; width: 400px; height: auto; }
+	/* flex-wrap: 자식요소를 강제로 한줄에 배치되게 할 것인지
+		여러줄로 나누어 표시될지 결정
+		wrap은 자식요소들의 가로길이가 가로길이가 지켜지고,
+		부모의 길이가 넘치면 여러줄으로 표시
+		nowrap: (기본) 부모요소보다 넘칠때도 억지로 한줄에 배치 */
+	.b3 > div { width: 200px; height: 100px; }
+
+
+	/* 자식요소 */
+
+	.table-box { display: table; }
+	.table-box > div { display: table-cell; vertical-align: middle;
+		text-align: center; }
+
+	.wrap2 > div:nth-child(1) { flex:1; }
+	.wrap2 > div:nth-child(2) { flex:5; }
+	.wrap2 > div:nth-child(3) { flex:2; }
+
+	.c2 { flex-direction: column; }
+	.c3 { width: 400px; flex-wrap: wrap; }
+
+	body > div > div { } /* 자식 요소들 */
+	body > div > div:nth-child(1) { background: lightpink; }
+	body > div > div:nth-child(2) { background: yellowgreen; }
+	body > div > div:nth-child(3) { background: lightskyblue; }
+  </style>
+ </head>
+ <body>
+	<div class="table-box">
+		<div>box1</div>
+		<div>display: table<br>이용한 레이아웃</div>
+		<div>box3</div>
+	</div>
+	<h3>↓wrap 클래스에 diplay: flex; wrap > div 요소에 width: 100% 적용됨↓</h3>
+	<div class="wrap b1">
+		<div>box1</div>
+		<div>flex 적용시 자식요소에 width:100% 주면<br> 컨텐츠에 상관없이 3등분</div>
+		<div>box3</div>
+	</div>
+
+	<div class="wrap b2">
+		<div>클래스 wrap b2</div>
+		<div>flex-direction: column-reverse;</div>
+		<div>box3</div>
+	</div>
+
+	<div class="wrap b3">
+		<div>클래스 wrap b3</div>
+		<div>flex-wrap: wrap; width: 400px; height: auto;</div>
+		<div>자식 div에 width: 200px; height: 100px;</div>
+	</div>
+
+	<div class="wrap wrap2 c1">
+		<div>flex:1; 단이 가지는 넓이를 비율로 조절</div>
+		<div>flex:5; 단이 가지는 넓이를 비율로 조절</div>
+		<div>flex:2; 단이 가지는 넓이를 비율로 조절</div>
+	</div>
+	<div class="wrap wrap2 c2">
+		<div>box1</div>
+		<div>flex-direction</div>
+		<div>box3</div>
+	</div>
+	<div class="wrap wrap2 c3">
+		<div>box1</div>
+		<div>flex-direction</div>
+		<div>box3</div>
+	</div>
+ </body>
+</html>

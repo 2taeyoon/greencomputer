@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>06 layout4</title>
+ </head>
+ <style>
+ 	* { margin: 0; padding: 0; box-sizing: border-box; }
+	li { list-style: none; }
+	
+	#container { width: 1024px; margin: auto; }
+
+	header, footer { height: 100px; background: #ccc; line-height: 100px; }
+
+	main { border: 1px solid black;  margin: 20px 0; }
+	aside { float: left; width: 200px; background: #e0e0e0; padding: 20px; margin: 30px; }
+	section { background: #f9d2fd; padding: 20px; margin-left: 270px; }
+	
+	.bottom { clear: both; background: #e0e0e0; overflow: hidden; }
+	.bottom p { width: 350px; }
+	.bottom * { float: left; }
+ </style>
+ <body>
+ 	<div id="container">
+		<header>
+			<h1>header</h1>
+		</header>
+		<main>
+			<aside class="left">
+				<ul>
+					<li>Nulla hendrerit, eros vel tincidunt dapibus</li>
+					<li>Nulla hendrerit, eros vel tincidunt dapibus</li>
+					<li>Nulla hendrerit, eros vel tincidunt dapibus</li>
+					<li>Nulla hendrerit, eros vel tincidunt dapibus</li>
+					<li>Nulla hendrerit, eros vel tincidunt dapibus</li>
+				</ul>
+			</aside>
+			<section>
+				<p>
+					Sed nunc lorem, lobortis et feugiat sed, mattis a elit. Nam et leo eleifend, tempus ex sed, tempor ex. Nunc at lacus ut purus accumsan vehicula vitae lobortis orci. Sed vehicula sodales massa ut aliquam. Quisque ac dolor elementum, suscipit nisl in, aliquam ex. Nullam semper nisi arcu, non lacinia lectus ultrices eget. Fusce ornare turpis nec lacus accumsan vulputate. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla tincidunt risus felis, quis hendrerit enim accumsan in. Ut facilisis velit sed leo suscipit, in vehicula est lacinia. Suspendisse ut libero venenatis massa consectetur condimentum. Cras eleifend auctor lacus, a sodales velit convallis sit amet. Phasellus odio lorem, aliquam in sapien ut, lacinia sagittis tortor. Nunc bibendum vestibulum sagittis. Curabitur arcu arcu, vehicula quis augue ut, eleifend venenatis sem. Integer placerat felis vulputate est auctor, in consequat neque efficitur.
+				</p>
+				<p>
+					Sed nunc lorem, lobortis et feugiat sed, mattis a elit. Nam et leo eleifend, tempus ex sed, tempor ex. Nunc at lacus ut purus accumsan vehicula vitae lobortis orci. Sed vehicula sodales massa ut aliquam. Quisque ac dolor elementum, suscipit nisl in, aliquam ex. Nullam semper nisi arcu, non lacinia lectus ultrices eget. Fusce ornare turpis nec lacus accumsan 
+				</p>
+				<p>
+					Sed nunc lorem, lobortis et feugiat sed, mattis a elit. Nam et leo eleifend, tempus ex sed, tempor ex. Nunc at lacus ut purus accumsan vehicula vitae lobortis orci. Sed vehicula sodales massa ut aliquam. Quisque ac dolor elementum, suscipit nisl in, aliquam ex. Nullam semper nisi arcu, non lacinia lectus ultrices eget. Fusce ornare turpis nec lacus accumsan vulputate. Class aptent taciti sociosqu ad litora torquent p
+				</p>
+			</section>
+		</main>
+		<footer>
+			<h2>footer</h2>
+		</footer>
+	</div>
+ </body>
+</html>

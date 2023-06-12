@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>15 text2</title>
+ </head>
+ <style>
+	h1:first-of-type {
+	color: skyblue;
+	/* 폰트 그림자는 text-shadow 나머지는 box-shadow */
+	text-shadow: 2px 5px 3px rgba( 0,0,0,0.5 ); /* text-shadow: x축이동 y축이동 퍼지는블러효과 색상 */
+	}
+	h1:nth-of-type(2) { 
+		text-shadow: 0 0 5px blue;
+		color : #fff;
+	}
+	h1:last-of-type(3) {
+		text-shadow: 0 0 3px yellow, 0 0 10px red; /* 두개 적용시 중간에 , 작성 */
+	}
+	
+	ul.list1 {
+		list-style-type: disclosure-open;  /* decimal / disclosure-closed / disclosure-open */
+	}
+	ul.list2 {
+		list-style-image: url('img/dot.gif');
+		list-style-position: inside; /* inside / outside */
+	}
+ </style>
+ <body>
+	<h1>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</h1>
+	<h1>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</h1>
+	<hr/>
+	<h1>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</h1>
+	<ul class="list1">
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>		
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>		
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>		
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>
+	</ul>
+	<ul class="list2">
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>		
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>		
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>		
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>
+	</ul>
+ </body>
+</html>

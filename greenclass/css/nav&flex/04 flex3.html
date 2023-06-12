@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>04 flex3</title>
+  <style>
+  	.flex-container { display: flex; border: 3px solid black; margin: 20px auto; }
+	.flex-container > * { flex-basis:20%; background: #107bf1; }
+	.flex-container > div:last-of-type { flex-basis:30px; background: #f54145; }
+
+	.c1 { justify-content: flex-end; }
+	.c2 { justify-content: center; }
+	.c3 { justify-content: space-between; }
+	.c4 { justify-content: space-around; }
+	/* justify-content: (주축을 기준으로 요소를 정렬)
+		flex-start; (시작지점) flex-end; (끝지점)
+		center; (주축을 따라 중앙에 배치)
+		space-between; (균일한 간격으로 시작, 끝까지 배치)
+		space-around; (아이템 양옆의 여백이 동일하게 배치)
+		space-evenly; (양끝, 아이템 사이 여백도 동일 배치)
+	*/
+
+	.c5 { height: 300px; align-items: center; }
+	.c5 > * { height: 50px; }
+	/* alugn-items: (주축의 수직방향 기준으로 요소를 정렬)
+		- flex-start / flex-end / center */
+  </style>
+ </head>
+ <body>
+ 	<h1>플렉스 아이템(자식요소) 속성들</h1>
+	<div class="flex-container c1">
+		<p class="item1-1">item1-1(flex-basis: 0px;)</p>
+		<div class="item1-2">item1-2</div>
+	</div>
+	<div class="flex-container c2">
+		<span class="item2-1">item2-1(flex-basis: 0px;)</span>
+		<div class="item2-2">item2-2</div>
+		<div class="item2-3">item2-3</div>
+	</div>
+	<div class="flex-container c3">
+		<span class="item3-1">item3-1(justify-content: center;)</span>
+		<div class="item3-2">item3-2(justify-content: center;)</div>
+		<div class="item3-3">item3-3(justify-content: center;)</div>
+		<div class="item3-3">item3-4(justify-content: center;)</div>
+	</div>
+	<div class="flex-container c4">
+		<span class="item4-1">item4-1(justify-content: space-around;)</span>
+		<div class="item4-2">item4-2(justify-content: space-around;)</div>
+		<div class="item4-3">item4-3(justify-content: space-around;)</div>
+	</div>
+	<div class="flex-container c5">
+		<span class="item5-1">item5-1(align-items: center;)</span>
+		<div class="item5-2">item5-2(align-items: center;)</div>
+		<div class="item5-3">item5-3(align-items: center;)</div>
+	</div>
+	<h3>justify-content: (주축을 기준으로 요소를 정렬)</h3>
+	<h3>flex-start; (시작지점) flex-end; (끝지점)</h3>
+	<h3>center; (주축을 따라 중앙에 배치)</h3>
+	<h3>space-between; (균일한 간격으로 시작, 끝까지 배치)</h3>
+	<h3>space-around; (아이템 양옆의 여백이 동일하게 배치)</h3>
+	<h3>alugn-items: (주축의 수직방향 기준으로 요소를 정렬)</h3>
+	<h3>- flex-start / flex-end / center</h3>
+ </body>
+</html>

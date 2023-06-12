@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형 레이아웃3</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box;}
+    header, aside, article, footer { border:1px solid #666; margin:10px; padding:20px;}
+    aside li { list-style:none; display:inline-block;}
+    footer { text-align:center }
+
+    .double > div { background:powderblue; margin:10px}
+
+    /* 태블릿  768px~  */
+    @media (min-width:768px){
+      .double { display:flex; }
+      .double > div { flex:1; }
+    }
+
+    /* pc  960px~  */
+    @media (min-width:960px){
+      aside { float:left; width:20% }
+      section { float:right; width:75%}
+      main:after { display:block; content:""; clear:both; }
+      aside li { display:block;}
+    }
+
+    /* 큰pc  1280px~  */
+    @media (min-width:1280px){
+      main, .header_in { width:1280px; margin:auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header_in">
+      <h1>Responsive Layout</h1>
+    </div>
+  </header>
+  
+  <main>
+    <aside>
+      <ul>
+        <li>Menu-1</li>
+        <li>Menu-2</li>
+        <li>Menu-3</li>
+        <li>Menu-4</li>
+        <li>Menu-5</li>
+        <li>Menu-6</li>
+      </ul>
+    </aside>
+    <section>
+      <article>
+        <p>Consequat laboris ad ex enim. Adipisicing laborum non reprehenderit commodo sint proident nisi culpa consectetur nulla non est. Ut fugiat elit nostrud quis. Voluptate dolor deserunt nulla Lorem sint aute est anim. Laborum dolore reprehenderit anim pariatur velit dolor veniam nulla est magna Lorem. Ea aliquip officia proident duis Lorem anim incididunt nulla eiusmod fugiat. Laboris consequat ipsum proident excepteur Lorem labore Lorem incididunt eu aliquip incididunt ad ullamco.</p>
+        <p>Fugiat voluptate tempor esse nisi et aliquip adipisicing adipisicing. Qui culpa culpa reprehenderit ullamco consequat et laborum fuum minim Lorem nulla duis. Non ex exercitation qui tempor qui non nostrud proident voluptate sunt ea.</p>
+        <p>Nulla ea magna culpa voluptate eprehenderit aute cupidatat. Occaecat irure ullamco dolore ad cillum do anim voluptate proident fugiat et adipisicing. Culpa excepteur enim sint nisi. Officia incididunt voluptate Lorem duis anim nostrud est exercitation aliqua est qui anim.</p>
+      </article>
+      <article>
+        <p>Consequat laboris ad ex enim. Adipisicing laborum non reprehenderit commodo sint proident nisi culpa consectetur nulla non est. Ut fugiat elit nostrud quis. Voluptate dolor deserunt nulla Lorem sint aute est anim. Laborum dolore reprehenderit anim pariatur velit dolor veniam nulla est magna Lorem. Ea aliquip officia proident duis Lorem anim incididunt nulla eiusmod fugiat. Laboris consequat ipsum proident excepteur Lorem labore Lorem incididunt eu aliquip incididunt ad ullamco.</p>
+        <p>Fugiat voluptate tempor esse nisi et aliquip adipisicing adipisicing. Qui culpa culpa reprehenderit ullamco consequat et laborum fuum minim Lorem nulla duis. Non ex exercitation qui tempor qui non nostrud proident voluptate sunt ea.</p>
+      </article>
+      <article class="double">
+        <div>Consequat laboris ad ex enim. Adipisicing laborum non reprehenderit commodo sint proident nisi culpa consectetur nulla non est. Ut fugiat elit nostrud quis. Voluptate dois Lorem anim incididunt nulla eiusmod fugiat. Laboris consequat ipsum proident excepteur Lorem labore Lorem incididunt eu aliquip incididunt ad ullamco.</div>
+        <div>Fugiat voluptate tempor esse nisi et aliquip adipisicing adipisicing. Qui culpa culpa reprehenderit ullamco consequat et laborum fuum minim Lorem nulla duis. Non ex exercitation qui tempor qui non nostrud proident voluptate sunt ea.</div>
+      </article>
+    </section>
+  </main>
+
+  <footer>  
+    반응형 레이아웃 연습페이지 입니다
+  </footer>
+
+</body>
+</html>

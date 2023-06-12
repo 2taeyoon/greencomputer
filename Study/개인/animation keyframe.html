@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+#Layer_1 {
+    width: 500px;
+}
+
+.cls-1 { 
+    fill: #e33b41;
+    stroke: #8d8a8b;
+    stroke-width: 4;
+    stroke-dasharray: 1000; /* Total length of the path */
+    stroke-dashoffset: 1000; /* Position the first dash at the end of the path */
+    animation: draw 2s linear infinite forwards;
+}
+
+
+@keyframes draw {
+
+    0% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 1000;
+    }
+}
+
+</style>
+<body>
+    <!--<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244.53 284.21">
+        <path class="cls-1" pathlength="500" d="M214.75,39.09S65.24-68.7,30.69,76s135.61-5.94,200.8,76.89S91.08,334.4.34,253.71"/>
+    </svg>--> <!-- pathlength : 패스의 길이 -->
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336.41 273.2">
+        <path class="cls-1" pathlength="1000" d="M205.4,277.16S-1.9,246.7,7.6,142.26s154-173.54,251.6-117.1,99.69,164.57,57,245.28"
+            transform="translate(-6.78 -4.46)" />
+    </svg>
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.container {
+  width: 1000px;
+  margin: 50px;
+  padding: 20px;
+  border: 2px solid black;
+  text-align: center;
+}
+.container p {
+  display: inline-block;
+  background: skyblue;
+  color: white;
+}
+.container p span {
+  font-weight: bold;
+  color: black;
+}/*# sourceMappingURL=main.css.map */

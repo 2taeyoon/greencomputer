@@ -1,0 +1,15 @@
+@mixin box-style($bg-color:gray,$text-color:dingray){
+    width:500px; height:500px;
+    background:$bg-color; color:$text-color;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font: {
+        size:2rem;
+        weight:bold
+    }
+}
+
+@mixin border-line($width:2px, $style:solid, $color:black){
+    border:$width $style $color;
+}

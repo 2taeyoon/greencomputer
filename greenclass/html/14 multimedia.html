@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>14 multimedia</title>
+ </head>
+ <style>
+	body { text-align: center; }
+ </style>
+ <body>
+	<h1>유튜브 가져오기</h1>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/WihQCnmBSJo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/5AYSF4YEDj8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	<h1>오디오 가져오기</h1>
+	<!-- 예전 방식의 멀티미디어 사용
+	<!-- <embed src="media/conf.mp3" alt="" width="500" height="200" autoplay loop="3">-->
+
+	<!-- 파일이 1개일 때 사용
+	<audio src="media/spring.mp3" alt="" controls autoplay loop> -->
+
+	<!-- 파일이 여러개일 때 사용 -->
+	<audio controls autoplay loop muted>
+		<source src="media/Kalimba.ogg" alt="" type="audio/ogg">
+		<source src="media/Kalimba.mp3" alt="" type="audio/mp3">
+		이 브라우저는 오디오가 작동되지 않습니다.
+	</audio>
+
+	<!-- 예전 방식의 멀티미디어 사용
+	<embed src="media/Wildlife.mp4" alt="" width="600" height="450"> -->
+	<h1>동영상 가져오기</h1>
+	<!-- autoplay가 실행되기 위해서는 muted를 동시에 사용해야 함
+	playsinline - ios 사용시 전체 화면으로 처리되는 것을 막아 준다 -->
+	<!-- <video src="media/Wildlife.mp4" playsinline controls muted autoplay width="960" height="540"></video> -->
+	<video controls poster="img/videophoto.png" playsinline muted width="550" height="450">
+		<source src="media/flight.mp4" type="video/webm">
+		<source src="media/flight.mp4" type="video/webm">
+		<source src="media/Wildlife.webm" type="video/mp4">
+		이 브라우저는 비디오가 작동되지 않습니다.
+	</video>
+ </body>
+</html>

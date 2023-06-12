@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 basic</title>
+    <style>
+        .divgo{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            color: yellow;
+        }
+        header{border: 5px solid blue}
+        nav{margin: 50px;
+            padding: 100px;
+            background-color: yellow;
+            border: 20px solid green;
+            width: 200px;}
+        section{
+            background-image: url(img/ai.jpg); width: 50%; height: 500px;
+            background-repeat: no-repeat;
+            background-color: burlywood;
+            background-size: cover;
+            background-position: center;}
+        article{
+            background-color: aquamarine;
+            width: 200px;
+            height: 200px;
+            border-radius: 10px 20px 30px 40px;
+            overflow: hidden;
+            position: relative;
+        }
+        article div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            color: yellow;
+            position: absolute;
+            top:100px; left:10px
+        }
+        #navi{
+            background-color: yellow
+        }
+        .list3{
+            background-color: aqua
+        }
+        nav{width: 200px}
+        .divbb{color: rgb(0, 0, 255);}
+        .divpp{color: rgb(255, 0, 0);}
+        .divfo{color: rgb(255, 0, 0);}
+        .divheader{color:rgb(0, 0, 255);}
+        .divlogin{
+            background-color: yellow;
+            display: inline;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="divgo">내용</div>
+    <br>
+    <div class="divlogin"><a href="06 login.html">login</a></div>
+    <div class="divlogin"><a href="02 sementic tag.html">기초연습2</a></div>
+    <div class="divlogin"><a href="03 position.html">절대 상대 픽스 z-index</a></div>
+    <div class="divlogin"><a href="04 link style.html">link style css</a></div>
+    <div class="divlogin"><a href="05 media query.html">media query</a></div>
+    <br>
+    <br>
+    <header>
+        로고
+    </header>
+    <br>
+    <br>
+    <section>
+        슬라이더이미지
+    </section>
+    <div>background-image: url(이미지폴더/이미지파일);</div>
+    <div>background-repeat: no-repeat; 반복되는 걸 하지 않겠다는 설정</div>
+    <div>background-size: cover; 는 이미지를 늘리거나 줄여도 백그라운드 크기에 맞춰 유지</div>
+    <br>
+    <article>
+        게시판
+        <div>
+            자식요소
+        </div>
+    </article>
+    <div>overflow: hidden; 부모가 자식을 잘라주는 것</div>
+    <nav>
+        
+        <ul id="navi">
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li class="list3">메뉴3</li>
+            <li>메뉴4</li>
+        </ul>
+    </nav>
+    <div class="divbb">element는 폰트 가로의 넓이, padding은 면, border는 선, margin은 빈공간</div>
+    <div class="divbb">border는 사이즈 속성(solid, dotted 등) 색상 순서</div>
+    <div class="divbb">color은 폰트 색상, background-color는 배경 박스 색상</div>
+    <br>
+    <div class="divpp">id는문서 문단에 같은 이름을 한 번만, class는 여러번 가능</div>
+    <div class="divpp">body에 id="예시"를 지정하고 head에 style을 만들어서 사용가능</div>
+    <div class="divpp">id는 style에 '#예시'로 사용하고, class는 style에 '.예시'로 사용한다.</div>
+    <br>
+    <img src="img/semantic.jpg" alt="시멘틱" width="60%" height="40%">
+    <div class="divheader">header는 문서의 상단</div>
+    <div class="divheader">nav는 메뉴를 클릭하여 서브페이지로 이동하는 것</div>
+    <div class="divheader">section은 슬라이드 이미지 메인</div>
+    <div class="divheader">article은 독립적으로 구분해 배포하거나 재사용할 수 있는 것으로 블로그 ,매거진, 뉴스 기사 등</div>
+    <div class="divheader">footer는 회사 주소, 패밀리 사이트, 하단에 많이 활용</div>
+    <div class="divheader">div id="nav"는 sementic 태그에서 nav로 변경하여 사용하는 것</div>
+    <h1>h1 안녕하세요(블록o)</h1>
+    <p>p 이태윤입니다(블록o)</p>
+    <br>
+    <br>
+    <div>div text1</div>  
+    <div>div text2</div>
+    <a href="기초연습2.html"><img src="img/ai.jpg" alt="AI 사진" width="100" height="100"></a>
+    <br>
+    <br>
+    <div class="divfo">img, a태그의 위치가 바뀌면 위치도 변경해야 한다.</div>
+    <div class="divfo">a 태그는 글자 및 이미지에 사용 가능하다.</div>
+    <div class="divfo">a href="주소"는 그 주소로 넘어가는 것</div>
+    <ul>
+        <li>menu1(숫자x)</li>
+        <li>menu2(숫자x)</li>
+    </ul>
+    <ol>
+        <li>menu3(숫자o)</li>
+        <li>menu4(숫자o)</li>
+    </ol>
+    <img src="img/brain.jpg" width="100" height="100" alt="뇌 사진">
+    <img src="" alt="뇌 사진" width="100" height="100">
+    <img src="img/brain.jpg" alt="뇌 사진" width="100" height="100">
+    디스플레이 인라인 요소는 이렇게 같은 줄로 올라간다. br을 사용하면 내릴 수 있다.
+    <h4>h123456, p태그는 블록 요소로 1줄을 차지한다.</h4>
+    <div>img는 단일 태그이며 src는 속성이다</div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    header {
+      position:fixed; top:0; left:0; width:100%; 
+      background:rgba(0,0,0,0.8); text-align:center;
+      transition:0.5s;
+    }
+    header h2 { color:#999; line-height:80px; border-bottom:1px solid #fff
+    }
+    header div { color:#fff; line-height:50px;}
+    header div span { color:red; font-weight:bold;}
+    header.scr { transform:translateY(-80px); background:rgba(255, 135, 225, 0.8);  }
+
+    section {}
+    section div { height:500px; font-size:5em;
+    display:flex; justify-content:center; align-items:center;
+    background:#ffcbcb;
+    }
+    section div:nth-child(even){ background:#cbefff;}
+  </style>
+</head>
+<body>
+  <header>
+    <h2>scroll</h2>
+    <div>scroll 값</div>
+  </header>
+  <section>
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+    <div>04</div>
+    <div>05</div>
+  </section>
+<script>
+  const header = document.querySelector('header')
+  const headerDiv =  document.querySelector('header div')  
+  //스크롤을 내릴때 - h2가 안보임
+  //스크롤을 오릴때 - h2가 보임
+  //스크롤 내릴때 올릴때 구분필요
+
+  let pos = { y:0, oy:0, status:true }   // 현재y, 과거y, boolean(true-내림/ false-올림)
+
+  window.onscroll = function(){  
+    pos.y = window.scrollY;       //현재 스크롤값
+    //console.log(window.scrollY);
+    pos.status = pos.oy < pos.y;  
+    //현재 스크롤값이 과거 스크롤 값보다 컸을때 true
+
+    pos.oy = pos.y;   //현재스크롤 값을 과거 스크롤값에 넣어줌
+    headerDiv.innerHTML = `
+      스크롤 현재값 <span>${pos.y}</span> / 
+      스크롤 전체 길이 <span>${document.scrollingElement.scrollHeight}</span> / 
+      브라우저의 너비1 <span>${window.innerWidth}</span> /
+      스크롤이 아래로 내려오는 중?  <span>${pos.status}</span>
+      ` 
+    
+    if(pos.status){
+      header.classList.add('scr')
+    } else {
+      header.classList.remove('scr')
+    }
+  }
+/*
+  window.scrollY   -문서가 수직으로 얼마나 스크롤됐는지 픽셀 단위로 반환
+  window.innerWidth  - 뷰포트너비, 스크롤바 제외
+*/
+</script>
+</body>
+</html>

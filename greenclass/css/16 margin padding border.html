@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>16 margin padding border</title>
+ </head>
+ <style>
+	* { margin: 0; padding: 0; } /* hrml이 자체적으로 가지고 있는 여백을 없애는 것 */
+	#wrap {
+		border: 2px solid #000;
+		margin: 50px;
+		padding: 30px;
+	}
+	.box { border: 2px solid black; background: #ebebeb; }
+
+	h3 { color: red; }
+
+	.b1 { padding: 5px 100px 30px; }
+		/* 위 오른쪽 아래 왼쪽 - 4개일 때 */
+		/* 위 좌우 아래 - 3개일 때 */
+		/* 위아래 왼쪽오른쪽 - 2개일 때 */
+
+	.b2 { margin: 30px; border-bottom: thin solid green; }
+		/* 두께 thin / medium / thick */
+
+		#container > div {
+			width: 600px;
+			margin:0 auto 30px;
+		}
+	
+	.b3 {
+		border-width:5px;
+		border-style: dashed dotted; /* solid/ dotted/ dashde/ double / inset / groove */
+		border-color:coral red violet;
+	}
+	.b4 { padding: 50px; } /* 원래 크기 600px + 양옆 50px = 700px */
+	.b5 { padding: 50px; box-sizing: border-box; }
+			/*  box-sizing: border-box 정해진 width(height)안에 border padding를 포함 시킴(content-box( 기본 상태 )) */
+
+	.b6 { border-radius: 30px; border-left: none; }
+	.b7 { border-radius: 50%; }
+	.b8 { border-radius: 10px 100px 50px 0; } /* 왼쪽 상단부터 시계 방향 */
+	.b9 { box-shadow: 10px 5px 10px coral; }
+	.b10 { box-shadow: 0px 0px 10px skyblue; }
+	.b11 { box-shadow: 0px 0px 10px 10px pink; } /* box-shadow: x축이동 y축이동 퍼진정도 (확장거리값) 색상)*/
+			/* box-shadow: x축 y축 퍼진정도 (수치만큼 보더는 유지) 색상 */
+
+	.b12 { box-shadow: 0px 0px 20px inset coral; }
+			/* box-shadow: x축 y축 퍼진정도 (수치만큼 보더는 유지) (inset은 박스 안으로 들어감) 색상 */
+	.b13 { box-shadow: 0px 0px 20px inset red, 0px 0px 10px 15px skyblue; }
+
+ </style>
+ <body>
+	<div id="wrap">
+		<h1>margin, padding, border</h1>
+		<div class="box b1">
+		<h3>padding: 5px 100px 30px;</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus vulputate velit, laoreet ullamcorper nulla. Ut lobortis erat eu viverra mattis. Aenean vehicula orci diam, id iaculis ante iaculis id. Nullam dapibus ligula eleifend nibh ultrices ultricies. Aenean vel sem sit amet felis rhoncus finibus in eget lectus. Mauris sit amet sapien condimentum, rhoncus nisi sit amet, ornare nunc. Nullam eleifend tellus placerat felis volutpat egestas. Etiam convallis, diam vitae euismod ullamcorper, erat felis ullamcorper arcu, vitae sodales turpis odio maximus dui. In gravida nibh non posuere cursus. Nulla in imperdiet est. Sed sed velit diam. Sed sed nulla velit. Nunc augue nibh, pharetra vel rutrum ac, venenatis imperdiet nunc.
+			</p>
+		</div>
+		<div class="box b2">
+		<h3>padding: 5px 100px 30px;</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus vulputate velit, laoreet ullamcorper nulla. Ut lobortis erat eu viverra mattis. Aenean vehicula orci diam, id iaculis ante iaculis id. Nullam dapibus ligula eleifend nibh ultrices ultricies. Aenean vel sem sit amet felis rhoncus finibus in eget lectus. Mauris sit amet sapien condimentum, rhoncus nisi sit amet, ornare nunc. Nullam eleifend tellus placerat felis volutpat egestas. Etiam convallis, diam vitae euismod ullamcorper, erat felis ullamcorper arcu, vitae sodales turpis odio maximus dui. In gravida nibh non posuere cursus. Nulla in imperdiet est. Sed sed velit diam. Sed sed nulla velit. Nunc augue nibh, pharetra vel rutrum ac, venenatis imperdiet nunc.
+			</p>
+		</div>
+		<div id="container">
+			<div class="box b3">
+			<small><h3>border-width:5px; border-style: dashed dotted; border-color:coral red violet;</small></h3>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus vulputate velit, laoreet ullamcorper nulla. Ut lobortis erat eu viverra mattis. Aenean vehicula orci diam, id iaculis ante iaculis id. Nullam dapibus ligula eleifend nibh ultrices ultricies. Aenean vel sem sit amet felis rhoncus finibus in eget lectus. Mauris sit amet sapien condimentum, rhoncus nisi sit amet, ornare nunc. Nullam eleifend tellus placerat felis volutpat egestas. Etiam convallis, diam vitae euismod ullamcorper, erat felis ullamcorper arcu, vitae sodales turpis odio maximus dui. In gravida nibh non posuere cursus. Nulla in imperdiet est. Sed sed velit diam. Sed sed nulla velit. Nunc augue nibh, pharetra vel rutrum ac, venenatis imperdiet nunc.
+				</p>
+			</div>
+			<div class="box b4">
+			<h3>padding: 50px;</h3>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus vulputate velit, laoreet ullamcorper nulla. Ut lobortis erat eu viverra mattis. Aenean vehicula orci diam, id iaculis ante iaculis id. Nullam dapibus ligula eleifend nibh ultrices ultricies. Aenean vel sem sit amet felis rhoncus finibus in eget lectus. Mauris sit amet sapien condimentum, rhoncus nisi sit amet, ornare nunc. Nullam eleifend tellus placerat felis volutpat egestas. Etiam convallis, diam vitae euismod ullamcorper, erat felis ullamcorper arcu, vitae sodales turpis odio maximus dui. In gravida nibh non posuere cursus. Nulla in imperdiet est. Sed sed velit diam. Sed sed nulla velit. Nunc augue nibh, pharetra vel rutrum ac, venenatis imperdiet nunc.
+				</p>
+			</div>
+			<div class="box b5">
+			<h3>padding: 50px; box-sizing: border-box;</h3>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus vulputate velit, laoreet ullamcorper nulla. Ut lobortis erat eu viverra mattis. Aenean vehicula orci diam, id iaculis ante iaculis id. Nullam dapibus ligula eleifend nibh ultrices ultricies. Aenean vel sem sit amet felis rhoncus finibus in eget lectus. Mauris sit amet sapien condimentum, rhoncus nisi sit amet, ornare nunc. Nullam eleifend tellus placerat felis volutpat egestas. Etiam convallis, diam vitae euismod ullamcorper, erat felis ullamcorper arcu, vitae sodales turpis odio maximus dui. In gravida nibh non posuere cursus. Nulla in imperdiet est. Sed sed velit diam. Sed sed nulla velit. Nunc augue nibh, pharetra vel rutrum ac, venenatis imperdiet nunc.
+				</p>
+			</div>
+			<div class="box b6">
+			<h3>padding: 5px 100px 30px;</h3>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus vulputate velit, laoreet ullamcorper nulla. Ut lobortis erat eu viverra mattis. Aenean vehicula orci diam, id iaculis ante iaculis id. Nullam dapibus ligula eleifend nibh ultrices ultricies. Aenean vel sem sit amet felis rhoncus finibus in eget lectus. Mauris sit amet sapien condimentum, rhoncus nisi sit amet, ornare nunc. Nullam eleifend tellus placerat felis volutpat egestas. Etiam convallis, diam vitae euismod ullamcorper, erat felis ullamcorper arcu, vitae sodales turpis odio maximus dui. In gravida nibh non posuere cursus. Nulla in imperdiet est. Sed sed velit diam. Sed sed nulla velit. Nunc augue nibh, pharetra vel rutrum ac, venenatis imperdiet nunc.
+				</p>
+			</div>
+			<div class="box b7">
+			<h3>border-radius: 50%;</h3>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus vulputate velit, laoreet ullamcorper nulla. Ut lobortis erat eu viverra mattis. Aenean vehicula orci diam, id iaculis ante iaculis id. Nullam dapibus ligula eleifend nibh ultrices ultricies. Aenean vel sem sit amet felis rhoncus finibus in eget lectus. Mauris sit amet sapien condimentum, rhoncus nisi sit amet, ornare nunc. Nullam eleifend tellus placerat felis volutpat egestas. Etiam convallis, diam vitae euismod ullamcorper, erat felis ullamcorper arcu, vitae sodales turpis odio maximus dui. In gravida nibh non posuere cursus. Nulla in imperdiet est. Sed sed velit diam. Sed sed nulla velit. Nunc augue nibh, pharetra vel rutrum ac, venenatis imperdiet nunc.
+				</p>
+			</div>
+			<div class="box b8">
+			<h3>border-radius: 10px 100px 50px 0;</h3>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus vulputate velit, laoreet ullamcorper nulla. Ut lobortis erat eu viverra mattis. Aenean vehicula orci diam, id iaculis ante iaculis id. Nullam dapibus ligula eleifend nibh ultrices ultricies. Aenean vel sem sit amet felis rhoncus finibus in eget lectus. Mauris sit amet sapien condimentum, rhoncus nisi sit amet, ornare nunc. Nullam eleifend tellus placerat felis volutpat egestas. Etiam convallis, diam vitae euismod ullamcorper, erat felis ullamcorper arcu, vitae sodales turpis odio maximus dui. In gravida nibh non posuere cursus. Nulla in imperdiet est. Sed sed velit diam. Sed sed nulla velit. Nunc augue nibh, pharetra vel rutrum ac, venenatis imperdiet nunc.
+				</p>
+			</div>
+			<div class="box b9">
+			<h3>box-shadow: 10px 5px 10px coral;</h3>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus vulputate velit, laoreet ullamcorper nulla. Ut lobortis erat eu viverra mattis. Aenean vehicula orci diam, id iaculis ante iaculis id. Nullam dapibus ligula eleifend nibh ultrices ultricies. Aenean vel sem sit amet felis rhoncus finibus in eget lectus. Mauris sit amet sapien condimentum, rhoncus nisi sit amet, ornare nunc. Nullam eleifend tellus placerat felis volutpat egestas. Etiam convallis, diam vitae euismod ullamcorper, erat felis ullamcorper arcu, vitae sodales turpis odio maximus dui. In gravida nibh non posuere cursus. Nulla in imperdiet est. Sed sed velit diam. Sed sed nulla velit. Nunc augue nibh, pharetra vel rutrum ac, venenatis imperdiet nunc.
+				</p>
+			</div>
+			<div class="box b10">
+			<h3>box-shadow: 0px 0px 20px skyblue;</h3>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus vulputate velit, laoreet ullamcorper nulla. Ut lobortis erat eu viverra mattis. Aenean vehicula orci diam, id iaculis ante iaculis id. Nullam dapibus ligula eleifend nibh ultrices ultricies. Aenean vel sem sit amet felis rhoncus finibus in eget lectus. Mauris sit amet sapien condimentum, rhoncus nisi sit amet, ornare nunc. Nullam eleifend tellus placerat felis volutpat egestas. Etiam convallis, diam vitae euismod ullamcorper, erat felis ullamcorper arcu, vitae sodales turpis odio maximus dui. In gravida nibh non posuere cursus. Nulla in imperdiet est. Sed sed velit diam. Sed sed nulla velit. Nunc augue nibh, pharetra vel rutrum ac, venenatis imperdiet nunc.
+				</p>
+			</div>
+			<div class="box b11">
+			<h3>box-shadow: 0px 0px 10px 10px pink;</h3>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus vulputate velit, laoreet ullamcorper nulla. Ut lobortis erat eu viverra mattis. Aenean vehicula orci diam, id iaculis ante iaculis id. Nullam dapibus ligula eleifend nibh ultrices ultricies. Aenean vel sem sit amet felis rhoncus finibus in eget lectus. Mauris sit amet sapien condimentum, rhoncus nisi sit amet, ornare nunc. Nullam eleifend tellus placerat felis volutpat egestas. Etiam convallis, diam vitae euismod ullamcorper, erat felis ullamcorper arcu, vitae sodales turpis odio maximus dui. In gravida nibh non posuere cursus. Nulla in imperdiet est. Sed sed velit diam. Sed sed nulla velit. Nunc augue nibh, pharetra vel rutrum ac, venenatis imperdiet nunc.
+				</p>
+			</div>
+			<div class="box b12">
+			<h3>box-shadow: 0px 0px 20px inset coral;</h3>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus vulputate velit, laoreet ullamcorper nulla. Ut lobortis erat eu viverra mattis. Aenean vehicula orci diam, id iaculis ante iaculis id. Nullam dapibus ligula eleifend nibh ultrices ultricies. Aenean vel sem sit amet felis rhoncus finibus in eget lectus. Mauris sit amet sapien condimentum, rhoncus nisi sit amet, ornare nunc. Nullam eleifend tellus placerat felis volutpat egestas. Etiam convallis, diam vitae euismod ullamcorper, erat felis ullamcorper arcu, vitae sodales turpis odio maximus dui. In gravida nibh non posuere cursus. Nulla in imperdiet est. Sed sed velit diam. Sed sed nulla velit. Nunc augue nibh, pharetra vel rutrum ac, venenatis imperdiet nunc.
+				</p>
+			</div>
+			<div class="box b13">
+			<h3>box-shadow: 0px 0px 20px inset red, 0px 0px 10px 15px skyblue;</h3>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus vulputate velit, laoreet ullamcorper nulla. Ut lobortis erat eu viverra mattis. Aenean vehicula orci diam, id iaculis ante iaculis id. Nullam dapibus ligula eleifend nibh ultrices ultricies. Aenean vel sem sit amet felis rhoncus finibus in eget lectus. Mauris sit amet sapien condimentum, rhoncus nisi sit amet, ornare nunc. Nullam eleifend tellus placerat felis volutpat egestas. Etiam convallis, diam vitae euismod ullamcorper, erat felis ullamcorper arcu, vitae sodales turpis odio maximus dui. In gravida nibh non posuere cursus. Nulla in imperdiet est. Sed sed velit diam. Sed sed nulla velit. Nunc augue nibh, pharetra vel rutrum ac, venenatis imperdiet nunc.
+				</p>
+			</div>
+		</div>
+	</div>
+ </body>
+</html>

@@ -1,0 +1,30 @@
+$main-color:green;
+$sub-color:pink;
+
+
+.h1_1 {
+    @if $main-color == green { 
+        color:$sub-color }
+}
+
+
+// if(조건, 표현식1(참), 표현식2(거짓))
+.h1_2 {
+    color:if($main-color==green, $sub-color, skyblue )
+}
+
+
+$height:150px;
+
+.box1 {
+    height: if($height > 100px, $height , null);  
+    background:coral;
+}
+
+
+
+
+
+
+
+

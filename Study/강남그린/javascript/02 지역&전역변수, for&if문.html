@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 지역&전역변수, for&if문</title>
+    <style>
+        img{
+            width: 30%;
+        }
+        hr{
+            border: solid 1px red;
+        }
+        body { -webkit-font-smoothing: antialiased; }
+    </style>
+    <script>
+        for(var i = 0; i<=5; i++){
+            document.write(i);
+            document.write('<br>');
+        }
+    </script>
+</head>
+<body>
+    <br/>
+    <img src="img/지역전역변수.jpg" alt="">
+    <h3>지역변수, 전역변수</h3>
+    <p>function 함수( ){ }는 함수 선언식에서 호출문이 없으면 실행이 안된다</p>
+    <p>전역변수는 리본 괄호{ } 밖에 있는 변수를 말하며 지역변수와 별개의 변수이다</p>
+    <p>리본 괄호 실행문 안에서 선언된 변수명은 그 괄호 안에서만 실행되는 지역변수라고 한다</p>
+    <p>지역변수 안에서 변수가 실행되면 전역변수와 이름이 같아도 문제가 없고 지역변수 안에 var 없이 변수가 실행이 되면 전역변수에서 덮어져서 출력된다</p>
+    <p>항상 javascript는 변수명이 같으면 무조건 맨 밑에 것만 실행됨</p>
+    <hr/>
+    <img src="img/반복문.jpg" alt="">
+    <h3>for문(반복문)</h3>
+    <p>for(변수명; 비교식; 증감식){출력문}</p>
+    <p>비교식 : &#60;, &#62;, &#60;=, &#62;=</p>
+    <p>증감식 : ++ : 1씩 증가, -- : 1씩 감소,</p>
+    <p>for문은 한 번에 하나씩 출력이 되서 반환이 되는 방식임</p>
+    <p>사진 예제는 0과5 비교후 br태그, 1과5 비교후 br태그¨¨¨5와5 비교후 br태그로 출력된다</p>
+    <hr/>
+    <h3>if문</h3>
+</body>
+</html>

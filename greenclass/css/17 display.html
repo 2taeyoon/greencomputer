@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>17 display</title>
+ </head>
+ <style>
+ 	* { margin: 0; padding: 0; }
+	dt:frist-of-type {font-size: 20px;}
+	ul {
+		border: 1px solid black;
+		margin: 50px 100px;
+		list-style: none;
+	}
+	li { background: rgba(255,160,122, .5); }
+
+	.list1 li { 
+		display: inline;
+		padding: 10px;
+	}
+	dd:before:: { content:"- "; }
+	.list1 li { display:inline; padding: 10px; margin: 10px;}
+	.list1 li:last-child { width:300px; height:100px; }
+	.list2 li { display: inline-block; padding: 10px; margin: 10px; }
+	.list2 li:last-child { width:200px; height:200px;}
+
+	.list3 { overflow: hidden; }
+	.list3 li { float:left; }
+	.list4 li { float:left;  }
+	.list4::after { display: block; content:""; clear: both;}
+	/* float를 적용하면 전체적인 레이아웃이 망가짐
+		- 해결책1) 부모 요소에 overflow : hidden;
+		- 해결책2) 부모 요소에 ::after를 이용해 가상의 공간에 clear : both; 속성을 부여한다 */
+	
+	p { border: 1px solid black; margin: 50px 100px; }
+	.p1 > a, .p1 > span { background: lightgreen; padding: 10px; }
+	.p2 { padding: 10px; display: block; }
+	.p3 { padding: 10px; display: inline-block; }
+
+	/*   p > * 태그 안의 모든 태그들 전부, (p > a, p > span) p 바로 밑의 자식인 모든 a 태그와 p 바로 밑의 자식인 모든 span
+		(p > a, span) p 태그 바로 밑의 자식인 모든 a와 모든 span */
+</style>
+ <body>
+	<dl>
+		<dt><strong>inline 요소</strong></dt>
+		<dt>a, span, br, strong, label, audio, video...</dt>
+		<dt>크기값을 지정 ❌</dt>
+		<dt>상하 margin을 가질 수 ❌</dt>
+		<dt>한줄에 여러개 배치</dt>
+		<dt>기본 너비값(width)은 컨텐츠의 너비값</dt>
+	</dl>
+	<dl>
+		<dt><strong>inline-block 요소</strong></dt>
+		<dt>img, imput</dt>
+		<dt>크기값을 지정 할 수 있다 ⭕</dt>
+		<dt>상하 margin, padding을 가질 수 ⭕</dt>
+		<dt>한줄에 여러개 배치</dt>
+		<dt>기본 너비값(width)은 컨텐츠의 너비값</dt>
+	</dl>
+	<dl>
+		<dt><strong>block 요소</strong></dt>
+		<dt>div, ul, li, table, hr, form, h1, p, video..</dt>
+		<dt>크기값을 지정 할 수 있다 ⭕</dt>
+		<dt>상하 margin, padding을 가질 수 ⭕</dt>
+		<dt>한줄에 한개만 배치</dt>
+		<dt>기본 너비값(width)은 100%</dt>
+	</dl>
+	<ul class="list1">
+		<li>display: inline;</li>		
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>		
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>		
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>
+	</ul>
+	<ul class="list2">
+		<li>display: inline-block;</li>		
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>		
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>		
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>
+	</ul>
+	<ul class="list3">
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>		
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>		
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>		
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>
+	</ul>
+	<ul class="list4">
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>		
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>		
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>		
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>
+		<li>용기가 청춘의 위하여 살았으며, 생의 날카로우나 것이다.</li>
+	</ul>
+	<hr/><br/>
+	<p class="p1">
+		<a href="#">Lorem ipsum dolor sit amet</a>
+		<span>Lorem ipsum dolor sit amet</span>
+		<a href="#">Lorem ipsum dolor sit amet</a>
+		<a href="#">Lorem ipsum dolor sit amet</a>
+	</p>
+	<p class="p2">
+		<a href="#">Lorem ipsum dolor sit amet</a>
+		<span>Lorem ipsum dolor sit amet</span>
+		<a href="#">Lorem ipsum dolor sit amet</a>
+		<a href="#">Lorem ipsum dolor sit amet</a>
+	</p>
+	<p class="p3">
+		<a href="#">Lorem ipsum dolor sit amet</a>
+		<span>Lorem ipsum dolor sit amet</span>
+		<a href="#">Lorem ipsum dolor sit amet</a>
+		<a href="#">Lorem ipsum dolor sit amet</a>
+	</p>
+ </body>
+</html>

@@ -1,0 +1,15 @@
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: aquamarine;
+}
+@media all and (max-width:767px) {
+  .box {
+    background-color: salmon;
+  }
+}
+@media all and (min-width:768px) and (max-width: 1200px) {
+  .box {
+    background-color: yellowgreen;
+  }
+}/*# sourceMappingURL=main.css.map */

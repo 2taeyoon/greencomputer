@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>02 semantic tag</title>
+ </head>
+ <style>
+ 	header, nav, main, aside, footer, section { border: 1px solid black; margin: 10px; }
+	header h1, nav, aside, footer { text-align: center; }
+
+	nav ul { list-style: none; }
+	nav li { display: inline; margin: 0 20px; }
+
+	#wrap { width: 1100px; margin: 0 auto; border: 2px solid lightblue; overflow:hidden; }
+	main { float: left; width: 800px; }
+	aside { float: right; width: 230px; }
+	article > p { text-align: justify;  }
+
+ </style>
+ <body>
+	<header>
+		<h1>semantic</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="#">MENU1</a></li>
+			<li><a href="#">MENU2</a></li>
+			<li><a href="#">MENU3</a></li>
+			<li><a href="#">MENU4</a></li>
+			<li><a href="#">MENU5</a></li>
+		</ul>
+	</nav>
+	<div id="wrap">
+		<main> <!-- 본문의 내용을 묶음으로 하는 것 -->
+			<section>
+				<article>
+					<img src="https://via.placeholder.com/200">
+					<h2>content1</h2>
+					<p>
+						Curabitur vel lacus aliquet, aliquet ipsum ac, ultrices lorem. Suspendisse dolor felis, gravida vel auctor id, dignissim et sapien. Nunc iaculis justo id vulputate gravida. Nunc vel libero a urna mollis varius at et felis. Duis sed sem nulla. Sed efficitur ligula in nunc ultricies, sed fermentum massa condimentum. Sed commodo porta consequat. In id nunc at nibh imperdiet tincidunt vel ac risus.
+					</p>
+				</article>
+				<article>
+					<h2>content2</h2>
+					<p>
+						Donec sodales leo nec magna bibendum porta. Nam purus libero, vestibulum vel neque eget, suscipit vulputate orci. Curabitur interdum ornare augue eu scelerisque. Nulla consequat est a leo vulputate luctus. Fusce fringilla nibh lectus, a convallis quam mattis vitae. Pellentesque eget ex a elit dapibus commodo quis sit amet velit. Suspendisse nec pellentesque diam. Aliquam id lectus accumsan, volutpat mauris vitae, pellentesque sapien. Pellentesque dignissim, massa at ullamcorper sollicitudin, ex lorem sagittis quam, vitae maximus eros tellus non urna. Donec accumsan lacus eget sapien semper ornare.
+					</p>
+					<img src="https://via.placeholder.com/200x150">
+					<img src="https://via.placeholder.com/200x150">
+					<img src="https://via.placeholder.com/200x150">
+				</article>
+			</section>
+		</main>
+		<aside>
+			<img src="https://via.placeholder.com/200x500/FFFF00//FF0000?text=banner">
+		</aside>
+	</div>
+
+	<footer>
+		<address>서울시 강남구 강남대로 장연빌딩 523호</address>
+		<p>이 페이지는 웹페이지의 구조를 연습하기 위한 페이지입니다</p>
+	</footer>
+	<!--<img src="img/semantic.jpg" alt="">-->
+ </body>
+</html>

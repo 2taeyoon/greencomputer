@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>06 flex 응용</title>
+ </head>
+ <body>
+	<style>
+		* { margin: 0; padding: 0; }
+		img { width: 100%; vertical-align: middle; }
+		li { list-style: none; }
+		body { max-width: 900px; margin: auto; }
+		body > div { border: 3px solid black; }
+		h2 { width: 900px; margin: 50px auto; }
+
+		#box1 { display: flex; justify-content: space-between; }
+		#box1 p { width:50%; }
+		#box1 div { width:30%; background: gray; }
+
+		#box2 { display: flex; flex-wrap: wrap; justify-content: space-around; }
+		#box2 p { width: 250px; margin: 20px 0; }
+
+		#box3 { display: flex; height: 200px; justify-content: center; }
+		#box3 div { display: flex; background: skyblue; align-items: center; }
+
+		#box4 { border: none; }
+		#box4 ul { display: flex; justify-content: space-between; }
+		#box4 li { display: flex; width: 47%; }
+		#box4 li figure { width: 45%; margin-right: 40px; }
+		#box4 li .text-wrap { background: #ccc; flex-grow: 1; align-items: center;
+			display: flex; flex-direction: column; align-items: center; justify-content: center; }
+
+	</style>
+	<h2>양끝에 배치</h2>
+	<div id="box1">
+		<p><img src="img/img01.jpg" alt=""></p>
+		<div>Lorem ipsum dolor sit amet</div>
+	</div>
+	<h2>여러줄 간격</h2>
+	<div id="box2">
+		<p><img src="img/img02.jpg" alt=""></p>
+		<p><img src="img/img03.jpg" alt=""></p>
+		<p><img src="img/img04.jpg" alt=""></p>
+		<p><img src="img/img05.jpg" alt=""></p>
+		<p><img src="img/img06.jpg" alt=""></p>
+	</div>
+	<h2>중앙 정렬</h2>
+	<div id="box3">
+		<div>중앙정렬</div>
+	</div>
+	<h2>flex 다중 적용(가로 컨텐츠)</h2>
+	<div id="box4">
+		<ul>
+			<li>
+				<figure><img src="img/img07.jpg" alt=""></figure>
+				<div class="text-wrap">
+					<strong>title</strong>
+					<p>content content</p>
+				</div>
+			</li>
+			<li>
+				<figure><img src="img/img08.jpg" alt=""></figure>
+				<div class="text-wrap">
+					<strong>title</strong>
+					<p>content content</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<h2>가로 컨텐츠(shrink: 0; )</h2>
+	<div id="box5">
+		<div>
+			<figure><img src="img/img02.jpg" alt=""></figure>
+			<figure><img src="img/img04.jpg" alt=""></figure>
+			<figure><img src="img/img05.jpg" alt=""></figure>
+			<figure><img src="img/img07.jpg" alt=""></figure>
+			<figure><img src="img/img08.jpg" alt=""></figure>
+		</div>
+	</div>
+	<style>
+		#box5 { overflow: hidden; }
+		#box5 > div { display: flex; transition: 0.5s; transition: }
+		#box5 > div > figure { flex-shrink: 0; height: 300px; }
+		#box5 > div > figure > img { height: 100%; }
+		#box5:hover div { margin-left: -1000px; }
+	</style>
+	<h2>아코디온 (flex-grow)</h2>
+	<div id="box6">
+		<div>
+			<ul>
+				<li>content1</li>
+				<li>content2</li>
+				<li>content3</li>
+				<li>content4</li>
+				<li>content5</li>
+			</ul>
+		</div>
+	</div>
+	<style>
+		#box6 {  }
+		#box6 > div > ul { display: flex; }
+		#box6 > div > ul > li { flex-grow:1; height: 400px; background:skyblue; border: 1px solid blue; transition: 0.5s; }
+		#box6 > div > ul > li:hover { flex-grow:10; }
+		/*transition: duration delay <- 하나만 쓰면 자동으로 애니메이션 시간이 지정됨
+			축약형: transition: property timing-function duration delay | initial | inherit */
+
+		/*	property : transition을 적용시킬 속성을 정합니다. transition-property를 참고하세요.
+			timing-function : transition의 진행 속도를 정합니다. transition-timing-function를 참고하세요.
+			duration : transition의 총 시간을 정합니다. transition-duration을 참고하세요.
+			delay : transition의 시작을 연기합니다. transition-delay를 참고하세요.
+			initial : 기본값으로 설정합니다.
+			inherit : 부모 요소의 속성값을 상속받습니다. */
+	</style>
+ </body>
+</html>

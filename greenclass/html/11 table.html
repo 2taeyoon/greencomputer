@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>11 table</title>
+ </head>
+	<style>
+		caption.counter{text-align: left; font-size: 30px; margin-bottom: 50px;}
+		#hw { border-collapse: collapse; width:650px; border-top:3px solid #ffcccc;}
+		/* border-collapse: collapse는 cell의 border가 겹쳤을 때는 한줄로 나타낸다 */
+		#hw td, th { border:1px solid #ccc; text-align: center; padding: 5px;}
+		#hw td { font-size: 14px; text-align: center;}
+		#hw th { background-color: #efefef; text-align: center;}
+	</style>
+ <body>
+ 	<h1>table tag(표 만들기)</h1>
+	<table border="5px" cellpadding="10px" cellspacing="20px">
+		<tr>
+			<td align="right" valign="top">1-1<br/>(align="right")<br/>(valign="top")</td>
+			<td align="center">1-2(align="center")</td>
+			<td height="100px">1-3(height="100px")</td>
+			<td>1-4</td>
+		</tr>
+		<tr>
+			<td>2-1</td>
+			<td valign="bottom">2-2(valign="bottom")</td>
+			<td height="50px">2-3((height="150px"))</td>
+			<td>2-4</td>
+		</tr>
+		<tr>
+			<td><img src="img/01.jpg" alt="박지환"></td>
+			<td width="350px">3-2</td>
+			<td>3-3(width="350px")</td>
+			<td>3-4</td>
+		</tr>
+	</table>
+	<hr/>
+	<table width="500" height="200px" bgcolor="gray">
+		<tr bgcolor="white">
+			<td bgcolor="LightSalmon">1-1</td>
+			<td bgcolor="lightgray">1-2</td>
+			<td bgcolor="lightblue">1-3</td>			
+		</tr>
+		<tr>
+			<td bgcolor="pink">2-1</td>
+			<td bgcolor="skyblue">2-2</td>
+			<td bgcolor="lightgreen">2-3</td>			
+		</tr>
+	<table>
+	<h3>table tag tr=테이블 행, td=테이블 데이터</h3>
+	<h3>table td에서 height를 조절하면 그 행도 조절된다</h3>
+	<h3>cellspacing tag는 셀과 셀 사이의 여백을 말하며 설정을 안해도 기본적을 들어가 있다</h3>
+	<br/>
+	<h1>테이블 셀 합치기</h1>
+	<table width="800px" height="500" border="1px">
+	<tr>
+		<td>1-1</td>
+		<td colspan="2">1-2(colspan="2")</td>
+		<td>1-4</td>
+		<td>1-5</td>
+	</tr>
+	<tr>
+		<td>2-1</td>
+		<td>2-2</td>
+		<td colspan="2">2-3(colspan="2")</td>
+		<td>2-5</td>
+	</tr>
+	<tr>
+		<td rowspan="2">3-1(rowspan="2")</td>
+		<td>3-2</td>
+		<td rowspan="3">3-3(rowspan="3")</td>
+		<td colspan="2" rowspan="3">3-4(colspan="2" rowspan="3")</td>
+	</tr>
+	<tr>
+		<td>4-2</td>
+	</tr>
+	<tr>
+		<td>5-1</td>
+		<td>5-2</td>
+	</tr>
+	</table><br/>
+	<h3>colspan="숫자" : 가로 셀 합치기, rowspan="숫자" 세로 셀 합치기</h3>
+	<hr/><br/>
+	<table width="500px" height="500" border="1px">
+	<tr>
+		<td colspan="3" bgcolor="LightSalmon">1-1</td>
+		<td>1-4</td>
+		<td>1-5</td>
+	</tr>
+	<tr>
+		<td>2-1</td>
+		<td>2-2</td>
+		<td rowspan="2" bgcolor="#D8A3E3">2-3</td>
+		<td>2-4</td>
+		<td>2-5</td>
+	</tr>
+	<tr>
+		<td>3-1</td>
+		<td>3-2</td>
+		<td>3-4</td>
+		<td rowspan="2" bgcolor="lightgreen">3-5</td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="2" bgcolor="skyblue">4-1</td>
+		<td>4-3</td>
+		<td>4-4</td>
+	</tr>
+	<tr>
+		<td colspan="3" bgcolor="Lightgray">5-3</td>
+	</tr>
+	</table>
+	</hr>
+	<br/>
+	</br>
+	<table border="1px" width="500px" height="300px">
+		<caption>테이블 구조</caption>
+			<thead bgcolor="#66ff99">
+				<tr>
+					<th>과목</th>
+					<th>중간고사</th>
+					<th>기말고사</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>HTML5</td>
+					<td>75</td>
+					<td>85</td>
+				</tr>
+				<tr>
+					<th>CSS</td>
+					<td>70</td>
+					<td>80</td>			
+				</tr>
+				<tr>
+					<th>JAVASCRIPT</td>
+					<td>50</td>
+					<td>65</td>			
+				</tr>
+			</tbody>
+			<tfoot style="background: gray">
+				<tr>
+						<th>평균</td>
+						<th colspan="2">354.166667점</td>
+					</tr>
+				</tfoot>
+			</table>
+		<h3> th tag는 table의 제목, 자동으로 bold와 center가 적용된다</h3>
+		<h3> caption tag는 말 그대로 캡션을 나타낸다</h3>
+		<br/><br/>
+		<table id="hw">
+			<caption class="counter">퇴실 연장요금 안내</caption>
+			<colgroup>
+				<col width="200px">
+				<col width="150px" style="background:#fff9f2">
+				<col span="2" width="150px"> <!-- 3,4번째 열에 같은 width 동일하게 적용 -->
+			</colgroup>
+			<tr>
+				<th colspan="2" rowspan="2">시기</td>
+				<th colspan="2">퇴실 연장요금</td>
+			</tr>
+			<tr>
+				<th>회원</td>
+				<th>비회원</td>					
+			</tr>
+			<tr>
+				<td rowspan="3">주말/연휴/성수기</td>			
+				<td>11시~14시</td>
+				<td>10,000</td>
+				<td>20,000</td>
+			</tr>
+			<tr>			
+				<td>14시~17시</td>
+				<td>20,000</td>
+				<td>40,000</td>
+			</tr>
+			<tr>			
+				<td>17시~</td>
+				<td colspan="2">일일 객식료</td>
+			</tr>
+			<tr>
+				<td rowspan="3">비수기 주중</td>			
+				<td>12시~15시</td>
+				<td>10,000</td>
+				<td>20,000</td>
+			</tr>
+			<tr>			
+				<td>15시~17시</td>
+				<td>20,000</td>
+				<td>40,000</td>
+			</tr>
+			<tr>			
+				<td>17시~</td>
+				<td colspan="2">일일 객실료</td>
+			</tr>		
+	</table>
+ </body>
+</html>

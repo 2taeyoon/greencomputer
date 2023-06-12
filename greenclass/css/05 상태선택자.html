@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>05 상태선택자</title>
+ </head>
+ <style>
+ 	body { background: #e1fffc; margin-bottom: 100px; }
+ 	div { background: #fff; width: 600px; margin:auto; }
+	#b1, #b2, #b3 { width: 500px; text-align: justify; }
+	.menu { list-style: none; text-align: center; padding: 30px 0; }
+	.menu > li { display: inline; margin: 0 20px; }
+	ul ~ div { 
+		border: 1px solid gray;
+		padding: 20px;
+		overflow: hidden;
+		display: none;
+	}
+	a { text-decoration: none;
+		color: #3399ff;
+	}
+	a:hover { text-decoration: underline; color: blue; }
+
+	/* 가상 선택자
+		target - 활성화된 링크 태그에 사용 */
+	ul ~ div:target { display: block; }
+	::selection { background: #3399ff; color: yellow; }
+ </style>
+ <body>
+	<div id="wrap">
+		<ul class="menu">
+			<li><a href="#b1" alt="">시베리안 허스키</a></li>
+			<li><a href="#b2" alt="">알라스칸 말라뮤트</a></li>
+			<li><a href="#b3" alt="">사모예드</a></li>
+			<li><a href="#" alt="">숨기기</a></li>
+		</ul>
+		<div id="b1">
+			<h2>개요</h2>
+			<p>러시아 시베리아에서 동북쪽 끝 추코트카가 발현지인 개의 일종. 그곳에서 대대로 거주하던 축치인이 키우던 썰매견에서 유래된 견종이다. 그러나 '시베리안 허스키'라는 이름을 얻고 하나의 독립된 견종으로 고착된 것은 미국에서 이뤄진 것이며 이 때문에 견종 전문가들은 '미국 개'로 분류하고 있다. 참고로 시베리아에서 이주한 아메리카 원주민들과 함께 따라간 시베리아 토착견들은 아메리칸 인디언 독이 되었다.</p>
+			<img src="https://w.namu.la/s/bd102a7521367c0f59efe70c783aca77f52a7f51c4ec9bcef8c9b84925c13a1a134153f4dc800df613650db780d71456c37a731d3082fc1a1ab11c15a03d839ee34e64556be8a1cc98e6a685613e137b5aa3286c59c6288b1000ad34248fd77e22b2671c00262303084ae2fc67510a8f" alt="">
+		</div>
+		<div id="b2">
+			<h2>개요</h2>
+			<p>
+				<img src="https://w.namu.la/s/5c056897194171f61b2a8ee2c7e69fe4bcd7cb77a73c9f656bea801e07f5e4c56b5712d466cb81ec48e0e8d49a33fbe98e5fb883c9db49f3ef5c2d48dc7d356d2cc05f2074fd3dab154f9e6345589aece2c119756356186a1a4bd19cee9a616ce56987422a3732a11b785445e6556481" alt=""><br/>썰매를 끄는 개. 스피츠 계통으로 이누이트 중 마흘레뭇 족(Mahlemut)이 처음부터 이 목적으로 개량했기 때문에 이런 이름이 붙었다. 몸집도 큰 대형견에 근육질이고, 귀는 쫑긋하며 꼬리도 늘 위로 쏠랑 말려 올라가 있어 늠름해 보인다. 회색-흰색 / 흰색-검정 / 흰색-붉은색을 띄는데 드물게 흰색 단색을 띄는 개체도 있다고 한다.
+			</p>
+		</div>
+		<div id="b3">
+			<p>러시아의 시베리아 지역이 원산인 개의 일종. 대형견에 속한다. 러시아의 시베리아 툰드라 지방에서 생활하던 사모예드족이 기르던 개로, 사역견으로서 사냥, 썰매 등 척박한 환경에서 각종 노동을 거드는 개였다. 우리네 조상들이 품을 팔 듯, 이 녀석들도 일거리 있는 집안으로 서로 빌려주고 빌려오고를 수백, 수천 년 반복하여 개량 되어왔으며, 알래스칸 말라뮤트, 시베리안 허스키 역시 비슷한 궤를 달리고 있다.</p>
+			<p>
+			<img src="https://w.namu.la/s/ceb2544760f845412ad26b0bb4812f9ca9df89ae13f5abd38f179a46324c6b8e4e209fbf1f237bd50c9e061fb2307635300874f10c35748dab0a8b805080e269e70ae6506c8d3c5df6612336ff1d1a910f6d89ff213bba132e5545753db07a7f5981afeae1d22351c47b7560862b9089" alt="">
+			</p>
+			<h2>개요</h2>
+		</div>
+	</div>
+ </body>
+</html>

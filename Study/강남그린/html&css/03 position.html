@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03 position</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        header{height: 80px; background-color: aqua; position: fixed; width: 100%; z-index: 888;}
+        section{height: 500px; top: 50px; background-color: blueviolet; position: relative}
+        section div{position: absolute; width: 200px; height: 200px; background-color: red; top: 50px;}
+        footer{height: 200px; background-color: cadetblue; position: relative;;}
+        footer div#footer{width: 100px; height: 100px; background-color: yellow; position: absolute;}
+    </style>
+</head>
+<body>
+    <header>
+        내용물 네이게이션
+    </header>
+    <section>
+        슬라이드이미지
+        <div>
+            절대좌표
+        </div>
+    </section>
+    <footer>
+        회사주소 패밀리사이트
+        <div id="footer">절대좌표2</div>
+    </footer>
+    <p>부모에 position: relative; 를 달아주고 자식 요소에 position: absolute; 를 달아주면 부모 기준으로 자식이 움직인다.</p>
+    <p>z-index: 숫자; 는 숫자가 높은 태그의 순서가 위로 올라오는 태그이다</p>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문 - if4</title>
+    <style>
+        body {background-color: rgb(200, 228, 144); }
+        body > div { width: 500px; margin: 200px auto; background: rgba(255,255,255, 0.3); text-align: center; padding: 20px; }
+        #p1 { font-size: 20px; }
+        #p2 {background-color: rgb(164, 196, 101); padding: 20px 0; }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>로그인하기</h1>
+        <p id="p1">
+            내가 입력한 아이디와 패스워드
+        </p>
+        <p id="p2">
+            로그인 여부
+        </p>
+    </div>
+    <script>
+        let id = prompt('ID를 입력해주세요');
+        let pw = prompt('Password를 입력해주세요')
+        const elp1 = document.querySelector('#p1');
+        const elp2 = document.querySelector('#p2');
+        let msg;
+
+        if(id == 'abc' && pw == '1234') { msg = '로그인 <big>성공!!</big>' }
+        else if ( id == 'abc' || pw == '1234' ) { msg = '아이디 혹은 패스워드 중 하나가 틀렸습니다' }
+        else { msg = '아이디 패스워드 모두 틀렸습니다' }
+
+        elp1.innerHTML = `내가 입력한 아이디 : ${id} <br/>
+            내가 입력한 비밀번호 : ${pw}`;
+        elp2.innerHTML = msg;     
+    </script>
+</body>
+</html>

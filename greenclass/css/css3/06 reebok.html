@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reebok</title>
+</head>
+<style>
+    * { box-sizing: border-box; margin:0; padding: 0; }
+	li { list-style: none; }
+	img { vertical-align: middle; }
+	body { font-family: "Malgun Gothic", "맑은 고딕", sans-serif; }
+
+    #container { width: 1000px; margin: 100px auto; }
+    ul.goods::after { content:""; display: block; clear: both; }
+    ul.goods li { float:left; }
+
+    a.item { width: 230px; margin: 0 10px; display: block; text-decoration: none; transition:0.3s ease-in; position:relative; }
+        a.item .info { height: 130px; padding: 10px 3px 0; }
+        a.item .info .title { color: black; font: bold 14px "Malgun Gothic", "맑은 고딕", sans-serif; height: 50px; }
+        a.item .info .color { color: #a0a0a0; font-size: 12px;}
+        a.item .info .price { color: black; font: bold 16px "Malgun Gothic", "맑은 고딕", sans-serif; }
+        a.item .info .price-line { text-decoration: line-through; }
+        a.item .info .price-sale { color:rgb(252, 77, 77) }
+
+        a.item .img img { width: 100%; }
+        a.item .img .img-over { display: none; }
+
+        a.item:hover { box-shadow: 0 0 20px rgba(97, 97, 97, 0.2); transform: translateY(-20px); z-index: 100; }
+        a.item:hover .img .img-now { display: none; }
+        a.item:hover .img .img-over { display: block; }
+
+    footer { height: 150px; text-align: center; line-height: 150px; background-color: #f0f0f0;
+        font: bold 14px/150px "Malgun Gothic", "맑은 고딕", sans-serif; }
+</style>
+<body>
+    <div id="container">
+        <ul class="goods">
+            <li>
+                <a href="#" class="item">
+                    <div class="img">
+                        <img src="reebok/01.jpg" alt="" class="img-now">
+                        <img src="reebok/01-o.jpg" alt="이미지 오버" class="img-over">
+                    </div>
+                    <div class="info">
+                        <p class="title">프라이머리 로고 하프 집업 맨투맨 - 핑크 (오버핏)</p>
+                        <p class="color">3 COLOR</p>
+                        <p class="price">
+                            <span class="price-now">79,000원</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="img">
+                        <img src="reebok/02.jpg" alt="" class="img-now" >
+                        <img src="reebok/02-o.jpg" alt="이미지 오버" class="img-over">
+                    </div>
+                    <div class="info">
+                        <p class="title">클래식레터 맨투맨 - 멜란지 그레이 (오버핏)</p>
+                        <p class="color">2 COLOR</p>
+                        <p class="price">
+                            <span class="price-now">89,000원</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="img">
+                        <img src="reebok/03.jpg" alt="" class="img-now">
+                        <img src="reebok/03-o.jpg" alt="이미지 오버" class="img-over">
+                    </div>
+                    <div class="info">
+                        <p class="title">클래식 벡터 빅로고 맨투맨 - 아이보리 (세미오버핏)</p>
+                        <p class="color">3 COLOR</p>
+                        <p class="price">
+                            <span class="price-now">69,000원</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="img">
+                        <img src="reebok/04.jpg" alt="">
+                        <img src="reebok/04-o.jpg" alt="이미지 오버">
+                    </div>
+                    <div class="info">
+                        <p class="title">코어 로고 맨투맨 - 블랙 (오버핏)</p>
+                        <p class="color">1 COLOR</p>
+                        <p class="price">
+                            <span class="price-line">99,000원</span>
+                            <span class="price-sale">79,000원</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="img">
+                        <img src="reebok/05.jpg" alt="" class="img-now">
+                        <img src="reebok/05-o.jpg" alt="이미지 오버" class="img-over">
+                    </div>
+                    <div class="info">
+                        <p class="title">벡터93 아카이브 슬로건 맨투맨 - 화이트 (오버핏)</p>
+                        <p class="color">3 COLOR</p>
+                        <p class="price">
+                            <span class="price-now">79,000원</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="img">
+                        <img src="reebok/06.jpg" alt="" class="img-now">
+                        <img src="reebok/06-o.jpg" alt="이미지 오버" class="img-over">
+                    </div>
+                    <div class="info">
+                        <p class="title">레터링 우븐 맨투맨 - 블랙 (오버핏)</p>
+                        <p class="color">3 COLOR</p>
+                        <p class="price">
+                            <span class="price-now">79,000원</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="img">
+                        <img src="reebok/07.jpg" alt="" class="img-now">
+                        <img src="reebok/07-o.jpg" alt="이미지 오버" class="img-over">
+                    </div>
+                    <div class="info">
+                        <p class="title">클럽 C 벡터박스 오버핏 후드</p>
+                        <p class="color">3 COLOR</p>
+                        <p class="price">
+                            <span class="price-now">99,000원</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="img">
+                        <img src="reebok/08.jpg" alt="" class="img-now">
+                        <img src="reebok/08-o.jpg" alt="이미지 오버" class="img-over">
+                    </div>
+                    <div class="info">
+                        <p class="title">TS Performance FZ 후드티</p>
+                        <p class="color">2 COLOR</p>
+                        <p class="price">
+                            <span class="price-now">79,000원</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="img">
+                        <img src="reebok/09.jpg" alt="" class="img-now">
+                        <img src="reebok/09-o.jpg" alt="이미지 오버" class="img-over">
+                    </div>
+                    <div class="info">
+                        <p class="title">RI FLC OTH BL 후드티</p>
+                        <p class="color">4 COLOR</p>
+                        <p class="price">
+                            <span class="price-now">65,000원</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="item">
+                    <div class="img">
+                        <img src="reebok/10.jpg" alt="" class="img-now">
+                        <img src="reebok/10-o.jpg" alt="이미지 오버" class="img-over">
+                    </div>
+                    <div class="info">
+                        <p class="title">MMLG 맨투맨</p>
+                        <p class="color">3 COLOR</p>
+                        <p class="price">
+                            <span class="price-now">59,000원</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        CSS3을 이용한 제품 소개 페이지입니다.
+    </footer>
+</body>
+</html>

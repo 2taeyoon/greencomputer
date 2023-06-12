@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text(html)부분만 접근</title>
+    <style>
+        * { margin:0; padding:0; }
+        body { background:#F5EAEA}
+        body > div { width:400px; margin:150px auto; padding:2px; text-align:center; border:1px solid #fa190d}
+        h1 { margin:20px 0 }
+        h2 { color:#774f75; margin-bottom:30px; }
+        h1 img { width:150px; }
+        li { list-style:none; background:#fda4a4; color:#fff; line-height:50px; margin:2px; padding-left:20px;  }
+        .red { background:#fa190d; }
+        .sky { background:#7ec0ec; }
+        .orange { background:#ffba26;}
+        .line { text-decoration:underline overline;}
+
+        em { display: none; }
+    </style>
+</head>
+
+<body>
+    <div id="page">
+        <h1><img src="icon.svg" alt=""></h1>
+        <h2>text(html)부분만 접근</h2>
+        <ul>
+            <li>1 - 리에주 벨기에와플</li>
+            <li>2 - 믹스 베리 요거트</li>
+            <li>3 - 머랭 쿠키</li>
+            <li>4 - 봉봉 오 쇼콜라</li>
+            <li>5 - 휠리 치즈 브프샌드위치</li>
+            <li>6 - 화이트 와인</li>
+        </ul>
+        <ul>
+            <li>메인요리7 - 러시안 킹크랩</li>
+        </ul>
+    </div>
+<script>
+    //const parentEl = document.querySelector('ul');
+    const parentEl = document.getElementsByTagName('ul')[0];
+    const removeEl = document.getElementsByTagName('li')[2];
+    parentEl.removeChild(removeEl);
+
+    const newEl = document.createElement('li'); // li 만들기
+    const newText = document.createTextNode('0 - 디저트) 녹차 아이스크림'); // 텍스트 만들기
+    newEl.appendChild(newText); // li만든 변수에 텍스트 만든 변수 집어넣기
+    parentEl.prepend(newEl); // 다 만든 것을 ul에 직접 직어넣기
+
+    parentEl.append('<li>일본산 연어 사시미</li>'); // 단순한 문자열로 인식
+
+    const h2 = document.querySelector('h2');
+    const elH3 = document.createElement('h3');
+    elH3.textContent = 'this is a small title';
+    //h2.before(elH3);
+    page.insertBefore(elH3, h2);
+
+    console.log('newEl 문서객체 생성',newEl); // 문서객체(html tag) 생성
+    console.log('newText 문서객체 생성',newText); // 문서객체(html tag) 생성
+
+    /*
+        createElement(A) - 문서객체(html tag) A를 생성
+        createTextNode(A) - 생성된 태그에 들어갈 텍스트 A 생성
+
+        A.appendChild(B) - A노드 안에 B노드 삽입해서 자식요소로 만듦(A내부 제일 끝부분에 삽입)
+        A.append(B) - appendChild와 동일 (새롭게 추가된 메소드, 버전이 조금 높음)
+        A.prepend(B) - A노드 안에 B노드 삽입해서 자식요소로 만듦(A내부 제일 앞부분에 삽입)
+
+        A.insertBefore(B,C) - 부모노드 A의 자식요소 C앞에 B를 삽입
+
+        A.after(B) - A노드 뒤 B노드를 삽입(A는 같은 형제)
+        A.before(B) - A노드 앞 B노드를 삽입(A는 같은 형제)
+    */
+    
+</script>
+</body>
+
+</html>

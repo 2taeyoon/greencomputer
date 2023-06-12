@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/*
+  믹스인- 함수와 비슷, 반복적, 재사용할 css스타일 그룹
+*/
+.b1 {
+  width: 150px;
+  height: 150px;
+  background: orange;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.b2 {
+  width: 150px;
+  height: 150px;
+  background: orange;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: blue;
+}
+
+.b3 {
+  width: 150px;
+  height: 150px;
+  background: pink;
+  color: purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  border: dotted solid black;
+}
+
+.b4 {
+  width: 150px;
+  height: 150px;
+  background: #a5cbf1;
+  color: dingray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  border: 10px dotted blue;
+}
+
+.wrap {
+  display: flex;
+  column-gap: 30px;
+  row-gap: 30px;
+  flex-wrap: wrap;
+}
+
+/*# sourceMappingURL=main.css.map */

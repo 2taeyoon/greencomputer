@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08 animation</title>
+</head>
+<style>
+    body { margin: 0; padding: 0;}
+
+    .myball { position: relative; width: 200px; height: 200px; background: url('./img/a.png'); border-radius: 50%; border: 2px solid #7198b4; margin: 50px; }
+    .b1 { animation-name:aa; /* 작동시킬 애니메이션 이름 */
+            animation-duration:2s; /* 애니메이션 작동 시간 */
+            animation-iteration-count:2; /* 애니메이션 작동 횟수, infinite: 무한 */
+            animation-fill-mode: forwards; /* 애니메이션 끝난 위치로 지정 */
+    }
+    .b2 { animation-name:aa;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate; /* 애니메이션 작동 방향 alternate(정방향후 역방향), reverse(역방향) */
+            animation-timing-function: ease-in;
+            /* 애니메이션 속도 움직임 linear(동일 속도), ease(시작, 끝 천천히(기본값)),
+                ease-in (시작 천천히), ease-out (끝 천천히),
+            */
+    }
+    .b3 {   animation:aa 3s infinite alternate;
+            animation-timing-function: steps(5,end); } /* 애니메이션 움직임을 단게별로 설정 steps(단계 숫자,start or end(제외)) */
+
+    @keyframes aa { /* 애니메이션 정의 */
+        0% { left: 0; }
+        100% { left: 1000px; }
+    }
+</style>
+<body>
+    <div class="myball b1"></div>
+    <div class="myball b2"></div>
+    <div class="myball b3"></div>
+</body>
+</html>

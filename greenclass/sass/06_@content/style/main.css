@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/*
+@content - mixin사용시 지정된 스타일 이외에도 별도의 스타일을 추가
+*/
+.b1 {
+  background: coral;
+  color: darkgreen;
+  width: 100px;
+  height: 50px;
+  border: none;
+}
+
+.b2 {
+  background: yellow;
+  width: 100px;
+  height: 50px;
+  border: none;
+}
+.b2:hover {
+  background: skyblue;
+}
+
+.b3 {
+  background: skyblue;
+  width: 100px;
+  height: 50px;
+  border: none;
+}
+.b3:hover {
+  background: gray;
+}/*# sourceMappingURL=main.css.map */

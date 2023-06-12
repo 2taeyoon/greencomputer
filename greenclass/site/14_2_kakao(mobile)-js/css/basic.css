@@ -1,0 +1,137 @@
+@charset "UTF-8"; 
+@font-face {
+  font-family: 'Pretendard-Light';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body { font-family:'Pretendard-Light','Malgun Gothic', Verdana, Geneva, Tahoma, sans-serif; font-size:14px; line-height: 1.5; color:#000; }
+a { color:#000; }
+button { border:0; background:transparent; cursor: pointer;}
+.ico_friends { display:block; background:url('../img/ico_friends.png') no-repeat 0 0 / 700px 1000px; font-size:1px; color:transparent; line-height:0;  }
+.img_g { display: block; width:100%; }
+
+#container { border:2px solid red;
+    max-width:640px; min-width:320px; margin:auto; min-height:100vh; height:2000px;
+}
+header { position:fixed; top:0; left:0; right:0;
+  max-width:640px; min-width:320px; margin:auto; background:#fff; border-bottom:1px solid #ccc; }
+
+h1 { }
+.link_logo { display:block; width:167px; height:46px; margin:auto; }
+
+.top_left, .top_right { position:absolute; top:6px; }
+.top_left { left:12px; }
+.gnbBtn { display:inline-block; }
+.top_right { right:12px; }
+
+.top_left span, .top_right span { width:24px; height:24px; border:1px solid red;}
+.ico_gnb { background-position: -520px -60px; }
+.ico_cart { background-position: -70px -810px;}
+.ico_search { background-position: -40px -20px;}
+
+nav {  }
+.list_tab { display:flex; }
+.list_tab li { flex:1; text-align: center;}
+.list_tab li a { display:block; line-height:48px; font-size:16px; }
+.list_tab li a.on { font-weight:700;}
+.list_tab li a.on:after { display:block; content:''; width:100%; height:4px; background:#000;}
+
+/*좌측 슬라이더 메뉴 부분*/
+.dark { display:none; position:fixed; background:rgba(0,0,0,0.8);  z-index:100;
+  inset:0px; 
+  /* inset -상위 요소까지의 거리를 설정, 일종의 margin설정, 안쪽으로 나자신이 줄어들면서 표현 */
+}
+.gnb_open { position:fixed; top:0; left:0; bottom:0; width:304px; background:#fff; 
+transform:translateX(-100%); transition:0.3s ease-in;
+z-index:101; overflow:hidden; }
+.gnb_open .inner { height:100%; width:304px; overflow-y: scroll; padding-right:17px; box-sizing:content-box;}
+
+
+.info_user { display:flex; justify-content:space-between; padding:35px 23px 23px; }
+.info_user a {}
+.info_user a.login { font-size:16px; font-weight:700; }
+.ico_arrow_right { display: inline-block;
+  width: 16px; height: 16px;
+  margin-top: 2px;
+  background-position: -320px 0;
+  vertical-align: top;}
+
+.list_menu { padding:20px 0; }
+.list_menu>li{  }
+.btn_menu { display: block; line-height:48px; font-size:16px; padding:0 24px }
+.line { border-bottom:1px solid #eeeeee; padding-bottom:16px; margin-bottom:16px; }
+
+.ico_arrow_down {
+  float:right;
+  display: inline-block;
+  width: 16px; height: 16px;
+  background-position: -360px 0;
+  margin-top:15px;
+}
+.ico_arrow_down.on {   /*화살표 방향이 위로*/
+  background-position: -340px 0;
+}
+
+.box_banner {  padding:0 16px; }
+.box_banner img { width:100%; border-radius:16px;}
+
+.link_login { display:block; text-align:center; padding:32px 0; 
+
+  border-top:1px solid #eeeeee; padding-top:16px; margin-top:16px;
+}
+.ico_arrow_lock {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 2px;
+  background-position: -560px -20px;
+  vertical-align: top;
+}
+
+.list_sub_wrap { height:0; overflow:hidden;  }
+.list_charactor {
+  padding:8px 0 32px 8px;
+  font-size:0;  /* 자식요소에 inline-block 사용시 여백을 막아주는 방법*/
+
+}
+.list_charactor li { display: inline-block; width:25%; }
+.charactor01 {}
+
+.list_charactor li a { display:block; padding:10px; color:#9e9e9e; }
+.img_charactor {  
+  display:block;
+  width:100%;
+  padding-top:100%;
+  background:no-repeat 50% 50%/ cover;
+  border-radius:50%;
+}
+.text_charactor { display:block; text-align:center; padding-top:8px; font-size:12px; }
+
+.charactor01 .img_charactor { background-image:url('../img/character.png'); transition:0.3s;}
+
+.charactor01:hover .img_charactor { background-image:url('../img/character1.png') ;}
+
+
+
+
+
+/*화면에  639px보다 컸을 경우*/
+@media screen and (min-width:640px) {
+  .gnb_open { width:400px; }
+  .gnb_open .inner { width:400px; }
+}
+

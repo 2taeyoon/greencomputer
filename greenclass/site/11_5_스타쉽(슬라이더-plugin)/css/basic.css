@@ -1,0 +1,52 @@
+@charset "UTF-8"; 
+body { font-family:Verdana, Geneva, Tahoma, sans-serif; }
+
+#top_banner { width:100%; height:100px; background:#FFA300 url('../img/audition_topbn.jpg'); transition:0.3s}
+#top_banner > div { text-align:center;}
+#top_banner > div > a { display:block; height:100px; line-height:100px; color:#fff }
+#top_banner > div > a > span { font-weight:bold; font-size:25px}
+#top_banner > div > a > p { position:absolute; top:20px; right:50px; line-height:1; }
+
+
+header { width:1080px; margin:auto; height:110px; padding-top:30px; }
+h1 { float:left; } 
+
+#gnb_wrap { float:right; width:860px; padding-top:5px; }
+.gnb:after { display:block; content:""; clear:both; }
+.gnb > li { position: relative; float:left; width:16%; text-align:center; }
+.gnb > li:last-child { width:170px; }
+.gnb > li > a { color:#000; font-size:15px; line-height:40px;}
+.gnb > li > a:hover { color:#FFA300; font-size:15px;}
+
+.gnbSubBox { 
+  height:0px; /*js 적용시*/
+  /*display:none; jQuery 적용시*/
+  overflow:hidden; position:absolute; width:860px;  transition:0.3s; }
+.gnbSubBox > div { border:1px solid #999; padding:20px 0; background:#fff; }
+.gnbSubBox ul { float:left; width:16%; height:177px; text-align:center; border-right:1px solid #d3d3d3;  }
+.gnbSubBox > div::after {display:block; content:""; clear:both;}
+.gnbSubBox ul:last-child { width:170px;border-right:none }
+.gnbSubBox a { font-size:12px; display:block; line-height:25px; color:#797979 }
+.gnbSubBox a:hover { color:#FFA300;}
+.gnbSubBox ul li:first-child a {color:#000; font-size:14px; } 
+
+
+#slider { width:1080px; margin:auto; }
+.slides {}
+.slides div {}
+
+/* slick슬라이더 커스텀 */
+.slick-arrow { 
+  position:absolute; top:0; top:200px;
+  width:64px; height:64px; border:none; text-indent:-9999px; cursor:pointer;
+ }
+.slick-next { background:url(../img/next.png); right:-60px;}
+.slick-prev { background:url(../img/prev.png); left:-60px; }
+
+.slick-dots { padding-top:10px; display:flex; justify-content:center;
+  /* position: relative; top:-30px; 위로 올림 */
+}
+.slick-dots li { margin:0 3px}
+.slick-dots button { border:2px solid #afafaf; text-indent:-9999px; cursor:pointer; width:16px; height:16px; border-radius:50%; background:transparent;  }
+
+li.slick-active button, .slick-dots li:hover button{ background: #ccc}

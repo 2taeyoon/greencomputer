@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07 filter</title>
+</head>
+<style>
+    #wrap { width: 1300px; margin: 50px auto; text-align: center; }
+    img { margin: 10px; }
+    h1 { margin-bottom: 50px; }
+
+    img:nth-of-type(2) { filter: blur(5px); }
+    img:nth-of-type(3) { filter: brightness(200%); } /* 명도 기본(1, 100%) 검정(0) */
+    img:nth-of-type(4) { filter: contrast(-1.5); } /* 대비(채도) 기본(1, 100%) 회색(0) */
+    img:nth-of-type(5) { filter: drop-shadow(-10px 5px 10px coral) } /* x축 y축 퍼짐정도 색상 */
+    img:nth-of-type(6) { filter: grayscale(1); } /* 흑백(0(적용❌)), 1(100%, 완전 흑백) */
+    img:nth-of-type(7) { filter: hue-rotate(180deg); } /* 색상환표를 rotate, 180deg는 보색관계를 의미 */
+    img:nth-of-type(8) { filter: invert(1); } /* 색상, 명도, 채도를 전부 반대로 (0, 원본 / 1 or 100%(전체 반전))) */
+    img:nth-of-type(9) { filter:opacity(0.3); } /* 반투명 0(완전 투명) 1(불투명) */
+    img:nth-of-type(10) { filter: saturate(300%); } /* 채도 기본(1, 100%) 수치가 높아질수록 채도가 높아짐 흑백(0) */
+    img:nth-of-type(11) { filter: sepia(0.5); } /* 세피아톤 - 0(기본, 적용❌), 1(최대 적용) */
+
+</style>
+<body>
+    <div id="wrap">
+    <h1>filter</h1>
+        <img src="./img/cat.jpg" alt="cat">
+        <img src="./img/cat.jpg" alt="cat">
+        <img src="./img/cat.jpg" alt="cat">
+        <img src="./img/cat.jpg" alt="cat">
+        <img src="./img/cat.jpg" alt="cat">
+        <img src="./img/cat.jpg" alt="cat">
+        <img src="./img/cat.jpg" alt="cat">
+        <img src="./img/cat.jpg" alt="cat">
+        <img src="./img/cat.jpg" alt="cat">
+        <img src="./img/cat.jpg" alt="cat">
+        <img src="./img/cat.jpg" alt="cat">
+    </div>
+</body>
+</html>

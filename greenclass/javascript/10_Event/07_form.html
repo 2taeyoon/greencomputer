@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-MEMBERSHIP</title>
+    <style>
+        * { margin:0; padding:0; }
+        body { background:#F5EAEA}
+        body > div { width:600px; margin:150px auto; padding:2px; border:5px solid rgba(250, 25, 13, 0.5); border-radius:16px; box-shadow:4px 4px 10px rgba(160, 46, 40, 0.5); }
+        h1 { margin:20px 0; text-align:center;  }
+        h2 { color:#774f75; margin-bottom:30px; text-align:center;}
+        h1 img { width:150px; }
+        
+        form { padding:0 50px 20px; }
+        select { width:200px; text-align: center; font-size:20px;}
+
+        .packageHint, .termsHint { margin:15px 0 ; color: #fa190d; padding-left:30px; }
+
+        .packageHint{ background:url('../img/event_hint.png') no-repeat; }
+        .termsHint{ background:url('../img/event_warning.png') no-repeat; }
+
+        input[type="submit"] { background: #f87823; padding:10px; color:#fff; border:none; border-radius:8px; cursor:pointer; }
+        input[type="submit"]:hover { background:#fa190d; transform:translate(2px, 2px); }
+    </style>
+</head>
+<body>
+    <div id="page">
+        <h1><img src="./icon.svg" alt=""></h1>
+        <h2>MEMBERSHIP</h2>
+        <form action="" id="formSignUp">
+            <label for="">패키지를 선택하세요 : </label>
+            <select name="" id="package">
+                <option value="">=== 선택 ===</option>
+                <option value="annual">1년 (30,000원)</option>
+                <option value="monthly">1달 (5,000원)</option>
+            </select>
+            <div class="packageHint"></div>
+
+            <input type="checkbox" id="terms">
+            <label for="terms">사용권 계약에 동의합니다</label>
+            <div class="termsHint"></div>
+
+            <div class="submitWrap">
+                <input type="submit" value="다음단계">
+            </div>
+
+        </form>
+    </div>
+    <script>
+        const elForm = document.getElementById('formSignUp')
+        const elPackage = document.getElementById('package')
+        const elPackageHint = document.querySelector('.packageHint')
+        const elTerms = document.getElementById('terms')
+        const elTermsHint = document.querySelector('.termsHint')
+
+        function pHint(e) {
+            let sel = elPackage.options[elPackage.selectedIndex].value;
+            //선택한 option의 value를 변수로
+            if (sel == 'annual') {
+                elPackageHint.textContent = '탁월한 선택입니다!';
+            } else if (sel == 'monthly') {
+                elPackageHint.textContent = '1년 패키지를 선택하시면 3만원을 절약하실 수 있습니다';
+            } else {
+                elPackageHint.textContent = '';
+            }
+            console.log(sel)
+        }
+        elPackage.addEventListener('change', pHint);
+        elForm.addEventListener('submit', checkTerms); // submit 이벤트는 form tae만 사용가능
+
+        function checkTerms(e){
+            e.preventDefault();
+            if(!elTerms.checked){
+                elTermsHint.textContent = '계약동의에 체크해주세요';
+            } else {
+                elTermsHint.textContent = '';
+                window.location = 'https://www.naver.com/';
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>full 배경 - 반응형</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/basic.css">
+    <script src="js/prefixfree.min.js"></script>
+</head>
+<body>
+    <header>
+        <div id="headerIn">
+            <h1>TAEYOON's <span>PORTPOLIO</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">GRAPHIC</a></li>
+                    <li><a href="#">UX/UI</a></li>
+                    <li><a href="#">PESPONSIVE</a></li>
+                    <li><a href="#">BOOTSTRAP</a></li>
+                    <li><a href="#">RESUME</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="trigger" onclick="onOff(0)"><span class="text_blind">열기/닫기</span></a>
+        </div>
+    </header>
+    <main>
+        <div class="emoji"></div>
+    </main>
+</body>
+<script>
+    const trigger = document.querySelector('.trigger');
+    const nav = document.querySelector('nav');
+
+    trigger.addEventListener('click',function(){
+        if(trigger.classList.contains('on')) { // 클래스에 on이 있으면
+            trigger.classList.remove('on'); // 제거
+            nav.style.transform = 'translateY(calc(-100% - 60px))';
+        } else {
+            trigger.classList.add('on'); // 추가
+            nav.style.transform = 'translateY(0)';
+        }
+    })
+
+    window.addEventListener('resize', function(){ // 화면 크기가 변경되면 조건 실행
+        if( window.innerWidth > 768 && nav.hasAttribute('style')) //화면이 768보다 컸을때 && nav에 style이 남아있을 때
+        nav.removeAttribute('style'); // nav에 style을 제거
+    })
+</script>
+</html>

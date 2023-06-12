@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>19 position</title>
+ </head>
+ <style>
+	#txt { width: 600px; margin: 100px auto; padding: 100px 0; }
+
+	.p1, .p2 { border: 3px solid gray; }
+	.p1 { position: relative; z-index: 10; }
+	.p2 { position: relative; left: 100px; top:200px; }
+
+	.box { width: 200px; height: 200px; }
+	.b1 { border: 5px solid deeppink; top:350px; left: 250px; position: absolute; z-index:5; }
+	.b2 { background: lightpink; top:450px; left: 300px; position: absolute; }
+	.b3 { background: yellowgreen; bottom:70px; right:70px; position: sticky; top:100px; left:200px; }
+	.b4 { position: absolute; border: 3px solid darkolivegreen; bottom:20px; right:20px; z-index:3;}
+	.b5 { background-image: linear-gradient(greenyellow, darkgreen); width: 70px; height: 70px; position: fixed; right: 50%; top:50%; } 
+ </style>
+ <body>
+ 	<div class="box b1"></div>
+	<div class="box b2"></div>
+ 	<div class="box b3"></div>
+	<div class="box b4"></div>
+	<div class="b5"></div>
+
+	<div id="txt">
+		<p>
+		<strong>position: static</strong> - 기본/ html의 흐름대로 요소배치</br></br>
+		<strong>position: relative</strong> - static과 동일하게 흐름대로 요소배치 / 위치이동 가능
+		/ 기준점은 나 자신의 top/right/bottom/left</br></br>
+		<strong>position: absolute</strong> - html의 흐름에서 제외됨 / 자유롭게 요소의 위치를 배치
+		/ 기준점은 브라우저의 top/right/bottom/left<br/><br/>
+		<strong>position: fixed</strong> - absolute와 동일 / 눈에 보이는 화면 기준으로 절대위치 / 스크롤이 바뀌어도 고정</br></br>
+		<strong>position: sticky</strong> - 평소에는 relative와 동일 / 스크롤을 내리면 알 수 있다. / 
+		웹사이트의 네비게이션을 만들 때 주로 사용 / 해당요소가 부여된 위치 특정값에 도달하면 고정 / 
+		overflow:hidden이 적용되면 불가능 / height 값이 %일때도 불가능</br></br>
+		<strong>z-index: 숫자</strong> z-index는 숫자가 높은게 위로 올라온다 / 포지션이 있을 때만 작동(static 제외)
+		</p>
+		<p class="p1">
+			Pellentesque vestibulum ut ligula vestibulum vulputate. Sed ante ante, ullamcorper eget lectus eget, auctor blandit erat. Phasellus imperdiet, ante iaculis varius tincidunt, arcu lacus tristique nibh, a consectetur nulla nibh non metus. Donec et ex in turpis varius semper vel id nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In est mi, aliquet et erat vel, hendrerit blandit diam. Sed dignissim justo id ullamcorper feugiat. Donec pharetra ex metus, nec lacinia mi faucibus vel. Aliquam non placerat diam, a pretium ante. Phasellus a volutpat augue, ac venenatis enim. Integer aliquam risus id risus elementum mattis quis quis lacus. Suspendisse euismod, mauris at egestas maximus, libero arcu placerat erat, vitae gravida ipsum augue nec lacus. Quisque pharetra metus in mauris sollicitudin luctus.
+		</p>
+
+		<p class="p2">
+			Pellentesque vestibulum ut ligula vestibulum vulputate. Sed ante ante, ullamcorper eget lectus eget, auctor blandit erat. Phasellus imperdiet, ante iaculis varius tincidunt, arcu lacus tristique nibh, a consectetur nulla nibh non metus. Donec et ex in turpis varius semper vel id nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In est mi, aliquet et erat vel, hendrerit blandit diam. Sed dignissim justo id ullamcorper feugiat. Donec pharetra ex metus, nec lacinia mi faucibus vel. Aliquam non placerat diam, a pretium ante. Phasellus a volutpat augue, ac venenatis enim. Integer aliquam risus id risus elementum mattis quis quis lacus. Suspendisse euismod, mauris at egestas maximus, libero arcu placerat erat, vitae gravida ipsum augue nec lacus. Quisque pharetra metus in mauris sollicitudin luctus.
+		</p>
+
+		<p>
+			Pellentesque vestibulum ut ligula vestibulum vulputate. Sed ante ante, ullamcorper eget lectus eget, auctor blandit erat. Phasellus imperdiet, ante iaculis varius tincidunt, arcu lacus tristique nibh, a consectetur nulla nibh non metus. Donec et ex in turpis varius semper vel id nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In est mi, aliquet et erat vel, hendrerit blandit diam. Sed dignissim justo id ullamcorper feugiat. Donec pharetra ex metus, nec lacinia mi faucibus vel. Aliquam non placerat diam, a pretium ante. Phasellus a volutpat augue, ac venenatis enim. Integer aliquam risus id risus elementum mattis quis quis lacus. Suspendisse euismod, mauris at egestas maximus, libero arcu placerat erat, vitae gravida ipsum augue nec lacus. Quisque pharetra metus in mauris sollicitudin luctus.
+		</p>
+	</div>
+ </body>
+</html>

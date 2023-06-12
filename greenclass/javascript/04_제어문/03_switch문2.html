@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swicth문2</title>
+    <style>
+        body { width: 1000px; margin: 0 auto; text-align: center; }
+        #p1 { padding: 20px 0; background-color: rgb(143, 199, 236); font-size: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>점수검색</h1>
+        <p id="p1">
+            점수
+        </p>
+    </div>
+<script>
+    let subj = prompt('영어, 국어, 수학, 과학중에 알고 싶은 점수는?', '');
+    const elP1 = document.querySelector('#p1'); // querySelector로 p1을 선택한 것
+    switch (subj) {
+        case '영어':
+            subj += '는 88점입니다.'; // ( subj += )의 의미는 ( subj = subj + )를 축약한것
+            break;
+        case '국어':
+        subj += '는 99점입니다.';
+            break;
+        case '수학':
+            subj += '은 65점입니다.';
+            break;
+        case '과학':
+            subj += '은 80점입니다.';
+            break;
+        default:
+            subj += '(은/는) 해당 과목이 없습니다.';
+            break;
+    }
+    elP1.textContent = subj; // querySelector로 선택한 p1의 텍스트를 subj로 대입하겠다는 의미
+</script>
+</body>
+</html>

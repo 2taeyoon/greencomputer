@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>04 transition</title>
+ </head>
+ <style>
+ 	div { width: 250px; height: 300px; margin: 50px auto;}
+	img { vertical-align: middle; }
+	.b1 { background: #000; }
+	.b1 img { opacity: 0.7; transition: 0.5s ease_in; }
+	.b1:hover img { opacity:1; }
+
+	.b2 { background: url('./img/minji.png'); transition: 0.3s ease-in; }
+	.b2:hover { background: url('./img/karina.png'); border-radius: 50px; }
+
+</style>
+ <body>
+	<div class="b1"><img src="./img/karina.png" alt=""></div>
+ </body>
+ <body>
+	<div class="b2"></div>
+ </body>
+</html>

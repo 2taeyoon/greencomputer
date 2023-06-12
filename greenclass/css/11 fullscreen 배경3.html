@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>11 fullscreen 배경3</title>
+ </head>
+ <style>
+ 	body { margin: 0; }
+	#warp {
+	text-align: center;
+	background-color: red;
+	width: 100%; height: 100vh; /* vh - (viewport height) 화면의 세로길이 전체를 100%으로 */
+	
+	/* background-image: url('img/banner.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center 20%; */
+
+	background: url('img/banner.jpg') no-repeat center 20%; / cover;
+	}
+	/*	== 축약형을 쓸 때 ==
+	size, position은 숫자이므로 동시에 사용할 때는 위치값(position 값) / 크기(size 값)
+	위치값과 크기의 순서가 가장 중요하다
+	숫자가 1번 나오면 무조건 위치값으로 인식한다 */
+
+	img { width: 180px; }
+	p { font-size: 75px; font-weight: bold; line-height: 120%; color: #fff; }
+	.small { font-size: 30px; }
+ </style>
+ <body>
+	<div id="warp">
+		<img src="img/img.png" alt="왕관">
+		<p>
+			KEEP<br/>CALM
+		<p>
+		<p class="small">
+			AND
+		</p>
+		<p>
+			CARRY<br/>ON
+		<p>
+	</div>
+ </body>
+</html>

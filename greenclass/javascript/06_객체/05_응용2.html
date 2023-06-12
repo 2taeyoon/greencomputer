@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object class 이용</title>
+    <style>
+        body { background: rgb(212, 246, 255); }
+        body > div { width: 500px; margin: 200px auto; padding: 20px; border-radius: 20px; box-shadow: 0 0 30px rgba(73,150,172, .2); background: rgba(255,255,255, 0.5); text-align: center; }
+        #p1 { font-size: 25px; color: rgb(73, 150, 172); font-weight: bold; }
+        #p2 { padding: 20px 0; border-radius: 10px; color: #fff; background-color: rgb(73, 150, 172); }
+    </style>
+</head>
+<body>
+    <div>
+        <p id="p1">호텔이름</p>
+        <p id="p2">빈방수</p>
+    </div>
+    <script>
+        // 객체 생성 - Object class를 이용
+        let hotel = new Object; // Object class를 이용해서 hotel 객체 생성
+        hotel.hotelName = 'SHILLA'; // 오브젝트의 property 속성 정의
+        hotel.rooms = 40; // 중괄호 안에 묶어진 오브젝트가 아니기 때문에 = ; 사용
+        hotel.booked = 25;
+        hotel.binRooms = () => { return hotel.rooms - hotel.booked; }
+
+        const elP1 = document.getElementById('p1'); // 엘리먼트의 Id p1을 elP1에 넣음
+
+        elP1.textContent = hotel.hotelName + ' HOTEL 예약정보';
+        document.getElementById('p2').textContent = hotel.binRooms() + '개의 방이 남아있습니다';; // 한번에 쓰기, 변수를 거치지 않은 것
+    </script>
+</body>
+</html>

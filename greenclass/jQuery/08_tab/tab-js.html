@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classList</title>
+    <style>
+        * { margin:0; padding:0; }
+        body { background:beige }
+        article { margin:80px 0; text-align:center; }
+        h1 { margin-bottom:20px;}
+        button { border:0; padding:10px 20px; border-radius:8px; background:#cecece; cursor: pointer; }
+        a { text-decoration:none; color:#111}
+        li { list-style:none; }
+        ul::after { display: block; content: ''; clear: both; }
+
+        .tabBody > div { display: none; }
+    </style>
+</head>
+<body>
+    <article class="c06">
+        <h1>Class add/remove</h1>
+        <div>
+            <button> JavaScript </button>
+            <button> jQuery </button>
+            <button> Bootstrap </button>
+        </div>
+        <style>
+            .c06 button.active { background: #d84444; color: #fff }
+        </style>
+        <script>
+            const elBtn6 = document.querySelectorAll('.c06 button')
+
+            let num = 0;
+            elBtn6.forEach(function (aa, bb) {
+                aa.onclick = function () {
+                    console.log(bb)
+                    elBtn6[num].classList.remove('active')
+                    this.classList.add('active')
+                    num = bb;
+                    //버튼을 클릭할때 몇번째 버튼인지 알아와서(bb) 그 숫자를 num안에 넣어 줌
+                }
+            })      //  A.forEach(function(item,index){ 실행구 }   
+        </script>
+    </article>
+
+    <article class="tab">
+        <ul class="tabMenu">
+            <li class="active"><a href="#">고래1</a></li> <!-- 첫번째 li에 active를 해줘야 제대로 작동함 -->
+            <li><a href="#">고래2</a></li>
+            <li><a href="#">고래3</a></li>
+        </ul>
+        <div class="tabBody">
+            <div>
+                <h3>Sweet Little Kitty</h3>
+                <img src="img/1.png" alt="">
+                <p>Nulla amet sunt dolor labore qui officia in commodo sint tempor laboris et commodo.</p>
+            </div>
+            <div>
+                <h3></h3>
+                <img src="img/2.png" alt="">
+                <p>Ullamco deserunt ea excepteur ex Lorem nulla adipisicing exercitation pariatur ex.</p>
+            </div>
+            <div>
+                <h3></h3>
+                <p>
+                    Et commodo id enim aliqua cillum duis quis et id ullamco consequat anim duis Lorem.
+                    <img src="img/3.png" alt="">
+                </p>
+            </div>
+        </div>
+        <style>
+            .tab { width: 600px; margin: auto; }
+            .tabMenu { display: flex; justify-content: center; margin-bottom: 30px; }
+            .tabMenu > li { margin: 0 20px; }
+            .tabMenu > li > a { font-size: 1.5em; color: gray; }
+            .tabMenu > li.active a { color: black; border-bottom: 3px solid black; }
+
+            .tabBody {}
+            .tabBody > div { border: 1px solid gray; padding: 20px; }
+        </style>
+        <script>
+            const elMenus = document.querySelectorAll('.tabMenu li');
+            const elBodys = document.querySelectorAll('.tabBody > div');
+
+            let idx = 0;
+            elBodys[idx].style.display = 'block';
+            elMenus.forEach(function(e, index){
+                e.addEventListener('click', function(){
+                    elMenus.item(idx).classList.remove('active');
+                    elBodys[idx].style.display = 'none';
+                    console.log(idx);
+                    this.classList.add('active');
+                    idx = index; // index를 idx에 대입해서 내가 선택한 요소가 선택 되게
+                    elBodys[idx].style.display = 'block';
+                    console.log('끝',idx);
+                })
+            });
+        </script>
+    </article>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .aa { height: 300px; background: red; transition: all 1s; }
+    .aa.active { background: blue; }
+    .he { height: 2000px; }
+</style>
+<body>
+
+    <div class="he"></div>
+    <div class="aa">클래스 aa의 요소</div>
+    <div class="aa">클래스 aa의 요소</div>
+    <div class="aa">클래스 aa의 요소</div>
+    <div class="he"></div>
+
+<script>
+    const aa = document.querySelectorAll('.aa');
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 1.0
+    };
+    const observer = new IntersectionObserver((bb) => {
+        bb.forEach((cc)=>{
+            console.log('ssssssssss',cc);
+            if(cc.isIntersecting){
+                cc.target.classList.add('active');
+            }
+        });
+    });
+
+    aa.forEach((dd)=>{
+        observer.observe(dd);
+    });
+</script>
+</body>
+</html>

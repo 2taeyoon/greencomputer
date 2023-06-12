@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+div { 
+  border:5px solid #999; background:PowderBlue;
+  line-height:200px; box-sizing:border-box;
+}
+div > div { border:2px solid red; background:pink;}

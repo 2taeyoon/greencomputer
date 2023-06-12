@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_node.Value</title>
+    <style>
+        * { margin:0; padding:0; }
+        body { background:#F5EAEA}
+        body > div { width:400px; margin:150px auto; padding:2px; text-align:center; border:1px solid #fa190d}
+        h1 { margin:20px 0 }
+        h2 { color:#774f75; margin-bottom:30px; }
+        h1 img { width:150px; }
+        li { list-style:none; background:#fda4a4; color:#fff; line-height:50px; margin:2px; padding-left:20px;  }
+        .red { background:#fa190d; }
+        .sky { background:#7ec0ec; }
+        .orange { background:#ffba26;}
+        .line { text-decoration:underline overline;}
+        .check { background:#fff url('../img/check-mark.png') no-repeat 90% 50% / 25px; color:red }
+        .purple { background:purple; color:yellow; }
+    </style>
+</head>
+<body>
+    <div id="page">
+        <h1><img src="icon.svg" alt=""></h1>
+        <h2>DOM_node.Value</h2>
+        <ul>
+            <!-- 주석입니다!! -->
+            <li>리에주 와플</li>
+            <li id="two">믹스 베리 요거트</li>
+            <li>머랭 쿠키</li>
+            <li id="four" class="red">봉봉 오 쇼콜라</li>
+            <li class="sky">휠리 치즈 브프샌드위치</li>
+            <li>화이트 와인</li>
+        </ul>
+    </div>
+<script>
+    let elText1 = two.nodeValue; // null, id는 바로 사용해도 된다.
+    let elText2 = two.firstChild.nodeValue; // 텍스트 요소도 자식노드로 인식
+    console.log(elText2);
+
+    two.firstChild.nodeValue = elText2.replace('요거트','아이스크림');
+
+    let elText3 = four.firstChild.nodeValue;
+    // four.firstChild.nodeValue = elText3.replace('쇼콜라','감자탕');
+    four.firstChild.nodeValue = '따끈한 감자탕'; // 텍스트 전체를 바꿔주는 방법
+    /*
+        A.replace('B', 'C') - 문자열 A에 있는 B단어를 C로 변경한다
+    */
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>firebase</title>
+</head>
+<style>
+    .login_wrap { max-width: 500px; margin: 100px auto 0; }
+    .login_wrap img { display: block; width: 100%; height: 100%; object-fit: cover; cursor: pointer; }
+</style>
+<body>
+    <div class="login_wrap">
+        <a href="#" id="google_login_btn">
+            <img src="./img/login.png" alt="login">
+        </a>
+    </div>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js";
+    import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyCgEAHi3EIlx9Dlfz4zSphYsTdraRSa40o",
+        authDomain: "webstudy-ff5c9.firebaseapp.com",
+        projectId: "webstudy-ff5c9",
+        storageBucket: "webstudy-ff5c9.appspot.com",
+        messagingSenderId: "42056533422",
+        appId: "1:42056533422:web:c55cdd7f07af5c9c45b43f",
+        measurementId: "G-56SV7G57P8"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    console.log(app)
+    const analytics = getAnalytics(app);
+    const provider = new GoogleAuthProvider();
+
+
+    document.querySelector('#google_login_btn').addEventListener('click', (event)=>{
+        event.preventDefault();
+
+        const auth = getAuth();
+        signInWithPopup(auth, provider)
+        .then((result) => {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+            // The signed-in user info.
+            const user = result.user;
+            // IdP data available using getAdditionalUserInfo(result)
+            // ...
+            window.location = 'https://www.naver.com/';
+        }).catch((error) => {
+            // Handle Errors here.
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // The email of the user's account used.
+            const email = error.customData.email;
+            // The AuthCredential type that was used.
+            const credential = GoogleAuthProvider.credentialFromError(error);
+            // ...
+        });
+    });
+
+</script>
+</body>
+</html>

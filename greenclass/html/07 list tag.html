@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>07 list tag</title>
+  <style>
+  	dt{
+		font-size:20px;
+		font-weight: bold
+	}
+	strong{
+		font-weight:normal;
+		color: gray;
+	}
+	sup{
+		color: skyblue;
+	}
+  </style>
+ </head>
+ <body>
+	<h1>목록을 나타내는 태그(list)</h1>
+	<h3>네이버 스포츠</h3>
+	<ol type="1" start="20">
+		<li>type="1 / I / i / A / a"</li>
+		<li>야구
+			<ol>
+				<li>영상</li>
+				<li>생생화보</li>
+				<li>일정/결과</li>
+				<li>기록/순위</li>
+			</ol>
+		</li>
+		<li>해외야구</li>
+		<li type="I">축구
+			<ul>
+				<li>영상</li>
+				<li>생생화보</li>
+				<li>일정/결과</li>
+				<li>기록/순위</li>
+			</ul>
+		</li>
+		<li>해외축구</li>
+		<li>농구</li>
+		<li>배구</li>
+	</ol>
+	<h3>TV연예</h3>
+	<ul type="square">
+		<li>type="disc / circle / square / none"</li>
+		<li>TV</li>
+		<li type="none">포토</li>
+		<li>랭킹</li>
+		<li>영화</li>
+		<li>최신뉴스</li>
+	</ul>
+	<dl>
+		<dt>愛<sup>사랑 애</sup></dt>
+		<dd><strong>명사 </strong>: 사랑, 자애<sup>慈愛</sup>, 인정<sup>人情</sup></dd>
+		<dd><strong>명사 </strong>: 사랑, 자애<sup>慈愛</sup>, 인정<sup>人情</sup></dd>
+		<dd><strong>명사 </strong>: 사랑, 자애<sup>慈愛</sup>, 인정<sup>人情</sup></dd>
+	</dl>
+	<dl>
+		<dt>유재석</dt>
+		<dd><b>1972년 08월 14일</b> 서울특별시에서 태어났다.</dd>
+	</dl>
+	<hr/>
+	<h3>ul, ol, li, dl, dt, dd tag</h3>
+	ul, ol은 한 묶음으로 된 것을 구성할 때 사용하며 블록 요소이다.<br/>
+	dl, dt은 어떤 것을 정의할 때 사용한다 dd는 설명하는 것(설명 목록)<br/>
+ </body>
+</html>

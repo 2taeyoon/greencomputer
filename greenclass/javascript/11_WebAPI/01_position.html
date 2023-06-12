@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    header {
+      position:fixed; top:0; left:0; width:100%; 
+      background:rgba(0,0,0,0.8); text-align:center;
+      transition:0.5s;
+    }
+    header h2 { color:#999; line-height:80px; border-bottom:1px solid #fff
+    }
+    header div { color:#fff; padding:10px 0; }
+    header div span { display:inline-block; width:45px; background: #fff; color:red; font-weight:bold; margin-right:20px;}
+    header.scr { transform:translateY(-80px); background:rgba(255, 135, 225, 0.8);  }
+
+    section {}
+    section div { height:500px; font-size:5em;
+    display:flex; justify-content:center; align-items:center;
+    background:#ffcbcb;
+    }
+    section div:first-child {font-size:1.5em;}
+    section div:nth-child(even){ background:#cbefff;}
+  </style>
+</head>
+<body>
+  <header>
+    <h2>마우스의 위치</h2>
+    <div>
+      
+      screenX : <span id="sx">0</span>  
+      screenY : <span id="sy">0</span> || &nbsp;  
+      pageX : <span id="px">0</span>  
+      pageY : <span id="py">0</span> || &nbsp; 
+      clientX : <span id="cx">0</span>  
+      clientY : <span id="cy">0</span>  
+    </div>
+  </header>
+  <section>
+    <div>
+      screenX,screenY   : 스크린(모니터) 기준 위치값<br>
+      pageX,pageY   : 열려있는 페이지(브라우저)기준 위치값. 스크롤 된 부분 포함<br>
+      clientX,clientY  : 눈에 보여지는 영역 기준 위치값
+    </div>
+    <div>02</div>
+    <div>03</div>
+    <div>04</div>
+    <div>05</div>
+  </section>
+<script>
+  const header = document.querySelector('header')
+  const headerDiv =  document.querySelector('header div')  
+
+  function mousePos(e){
+    sx.innerText = e.screenX;
+    sy.innerText = e.screenY;
+    px.innerText = e.pageX;
+    py.innerText = e.pageY;
+    cx.innerText = e.clientX;
+    cy.innerText = e.clientY;
+  }
+
+  window.addEventListener('mousemove', mousePos);
+</script>
+</body>
+</html>

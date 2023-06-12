@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input_File_Image</title>
+</head>
+
+<body>
+    <input type="file" id="myFileInput" accept="image/*" />
+    <div id="myDiv" style="width: 200px; height: 200px;"></div>
+
+    <script>
+        const fileInput = document.getElementById('myFileInput');
+        const divElement = document.getElementById('myDiv');
+
+        fileInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = (e) => {
+                console.log(e);
+                const imageUrl = e.target.result;
+                divElement.style.background = `url(${imageUrl}) no-repeat center / cover`;
+            };
+
+            reader.readAsDataURL(file);
+        });
+    </script>
+
+    <!-- img tag로 가져오기
+    <input type="file" id="myFileInput" accept="image/*" />
+    <img id="myImage" src="#" alt="Preview" />
+
+    <script>
+        const fileInput = document.getElementById('myFileInput');
+        const imageElement = document.getElementById('myImage');
+
+        fileInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = (e) => {
+                imageElement.src = e.target.result;
+            };
+
+            reader.readAsDataURL(file);
+        });
+    </script> -->
+
+</body>
+
+</html>

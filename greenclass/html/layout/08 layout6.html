@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>08 layout6</title>
+ </head>
+ <style>
+ 	* { margin: 0; padding: 0; box-sizing: border-box; }
+	li { list-style: none; }
+	
+	#container { max-width: 1102px; margin: auto; }
+	/* max-width 최대치가 1102px로 설정하면 줄어들었을때는 자동적으로 100%로 적용되어 반응형이 된다. */
+
+	header, footer { height: 100px; background: #ccc; line-height: 100px; }
+
+	main { border: 1px solid black; margin: 20px 0; position: relative; }
+	main::after { content:""; clear:both; display: block; } /* overflow: hidden 대신 */
+	main li { float: left; padding: 10px; }
+
+ </style>
+ <body>
+ 	<div id="container">
+		<header>
+			<h1>header</h1>
+		</header>
+		<main>
+			<ul>
+				<li><img src="https://via.placeholder.com/200/fffa91/FF0000?text=dummy"></li>
+				<li><img src="https://via.placeholder.com/200/fffa91/FF0000?text=dummy"></li>
+				<li><img src="https://via.placeholder.com/200/fffa91/FF0000?text=dummy"></li>
+				<li><img src="https://via.placeholder.com/200/fffa91/FF0000?text=dummy"></li>
+				<li><img src="https://via.placeholder.com/200/fffa91/FF0000?text=dummy"></li>
+				<li><img src="https://via.placeholder.com/200/fffa91/FF0000?text=dummy"></li>
+				<li><img src="https://via.placeholder.com/200/fffa91/FF0000?text=dummy"></li>
+				<li><img src="https://via.placeholder.com/200/fffa91/FF0000?text=dummy"></li>
+				<li><img src="https://via.placeholder.com/200/fffa91/FF0000?text=dummy"></li>
+				<li><img src="https://via.placeholder.com/200/fffa91/FF0000?text=dummy"></li>
+			</ul>
+		</main>
+		<footer>
+			<h2>footer</h2>
+		</footer>
+	</div>
+ </body>
+</html>

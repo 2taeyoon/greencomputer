@@ -1,0 +1,21 @@
+/*
+    다른 클라스의 스타일을 그대로 가져와서 쓸 수 있다
+    @extend 클라스명
+*/
+.aaa { padding:20px; background:lightseagreen; display:flex; justify-content:center; align-items:center; color:darkblue; }
+
+.bbb { @extend .aaa; background:OrangeRed; }
+
+.btn { width:100px; height:40px; background:#def3f3; border:1px solid #5cd3a6; border-radius:8px; }
+input[type="text"] { @extend .btn; width:300px; padding-left:10px; }
+
+/*
+    플레이스 홀더(placeholder), 유령클라스 %
+    @extend시 가져다 쓰는 용도로만 만들어짐
+    css세트들을 변수처럼 선언해서 사용
+*/
+
+%box { display:flex; justify-content:center; align-items:center; border:2px solid gray; width:200px; height:200px; }
+
+.box1 { @extend %box; }\
+.box2 { @extend %box; background:#5cd3a6; }

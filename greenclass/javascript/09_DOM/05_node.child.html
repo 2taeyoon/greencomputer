@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_node,children</title>
+    <style>
+        * { margin:0; padding:0; }
+        body { background:#F5EAEA}
+        body > div { width:400px; margin:150px auto; padding:2px; text-align:center; border:1px solid #fa190d}
+        h1 { margin:20px 0 }
+        h2 { color:#774f75; margin-bottom:30px; }
+        h1 img { width:150px; }
+        li { list-style:none; background:#fda4a4; color:#fff; line-height:50px; margin:2px; padding-left:20px;  }
+        .red { background:#fa190d; }
+        .sky { background:#7ec0ec; }
+        .orange { background:#ffba26;}
+        .line { text-decoration:underline overline;}
+        .check { background:#fff url('../img/check-mark.png') no-repeat 90% 50% / 25px; color:red }
+        .purple { background:purple; color:yellow; }
+    </style>
+</head>
+<body>
+    <div id="page">
+        <h1><img src="icon.svg" alt=""></h1>
+        <h2>childNodes,children</h2>
+        <ul>
+            <!-- 주석입니다!! -->
+            <li>봉봉 오 쇼콜라</li>
+            <li>휠리 치즈 브프샌드위치</li>
+            <li>화이트 와인</li>
+        </ul>
+        <ul><li
+            >2번째 ul시작!!!!</li
+            ><li>믹스 베리 요거트</li
+            ><li class="red">봉봉 오 쇼콜라</li
+            ><li class="sky">휠리 치즈 브프샌드위치</li
+            ><li>화이트 와인</li
+        ></ul>
+    </div>
+<script>
+    const elStart = document.getElementsByTagName('ul')[1];
+    //항상 배열로 인식, 순서를 명확히 해줬음
+    const elFirst = elStart.firstChild;
+    const elLast = elStart.lastChild;
+    const el3 = elStart.childNodes[2];
+
+    elFirst.classList.add('check');
+    console.log('ssssssssssssssssssssssssssssss',elFirst);
+
+    elLast.classList.add('orange');
+    el3.classList.add('line');
+    el3.classList.replace('red', 'purple');
+
+    console.log('childNodes는 무엇?', elStart.childNodes);
+    /*
+        A.firstChild    - A의 자식 노드들 중 첫번째 노드
+        A.lasdstChild   - A의 자식 노드들 중 마지막 노드
+        A.childNodes[N]  - A의 자식 노드들 중 N번째(N+1) 노드
+        A.classList.replace('B','C')  - A의 클라스 B를 C로 바꾼다
+    */
+
+    const elStart2 = document.getElementsByTagName('ul')[0];
+    const elChildren = elStart2.children;
+    console.log('children은 무엇?', elChildren)
+
+    const elCh2 = elStart2.children[1];
+    elCh2.classList = 'orange';
+
+    // const elFirstChild = elStart2.firstChild;
+    // console.log('elFirstChild',elFirstChild)
+    // elFirstChild.classList.add('check');   //children 과 다름 Node
+
+    console.log('elStart2의 자식 갯수는? childNodes', elStart2.childNodes.length)
+    console.log('elStart2의 자식 갯수는? children', elStart2.children.length)
+
+    const elPa = elStart2.parentNode;
+    console.log('elPa', elPa)
+
+    const h2 = document.getElementsByTagName('h2')[0];
+    console.log('h2에 자식노드가 있나?', h2.hasChildNodes());
+
+    /*
+    A.childNodes  - A의 모든 자식노드(엔터, 여백, 주석등 포함)
+    A.children    - A의 모든 자식노드 중 엔터, 여백, 주석등 제외     
+    A.parentNode  - A의 부모 노드
+    A.hasChildNodes - A의 자식 노드가 있는지 없는지 알아봄
+    */
+</script>
+</body>
+</html>

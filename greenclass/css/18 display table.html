@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>18 display-table</title>
+ </head>
+ <style>
+	#wrap { display: table; width:500px; height: 400px; margin: 0 auto;
+	table-layout: fixed; word-break: keep-all; }
+	/*
+	table-layour: fixed/auto - 셀안의 컨텐츠 양에 따라 각셀이 늘어나거나(auto) 고정(fixed)
+	word-break - 단어의 분리를 어떻게 할 것인가 결정(normal/break-all(연결된 단어라도 줄바꿈)/keep-all(한중일 언어만 줄변경 X)) */
+	/*  white-space: nowrap; 한줄로만 사용하겠다는 의미
+		overflow: hidden;
+		text-overflow: ellipsis; 넘치는 텍스트 생략 부호로 만들어줌
+		-webkit-line-clamp: 3; 텍스트를 자를 때 원하는 단위 ex) 3줄
+		-webkit-box-orient: vertical; */
+
+	#wrap > div { display:table-cell; text-align: center; vertical-align: middle; }
+
+	#wrap > div:nth-child(1) { background: Thistle; }
+	#wrap > div:nth-child(2) { background: peachpuff; }
+	#wrap > div:nth-child(3) { background: paleturquoise; }
+
+	#practice { width: 300px; height: 300px; background: orange; text-align: center; display: table; }
+	#practice > p { display: table-cell; vertical-align: middle; word-break: break-all; }
+
+ </style>
+ <body>
+ 	<div style="width: 300px; height: 300px; background:lightsalmon;">
+	 	<h1 style="text-align: center; background: red;">123</h1>
+	</div>
+	<div id="wrap">
+		<div><h2>가나다라</h2></div>
+		<div><h2>가나다라 가나다라마바사아자차카타파하</h2></div>
+		<div><h2>가나다라 가나다라마바사</h2></div>
+	</div>
+	<div id="practice">
+		<p>Nullam tincidunt<br/> enim non metus convallis, quis egestas velit feugiat.</p>
+	</div>
+ </body>
+</html>

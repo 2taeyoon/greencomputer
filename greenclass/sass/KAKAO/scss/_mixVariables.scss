@@ -1,0 +1,16 @@
+$bg-color:#FFEB35;
+$main-color:#381E1F;
+$gray1:#61615a;
+$gray2:#a1a199;
+$gray3:#e6e3e3;
+$gray4:#f3f2f2;
+
+$opcityBlack:rgba(0,0,0,0.2);
+
+
+
+@mixin set-box($height,$width:100%,$border-radius:0){
+  height:$height;
+  width:$width;
+  border-radius:$border-radius;
+}

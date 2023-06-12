@@ -1,0 +1,6 @@
+@charset "UTF-8"; 
+
+@media (max-width:991px){
+  .visual_m { display:block; max-width:100% }
+  .visual_pc { display:none; }
+}

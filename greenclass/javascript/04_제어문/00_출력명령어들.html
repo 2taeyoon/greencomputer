@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>출력 명령어들</title>
+</head>
+<script>
+    document.write('화면에 그냥 출력!!');
+    // alert('경고합니다!!'); // 경고창, 확인버튼
+    // window.confirm('확인창입니다'); // 확인창, 확인 취소 버튼
+    // prompt('제목', '텍스트를 입력하세요'); // 입력창
+    let msg = prompt('이름을 입력해주세요!', '');
+    console.log(msg);
+</script>
+<body>
+    <h1>javascript - 출력 명령어</h1>
+    <div><span id="name"></span>님 반갑습니다!!</div>
+    <script>
+        const elName = document.querySelector('#name');
+        // console.log(elName);
+        elName.textContent = msg;
+        // prompt 창에 입력한 내용을 아이디 name으로 정의한 부분에 문자로 넣는다
+    </script>
+</body>
+</html>

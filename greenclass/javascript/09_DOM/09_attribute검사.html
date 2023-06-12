@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM-attribute검사</title>
+  <style>
+    * { margin:0; padding:0; }
+    body { background:#F5EAEA}
+    body > div { width:400px; margin:150px auto; padding:2px; text-align:center; border:1px solid #fa190d}
+    h1 { margin:20px 0 }
+    h2 { color:#774f75; margin-bottom:30px; }
+    h1 img { width:150px; }
+    li { list-style:none; background:#fda4a4; color:#fff; line-height:50px; margin:2px; padding-left:20px;  }
+    .red { background:#fa190d; }
+    .sky { background:#7ec0ec; }
+    .orange { background:#ffba26;}
+    .line { text-decoration:underline overline;}
+
+    #result { background:#f3cece; margin:20px; padding:20px; border-radius:10px;}
+  </style>
+</head>
+<body>
+  <div id="page">
+    <h1><img src="icon.svg" alt=""></h1>
+    <h2>attribute 검사</h2>
+    <ul>
+      <li id="one" class="happy">리에주 와플</li>
+      <li>믹스 베리 요거트</li>
+      <li>머랭 쿠키</li>
+      <li id="four">봉봉 오 쇼콜라</li>
+    </ul>
+    <div id="result"></div>
+  </div>
+  <script>
+    const item1 = document.getElementById('one');
+    const pos = document.getElementById('result');
+
+    if(item1.hasAttribute('class')){      
+      const attValue = item1.getAttribute('class'); 
+      console.log('class속성 값은? ',attValue)
+
+      pos.innerHTML = `첫번째 아이템의 클라스 이름은? <br> <big>${attValue}</big> 입니다`
+    }
+
+  </script>
+</body>
+</html>

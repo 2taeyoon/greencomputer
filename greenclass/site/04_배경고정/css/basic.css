@@ -1,0 +1,17 @@
+@charset "UTF-8";
+body { font-family:Verdana, Geneva, Tahoma, sans-serif; }
+
+section { position: relative; width: 100%; height: 960px; }
+
+.s1 { background: url('../img/product1_bg.jpg') no-repeat center / cover fixed; }
+.s2 { background: url('../img/product2_bg.jpg') no-repeat center / cover fixed; }
+.s3 { background: url('../img/product3_bg.jpg') no-repeat center / cover fixed; }
+.s4 { background: url('../img/product4_bg.jpg') no-repeat center / cover fixed; }
+.s5 { background: url('../img/product5_bg.jpg') no-repeat center / cover fixed; }
+
+.right { right: 0; }
+.con { position: relative; width: 960px; height: 950px; margin: auto; overflow: hidden; }
+.text { position: absolute; top: 50%; width: 480px; text-align: center; transform: translateY(-50%); }
+.text h2{ margin-bottom: 20px; }
+.text a { display: block; }
+.text > img { margin-top: 50px; }

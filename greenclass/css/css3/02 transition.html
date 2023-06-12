@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>02 trnasition01</title>
+ </head>
+ <style>
+	.b1, .b2 { width: 300px; height: 300px; margin: 50px; }
+	/* transition-duration : transition의 총 시간
+		transition-property: 적용시킬 속성을 선택/all은 전체 선택
+		transition-timing-function: 변화할때 속도 조절
+			ease - 기본 (시작과 끝을 천천히/중간 빠르게)
+			ease-in (시작할때 천천히 뒤로가면 빠르게)
+			ease-out (시작할때 빠르게 뒤로가면 천천히)
+			ease-in-out (시작과 끝을 천천히, ease보다 약간 더 빠름)
+			linear - 동일한 속도
+		transition-delay: 지연된 후 실행 */
+
+
+
+	.b1 { background: orangered; transition: 0.3s 0.1s; -webkit-transition: 0.3s 0.1s; }
+	.b2 { background: olivedrab; transition: all 0.5s ease-out; }
+
+	.b1:hover { transform: translate(700px); background: blue; border-radius: 15px; }
+	.b2:hover { transform: rotate(360deg); background: url(../img/dog1.jpg) no-repeat -90px -34px; }
+
+ </style>
+ <body>
+	<div class="b1"></div>
+	<div class="b2" style="color: white; text-align:center; font-size:30px;">나는 누구일까요?</div>
+ </body>
+</html>
+
+
+
+
+
+	<!--.jb1 { box-sizing: border-box; width: 64px; height: 64px; margin: 10px 0px; opacity: 0.1; transition: background-color 0.5s; }
+	.jb2 { box-sizing: border-box; width: 64px; height: 64px; margin: 10px 0px; opacity: 0.1; transition: 0.5s 1s; }
+
+	.jb:hover { opacity: 1; background-color: orange; }
+	
+	.jb1 { transition-property: all; }
+	.jb2 { transition-property: width, background-color; }
+
+		/*
+		#box6 > div > ul > li { flex-grow:1; height: 400px; background:skyblue; border: 1px solid blue; transition: 0.5s; }
+		#box6 > div > ul > li:hover { flex-grow:10; }
+		transition: duration delay <- 하나만 쓰면 자동으로 애니메이션 시간이 지정됨
+			축약형: transition: property timing-function duration delay | initial | inherit
+
+			property : transition을 적용시킬 속성을 정합니다.
+			timing-function : transition의 진행 속도를 정합니다.
+			duration : transition의 총 시간을 정합니다.
+			delay : transition의 시작을 연기합니다.
+			initial : 기본값으로 설정합니다.
+			inherit : 부모 요소의 속성값을 상속받습니다. -->

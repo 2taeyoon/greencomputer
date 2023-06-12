@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 media query</title>
+    <style>
+        body{background-color: bisque;}
+        .divfo{/*position: relative;*/}
+        .divgo{width: 100px; height: 100px; background-color: chartreuse; position: absolute; left: 10px; top: 20px;}
+        @media only screen and (min-width: 800px) {
+            body{background-color: aqua;}
+        }
+        @media only screen and (min-width: 601px) and (max-width: 799px) {
+            .divgo{display: none;}
+        }
+        @media only screen and (max-width: 600px) {
+            body{background-color: red;}
+        }
+    </style>
+</head>
+<body>
+    <div class="divgo">
+        물체
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="divfo">미디어 커리는 항상 맨 밑에 있는게 맨 나중에 실행된다. 그래서 미디어 커리는 밑쪽에 작성한다.</div>
+    <div class="divfo">max-width 는 작은 사이즈가 밑에 내려가게 작성해야 한다. 작은 사이즈가 밑에 내려간다고 생각하면 된다.</div>
+    <div class="divfo">@media only screen and (min-width: 800px) 화면이 최소 800px까지 도달하는 시점부터 반응을 한다. 즉 800px 이상</div>
+    <div class="divfo">@media only screen and (max-width: 600px) 화면이 최대 600px까지 도달하는 시점까지 반응을 한다. 즉 600px 이하</div>
+</html>

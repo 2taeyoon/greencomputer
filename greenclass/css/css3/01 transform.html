@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>01 transform</title>
+ </head>
+ <style>
+ 	
+	body { margin: 0; padding: 0; margin-top: 100px; }
+	body > div { width: 81%; margin: 0 auto; }
+	body > h1 { text-align: center; margin-bottom: 50px; }
+	div { text-align: center; }
+	body > div > div { width: 150px; height: 150px; border: 5px solid black; margin: 30px; float: left; }
+	body > div > div > div { width: 150px; height: 150px; background: rgba(154,205,50,0.6); margin: 0 auto; }
+
+	hr { clear: both; }
+
+	.trans01 { transform: translateX(-40px); } /* x축 이동 */
+	.trans02 { transform: translateY(-40px); } /* y축 이동 */
+	.trans03 { transform: translate(-40px, -40px);} /* x, y 축 이동 */
+	.trans04 { transform: scaleX(1.5); } /* x축 배율(%도 가능) */
+	.trans05 { transform: scaleY(1.5); } /* y축 배율(%도 가능) */
+	.trans06 { transform: scale(1.5, 2.0); } /* x, y 축 배율(%도 가능) */
+	.trans07 { transform: skewX(30deg); } /* x 축 기울기 */
+	.trans08 { transform: skewY(30deg); } /* y 축 기울기 */
+	.trans09 { transform: skew(30deg, 15deg); } /* x, y 축 기울기 */
+	.trans10 { transform: rotate(25deg); } /* 시계방향 회전 */
+	.trans11 { transform: rotate(-25deg); } /* 반시계방향 회전 */
+		/* transform-origin: x축 중심, y축 중심 */
+	.trans12 { transform: rotate(-25deg); transform-origin: center center; } /* 기본값 : 중앙이 기준점 */
+	.trans13 { transform: rotate(25deg); transform-origin: right bottom; }
+	.trans14 { transform: rotate(25deg); transform-origin: 20% 50%; }
+	.trans15 { transform: rotate(25deg); transform-origin: 0% 0%; }
+	.trans16 { transform: rotate(-25deg); transform-origin: center; }
+	.trans17 { transform: scale(70%) rotate(45deg) translateX(-30px); }
+		/* 여러 속성값을 동시에 적용, 중심축은 이동하지 않음 */
+	.trans18 { transform: matrix(1.5, 0, 0, 1.5, 0.8, -45); }
+		/* transform: matrix(scaleX, skewX, skewY, scaleY, translateX, translateY) */
+
+	.backface { background: rgba(30,144,250,0.5); }
+	.backface > div { background: tomato;  }
+	.backface > div > h1 { margin:0; font-size: 30px; }
+
+	.trans19 { transform: scale(60%); }
+	.trans20 , .trans21 { transform: rotateY(180deg) scale(60%); }
+	.trans21 { backface-visibility: hidden;  }
+		/* backface-visibility:hidden; 요소가 뒤집혔을때(rotateY, raotateX) 뒷면 표시요부를 지정 */
+
+ </style>
+ <body>
+ 	<h1>transform tag</h1>
+ 	<div>
+		<div>
+			<div class="trans01">transform: translateX(-40px);</div>
+		</div>
+		<div>		 
+			<div class="trans02">transform: translateY(-40px);</div>
+		</div>
+		<div>		 
+			<div class="trans03">transform: translate(-40px, -40px);</div>
+		</div>	
+		<div>		 
+			<div class="trans04">transform: scaleX(1.5);</div>
+		</div>	
+		<div>		 
+			<div class="trans05">transform: scaleY(1.5);</div>
+		</div>	
+		<div>		 
+			<div class="trans06">transform: scale(1.5, 2.0);</div>
+		</div>
+		<hr/>
+		<div>		 
+			<div class="trans07">transform: skewX(30deg);</div>
+		</div>	
+		<div>		 
+			<div class="trans08">transform: skewY(30deg);</div>
+		</div>	
+		<div>		 
+			<div class="trans09">transform: skew(30deg, 15deg);</div>
+		</div>
+		<hr/>
+		<div>		 
+			<div class="trans10">transform: rotate(25deg);</div>
+		</div>	
+		<div>		 
+			<div class="trans11">transform: rotate(-25deg);</div>
+		</div>	
+		<div>		 
+			<div class="trans12">transform: rotate(-25deg); transform-origin: center center;</div>
+		</div>	
+		<div>		 
+			<div class="trans13">transform: rotate(25deg); transform-origin: right bottom;</div>
+		</div>
+		<div>		 
+			<div class="trans14">transform: rotate(25deg); transform-origin: 20% 50%;</div>
+		</div>	
+		<div>		 
+			<div class="trans15">transform: rotate(25deg); transform-origin: 0% 0%;</div>
+		</div>	
+		<div>		 
+			<div class="trans16">transform: rotate(-25deg); transform-origin: center;</div>
+		</div>
+		<hr/>
+		<div>		 
+			<div class="trans17">transform: scale(70%) rotate(45deg) translateX(-30px);</div>
+		</div>	
+		<div>		 
+			<div class="trans18">transform: matrix(1.5, 0, 0, 1.5, 0.8, -45);</div>
+		</div>
+		<hr/>
+		<div class="backface">		 
+			<div class="trans19"><h1>BACK</h1></div>
+		</div>
+		<div class="backface">		 
+			<div class="trans20"><h1>BACK</h1></div>
+		</div>
+		<div class="backface">		 
+			<div class="trans21"><h1>BACK</h1></div>
+		</div>
+	</div>
+ </body>
+</html>

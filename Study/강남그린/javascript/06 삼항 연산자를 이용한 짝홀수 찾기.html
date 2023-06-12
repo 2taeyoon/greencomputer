@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼항 연산자를 이용한 짝홀수 찾기</title>
+</head>
+<style>
+    img { width: 70%; }
+</style>
+<script>
+    /* 삼향 연산자 조건식이 참일 경우 1이 반환, 거짓일 경우 2가 반환된다
+        조건식 ? 실행문1 : 실행문2 ; */
+    var a = Number(prompt('숫자를 기입'));
+    // var b = 3;
+    var c = a%2==0 ? '짝수입니다.' : '홀수입니다.';
+    document.write(c)
+</script>
+<body>
+    <img src="img/삼향연산자.jpg" alt="삼항 연산자를 이용한 짝홀수 찾기">
+</body>
+</html>

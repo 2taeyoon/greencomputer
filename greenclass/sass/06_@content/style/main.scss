@@ -1,0 +1,39 @@
+/*
+@content - mixin사용시 지정된 스타일 이외에도 별도의 스타일을 추가
+*/
+
+@mixin btn-style{
+  @content;
+  width:100px;
+  height:50px;
+  border:none;
+}
+
+@mixin btn-style2($hv-Bgcolor:gray){
+  @content;
+  width:100px;
+  height:50px;
+  border:none;
+
+  &:hover{
+    background:$hv-Bgcolor;
+  }
+}
+
+.b1{
+  @include btn-style {
+    background:coral;
+    color: darkgreen;
+  }
+}
+
+.b2{
+  @include btn-style2(skyblue){
+    background:yellow
+  }
+}
+.b3{
+  @include btn-style2{
+    background:skyblue
+  }
+}

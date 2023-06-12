@@ -1,0 +1,7 @@
+{
+    "events": [
+        { "loacation": "샌프란시스코, CA", "data": "4월 20일", "map": "../img/map-ca.png" },
+        { "loacation": "오스틴, TX", "data": "4월 13일", "map": "../img/map-tx.png" },
+        { "loacation": "뉴욕, NY", "data": "4월 30일", "map": "../img/map-ny.png" }
+    ]
+}

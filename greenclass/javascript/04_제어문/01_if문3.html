@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문 - if3</title>
+    <style>
+        body {background-color: rgb(200, 228, 144); }
+        body > div { width: 500px; margin: 200px auto; background: rgba(255,255,255, 0.3); text-align: center; padding: 20px; }
+        #p1 {background-color: rgb(164, 196, 101); padding: 20px 0; }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>합격여부</h1>
+        <p id="p1">
+            <script>
+                let score = prompt('점수를 입력해주세요');
+                const pass = 60; // 합격 커트라인
+                if(score >= pass){ document.write('🎉합격을 축하합니다!!🎉'); } else { document.write('불합격입니다. 😭'); }
+            </script>
+        </p>
+    </div>
+</body>
+</html>

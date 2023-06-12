@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤이미지</title>
+</head>
+<style>
+    .rd1 { width: 100%; }
+</style>
+<body>
+    <article class="rd1">
+        <h2>랜덤 이미지</h2>
+        <div>
+            <img src="img/banner1.jpg" alt="banner1">
+        </div>
+        <script>
+            const elImg = document.querySelector('.rd1 img');
+            // 이미지를 배열로 변수에 넣는다
+            let imgs = [ 'img/banner1.jpg', 'img/banner2.jpg', 'img/banner3.jpg', 'img/banner4.jpg', 'img/banner5.jpg' ];
+            let imgAlt = [ 'banner1', 'banner2', 'banner3', 'banner4', 'banner5' ];
+            let imgNum = imgs.length;
+            let rd = Math.random(); // 랜덤값을 얻어옴
+            let random = Math.floor(rd * imgNum); // 원래 0.01 ~ 4.99까지 나오는데 imgNum 개수(5) 해서 0 ~ 4로 나옴
+            elImg.src = imgs[random];
+            elImg.alt = imgAlt[random];
+            //console.log(random);
+            console.log(`배열에 들어가있는 이미지 ${imgNum} * 랜덤값 ${rd} = ${rd * imgNum}`);
+
+        </script>
+    </article>
+    <article class="rd2">
+        <div>
+            <img src="img/banner1.jpg" alt="banner1">
+        </div>
+        <button>랜덤이미지</button>
+        <script>
+            const elImg2 = document.querySelector('.rd2 img');
+            const elBtn = document.querySelector('.rd2 button');
+            let imgs2 = [ 'img/banner1.jpg', 'img/banner2.jpg', 'img/banner3.jpg', 'img/banner4.jpg', 'img/banner5.jpg' ];
+            
+            let imgChange = function(){
+                let random2 = Math.floor(Math.random() * imgs2.length);
+                elImg2.src = imgs2[random2];
+            }
+            console.log(elBtn);
+
+            // elBtn.onclick = function() {
+            //     imgChange();
+            // }
+
+            // elBtn.addEventListener('click',function() { imgChange(); } );
+            // elBtn.addEventListener('click', () => imgChange() );
+            // 버튼을 클릭할때마다 함수 발생
+            elBtn.addEventListener('click',function() {
+                    imgChange();
+                }
+            );
+        </script>
+    </article>
+</body>
+</html>

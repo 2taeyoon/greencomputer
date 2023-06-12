@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가위바위보</title>
+</head>
+<body>
+  <h1>가위, 바위, 보 맞추기</h1>
+  <script>    
+    let game = prompt('가위,바위,보 중 선택해주세요!')
+
+    switch (game) {
+      case '가위' : 
+        gameN = 1;
+        break;
+      case '바위' : 
+        gameN = 2;
+        break;
+      case '보' : 
+        gameN = 3;
+        break;
+      default: 
+        alert('잘못 입력하셨습니다.');
+        location.reload();  //윈도우오브젝트-새로고침
+    }
+
+    let computer = Math.ceil(Math.random() * 3)   //1,2,3중에 랜덤선택
+    console.log(computer)
+    document.write(`내가 고른 것은?  <big style="color:red">${game}</big>`);
+    document.write(`<br>컴퓨터가 고른 것은? <br> <img src="img/math_img_${computer}.jpg"><hr>`);
+
+    if(gameN == computer){
+      document.write(`<img src="img/game1.png">`); 
+    } else {
+      document.write("<img src=\"img/game2.jpg\">"); 
+    }
+
+
+  </script>
+</body>
+</html>

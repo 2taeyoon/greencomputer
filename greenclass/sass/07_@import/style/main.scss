@@ -1,0 +1,14 @@
+/*
+    @import -Sass는 여러개의 Sass파일을 불러 모으는 기능이 있음
+    _(언더스코어, 언더바)로 시작하는 파일은 컴파일 대상이 아님
+    파일이 많아도 css는 하나만 만들어짐 -> 웹사이트 성능개선에 도움
+*/
+
+@import 'mixin';  //언더바 생략하고 불러옴/ .scss 생략가능
+@import 'variables';
+
+
+div{
+    @include box-style($main-color,$sub-color);
+    @include border-line
+}

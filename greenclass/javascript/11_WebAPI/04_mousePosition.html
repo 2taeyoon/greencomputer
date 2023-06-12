@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Position</title>
+    <style>
+        .mousePos { display: inline-block; background:khaki; padding:0 16px 16px; margin: 250px 50px 50px 50px; font-size: 30px; border:30px solid coral; }
+        span { font-size:16px; }
+    </style>
+
+</head>
+<body>
+    <div class="mousePos">마우스 포지션</div>
+    <div style="height: 1500px;"></div>
+    <script>
+        const mousePos = document.querySelector('.mousePos');
+
+        document.addEventListener('mousemove', function(e){
+            console.log(e);
+            const cx = e.clientX; // 눈에 보이는 브라우저 좌표
+            const cy = e.clientY; // e.x, e.y 같음
+            const px = e.pageX; // 전체문서 기준 좌표
+            const py = e.pageY;
+            const sx = e.screenX;
+            const sy = e.screenY;
+            const ox = e.offsetX;
+            const oy = e.offsetY;
+
+            mousePos.innerHTML = `<h4>마우스의 포지션</h4> clientX : ${cx}, clientY : ${cy} <span>눈에 보이는 브라우저 화면 기준 좌표</span><br/>
+            e.pageX : ${px}, e.pageY : ${py} <span>전체 문서 기준 좌표(스크롤 화면 포함)</span><br/>
+            e.screenX : ${sx}, e.screenY : ${sy} <span>모니터 화면 기준 좌표</span><br/>
+            e.offsetX : ${ox}, e.offsetY : ${oy} <span>도형 안에 들어가면 도형 기준 좌표</span>`;
+        });
+    </script>
+</body>
+
+</html>
