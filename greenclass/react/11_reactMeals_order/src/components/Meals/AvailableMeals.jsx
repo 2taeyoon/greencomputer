@@ -38,7 +38,7 @@ const AvailableMeals = () => {
     useEffect(()=>{
         const fetchMeals = async ()=>{
 
-            const response = await fetch('https://reactmeals11-default-rtdb.asia-southeast1.firebasedatabase.app//meals.jso');
+            const response = await fetch('https://reactmeals11-default-rtdb.asia-southeast1.firebasedatabase.app//meals.json');
 
             if(!response.ok){
                 throw new Error('404 ERROR : 잦같은 에러 발생');
