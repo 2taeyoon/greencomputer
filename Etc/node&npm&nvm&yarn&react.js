@@ -103,8 +103,8 @@
     ******* 리소스를 사전 캐시 가능한 모듈을 만들어주는 라이브러리 *******
     https://www.npmjs.com/package/sw-precache
 
-    npm install --save-dev sw-precache
-    npm install --global sw-precache
+    npm install --save-dev sw-precache (프로젝트에만 설치)
+    npm install --global sw-precache (전역적으로 설치)
 
     1: sw-config.js 파일 생성해야 함
     2: 그 후에 sw-precache --config sw-config.js 명렁어 입력
