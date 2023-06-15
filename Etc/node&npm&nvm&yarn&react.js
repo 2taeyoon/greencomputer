@@ -94,6 +94,9 @@
         npm run dev (lite sever start) 서버 실행
         yarn add lite-server --dev (lite sever) 서버 생성
         yarn run dev (lite sever start) 서버 실행 https://www.npmjs.com/package/lite-server
+
+        npm install react-router-dom (react router libary 설치)
+        yarn add react-router-dom (react router libary 설치) https://reactrouter.com/en/main/start/tutorial
 */
 
 /*
