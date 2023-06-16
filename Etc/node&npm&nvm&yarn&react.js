@@ -87,8 +87,8 @@
 
         npm install -D tailwindcss (Tailwind CSS) 부트스트랩 같은 라이브러리
         npx tailwindcss init (Tailwind CSS Default File Create)
-        yarn add -D tailwindcss (Tailwind CSS)
-        yarn tailwindcss init (Tailwind CSS Default File Create) https://tailwindcss.com/docs/installation
+        yarn add -D tailwindcss (Tailwind CSS) 프로젝트에만 설치
+        yarn tailwindcss init (Tailwind CSS Default File Create) Tailwind 초기화(필수) https://tailwindcss.com/docs/installation
 
         npm install lite-server --save-dev (lite sever) 서버 생성
         npm run dev (lite sever start) 서버 실행
