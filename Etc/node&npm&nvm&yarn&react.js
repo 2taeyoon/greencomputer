@@ -106,6 +106,9 @@
     npm install --save-dev sw-precache (프로젝트에만 설치)
     npm install --global sw-precache (전역적으로 설치)
 
+    yarn add --dev sw-precache (프로젝트에만 설치)
+    yarn global add sw-precache (전역적으로 설치)
+
     1: sw-config.js 파일 생성해야 함
     2: 그 후에 sw-precache --config sw-config.js 명렁어 입력
     3: => service-worker.js 파일이 생김
