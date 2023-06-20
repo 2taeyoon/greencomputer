@@ -123,3 +123,22 @@
     //           'js/**/*'
     //       ]
     //   };
+
+/*
+    ******* tanstack react query 라이브러리 *******
+    https://tanstack.com/
+
+    npm i @tanstack/react-query (npm으로 react query 설치)
+    yarn add @tanstack/react-query (yarn으로 react query 설치)
+
+    https://tanstack.com/query/latest/docs/react/overview (사용법)
+*/
+
+/*
+    ******* Axios 라이브러리 *******
+    https://axios-http.com/kr/
+    https://github.com/axios/axios/
+
+    npm install axios (npm으로 Axios 설치)
+    yarn add axios (yarn으로 Axios 설치)
+*/

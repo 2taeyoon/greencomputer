@@ -26,29 +26,24 @@ export default function SearchHeader() {
                         <h1 className='text-3xl font-LeagueGothic ml-3 tracking-wide'>Youtube</h1>
                         <sup className='text-xs text-zinc-400 ml-2'>KR</sup>
                     </Link>
-
                     <form onSubmit={handleSubmit} className='flex justify-between border border-zinc-600 rounded-full pl-6 w-1/2 max-w-2xl '>
                         <input
                             type="text"
                             placeholder='검색'
                             value={text}
                             onChange={(e) => setText(e.target.value)}
-                            className='bg-zinc-900 text-zinc-400 outline-0' />
+                            className='bg-zinc-900 text-zinc-400 outline-0 w-full' />
                         <button className='border-l border-zinc-600 px-6 bg-zinc-700 rounded-r-full '  >
                             <BsSearch />
                         </button>
                     </form>
-
-                    <div className='flex items-center'>
+                    <div className='hidden sm:flex items-center'>
                         <BsThreeDotsVertical className='text-lg' />
-                        <button className='flex items-center border border-zinc-600 rounded-full p-2 text-sky-500 ml-4'>
+                        <button className=' flex items-center border border-zinc-600 rounded-full p-2 text-sky-500 ml-4 hover:bg-sky-950'>
                             <BsPersonCircle />
                             <span className='text-sm pl-2'>로그인</span>
                         </button>
-
                     </div>
-
-
                 </header>
             </div>
         </div>
