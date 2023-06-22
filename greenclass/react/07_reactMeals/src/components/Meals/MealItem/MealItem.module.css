@@ -1,6 +1,0 @@
-.meal { display: flex; justify-content: space-between; align-items: center; margin: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #ccc; }
-.meal > div:first-child { width: 80%; }
-.meal > div:last-child { width: 20%; }
-.meal > div h3 { margin-bottom: 0.3rem; font-size: 18px; font-weight: 600; }
-.meal > div .description { width: 80%; }
-.meal > div .price { color: var(--main-color); font-size: 1rem; font-weight: 400; margin-top: 0.7rem; }
