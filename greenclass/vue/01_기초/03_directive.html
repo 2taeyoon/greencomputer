@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v- 디렉티브(directive)</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h3> {{ title }} </h3>
+        <input type="text" v-bind:placeholder='message'> v-bind:(데이터를 연결)
+        <hr>
+        <button v-on:click="hello">click</button>
+        <hr>
+        <button v-on:click="reverseMsg">input reverse</button>
+        <hr>
+        <input type="text" v-model="username"> {{username}}
+        <br>v-model 양방향 바인딩
+        <hr/>
+        <p v-if="visible">자네..내가 보이나?</p>
+        <button v-on:click="visible=true">Visible</button>
+        <button v-on:click="visible=false">Invisible</button>
+        <hr/>
+        <p v-if="toggleVisibleText">자네..내가 보이나?(토글)</p>
+        <button v-on:click="toggleVisible">Visible(토글)</button>
+        <hr/>
+        <ul>
+            <li v-for="fruit in arrayname">{{fruit}}</li>
+        </ul>
+    </div>
+    <script>
+        const abc = Vue.createApp({
+            data() {
+                return {
+                    title: '디렉티브 v- 접두어가 붙은 특수속성',
+                    message: '아이디를 입력해주세요!',
+                    username: '전지현',
+                    visible: false,
+                    toggleVisibleText: false,
+                    arrayname: ['사과', '딸기', '바나나', '포도']
+                }
+            },
+            methods: {
+                hello() {
+                    alert('안녕!!');
+                },
+                reverseMsg() {
+                    this.message = this.message.split('').reverse().join('')
+                },
+                toggleVisible() {
+                    this.toggleVisibleText = !this.toggleVisibleText;
+                },
+            }
+        })
+
+        abc.mount('#app')
+    </script>
+</body>
+
+</html>
