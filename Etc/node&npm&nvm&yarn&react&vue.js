@@ -145,26 +145,26 @@
 
 /*
     ******* Vue로 변환하는 법 *******
-    npm init -y   ->package.json파일 생성
-    npm i vue
-    npm i vite
-    npm i @vitejs/plugin-vue
+    npm init -y (package.json파일 생성 및 초기화)
+    npm i vue (vue를 패키지에 설치)
+    npm i vite (vite를 패키지에 설치)
+    npm i @vitejs/plugin-vue (vite plugin를 패키지에 설치)
 
-    vite.config.js - 파일을 프로젝트 폴더에 만든 뒤 밑에 내용
-    참고: https://vitejs.dev/plugins/
-    ---------------------------------------------
-    vite.config.js 파일 내용
+    vite.config.js - 파일을 프로젝트 폴더에 만듦
+    *************************************************
+    vite.config.js 파일의 내용
 
     import vue from '@vitejs/plugin-vue'
 
     export default {
         plugins: [vue()],
     }
-    ---------------------------------------
-    package.json에  추가
+    참고: https://vitejs.dev/plugins/
+    *************************************************
+    package.json에 추가
 
     "scripts": {
-        "dev": "vite",    -실행용
+        "dev": "vite",    - vite 실행용
     }
     
     npm run dev (Vue 프로젝트 실행)
