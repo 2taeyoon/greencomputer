@@ -1,8 +1,0 @@
-
-* { margin:0; padding:0; box-sizing: border-box;}
-header { height:96px; padding:16px; background:lightcoral;}
-nav ul { display: flex; justify-content:center; background: lightgrey;}
-nav li { list-style:none; margin-right:20px; line-height:40px;  }
-main { height:calc(100vh - 186px); overflow-y: auto; }
-.book { border:2px solid red; display: inline-block; padding:60px; margin: 16px; border-radius:8px; text-align:center;}
-footer { text-align: center; line-height:50px; background: lightgrey;}
