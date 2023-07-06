@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; color: #333; }
+    main { height: calc(100vh - 165px); overflow-y: auto; }
+    .header { padding: 15px; background-color: skyblue; text-align: center; }
+    nav ul { display: flex; align-items: center; justify-content: center; background-color: lightgoldenrodyellow; }
+    nav li { list-style:none; margin-right:20px; padding: 10px; }
+    nav li:hover { filter: contrast(0.1); }
+    .book { display: flex; flex-direction: column; margin: 16px; padding: 30px; border-radius: 5px; border: 1px solid #333; text-align: center; }
+    footer { padding: 15px; background-color: lightgray; text-align: center; }
+</style>
+</head>
+<body>
+    <div id="app">
+        <App></App>
+    </div>
+    <script>
+        //문자열 템플릿 방식 컴포넌트 정의
+        const App = {
+            template:
+            `
+                <App-Header></App-Header>
+                <App-Nav></App-Nav>
+                <App-View></App-View>
+                <App-Footer></App-Footer>
+            `
+        }
+
+            const BookComponent = {
+                template:
+                `
+                    <article class="book" v-for="(item, index) in skill" :key="index">
+                        <p>{{ item }}</p>
+                        <h1>{{ item }} 강좌</h1>
+                    </article>
+                `,
+                data() {
+                    return {
+                        skill: ['HTML', 'CSS', 'Javascript', 'React']
+                    };
+                }
+            }
+
+        const appHeader = {
+            template:
+            `
+                <header class="header">
+                    <h1>그린컴퓨터아카데이 프론트엔드</h1>
+                </header>
+            `
+        }
+
+        const appNav = {
+            template:
+            `
+                <nav>
+                    <ul>
+                        <li>송영진</li>
+                        <li>장명래</li>
+                        <li>이태윤</li>
+                        <li>고병준</li>
+                        <li>서범규</li>
+                    </ul>
+                </nav>
+            `
+        }
+
+        const appFooter = {
+            template:
+            `
+                <footer>
+                    <address>Vue component 연습 페이지입니다.</address>
+                </footer>
+            `
+        }
+
+        const AppView = {
+            template:
+            `
+                <main>
+                    <section>
+                        <Book-Component></Book-Component>
+                    </section>
+                </main>
+            `
+        }
+
+        const app = Vue.createApp({});
+
+        app.component('BookComponent', BookComponent);
+        app.component('AppHeader', appHeader);
+        app.component('AppNav', appNav);
+        app.component('AppFooter', appFooter);
+        app.component('AppView', AppView);
+        app.component('App', App);
+        app.mount('#app');
+    </script>
+</body>
+</html>
+<!--
+    bookComp - 카멜 표기법
+    BookComp - 파스칼 표기법으로 컴포넌트 등록
+    book-comp - 케밥 표기법으로 컴포넌트 사용(대소문자 상관X)
+-->

@@ -142,3 +142,39 @@
     npm install axios (npm으로 Axios 설치)
     yarn add axios (yarn으로 Axios 설치)
 */
+
+/*
+    ******* Vue로 변환하는 법 *******
+    npm init -y   ->package.json파일 생성
+    npm i vue
+    npm i vite
+    npm i @vitejs/plugin-vue
+
+    vite.config.js - 파일을 프로젝트 폴더에 만든 뒤 밑에 내용
+    참고: https://vitejs.dev/plugins/
+    ---------------------------------------------
+    vite.config.js 파일 내용
+
+    import vue from '@vitejs/plugin-vue'
+
+    export default {
+        plugins: [vue()],
+    }
+    ---------------------------------------
+    package.json에  추가
+
+    "scripts": {
+        "dev": "vite",    -실행용
+    }
+    
+    npm run dev (Vue 프로젝트 실행)
+*/
+
+/*
+    ******* Vue 프로젝트 생성 *******
+    npm init vue (Vue 프로젝트 생성)
+    npm install (프로젝트에 npm 설치)
+    npm run dev (Vue 프로젝트 실행)
+
+    참고: https://vuejs.org/guide/quick-start.html#creating-a-vue-application
+*/
