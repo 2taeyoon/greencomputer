@@ -175,6 +175,7 @@
     npm init vue (Vue 프로젝트 생성)
     npm install (프로젝트에 npm 설치)
     npm run dev (Vue 프로젝트 실행)
+    yarn dev (yarn으로 프로젝트 실행)
 
     참고: https://vuejs.org/guide/quick-start.html#creating-a-vue-application
 */
