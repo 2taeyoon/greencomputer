@@ -24,7 +24,7 @@
     1. npm install -g yarn (npm 설치 후 yarn 설치)
 
     2. yarn --version or yarn -v(yarn 버전 확인)
-    3. yarn set version stable(해당 경로에 yarn 최선 버전을 설치(바탕화면에 설치하면 됨))
+    3. yarn set version stable(해당 경로에 yarn 최선 버전을 설치(프로젝트에 설치하면 됨))
 
     4-1. corepack prepare yarn@stable --activate  (yarn 최신 버전 설치하고, CorePack에서 활성화)
     4-2. corepack prepare yarn@버전 --activate (yarn 해당 버전 설치하고, CorePack에서 활성화)
@@ -178,4 +178,14 @@
     yarn dev (yarn으로 프로젝트 실행)
 
     참고: https://vuejs.org/guide/quick-start.html#creating-a-vue-application
+*/
+
+/*
+    ******* typeScript 사용법 *******
+    npm install -g typescript (npm으로 tyScript 전역적으로 설치)
+    npx tsc --init (tsconfig.json 파일 생성)
+
+    ******* React에서 typeScript 사용법 *******
+    npx create-react-app my-app --template typescript (typeScript를 사용하는 my-app 생성)
+    npm install --save typescript @types/node @types/react @types/react-dom @types/jest (기존 jsx프로젝트에서 tsx로 변환)
 */
