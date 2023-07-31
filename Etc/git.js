@@ -10,7 +10,7 @@
     git config --global --unset-all user.name           // 등록된 아이디 제거
 
     [ git clone으로 복제시 ]
-    F1 or (Ctrol + Shift + P) > Git:clone
+    F1 or (Ctrl + Shift + P) > Git:clone
 
     [ git 사이트주소로 파일 다운로드시 ]
     (cmd에서도 가능) git clone 사이트주소
