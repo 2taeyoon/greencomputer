@@ -185,7 +185,21 @@
     npm install -g typescript (npm으로 tyScript 전역적으로 설치)
     npx tsc --init (tsconfig.json 파일 생성)
 
-    ******* React에서 typeScript 사용법 *******
-    npx create-react-app my-app --template typescript (typeScript를 사용하는 my-app 생성)
+    npx create-react-app my-app --template typescript (react에서 typeScript를 사용하는 my-app 생성)
+    yarn create react-app my-app --template typescript (react에서 typeScript를 사용하는 my-app 생성)
+
+    npm install typescript --save-dev (프로젝트에 typeScript 설치)
+    yarn add typescript --dev (프로젝트에 typeScript 설치)
+
+    npm install --save-dev @types/react (프로젝트에 @types/react 모듈 설치)
+    yarn add --dev @types/react (프로젝트에 @types/react 모듈 설치)
+
+    ***** tsconfig.json 파일에 추가 *****
+    "compilerOptions": {
+        "jsx": "react",
+        "jsxFactory": "React.createElement",
+        "jsxFragmentFactory": "React.Fragment"
+    }
+
     npm install --save typescript @types/node @types/react @types/react-dom @types/jest (기존 jsx프로젝트에서 tsx로 변환)
 */
