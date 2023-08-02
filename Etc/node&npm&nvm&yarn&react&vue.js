@@ -188,6 +188,8 @@
     npx create-react-app my-app --template typescript (react에서 typeScript를 사용하는 my-app 생성)
     yarn create react-app my-app --template typescript (react에서 typeScript를 사용하는 my-app 생성)
 
+    vue add typescript (vue 프로젝트에서 typeScript 사용)
+
     npm install typescript --save-dev (프로젝트에 typeScript 설치)
     yarn add typescript --dev (프로젝트에 typeScript 설치)
 
@@ -202,4 +204,11 @@
     }
 
     npm install --save typescript @types/node @types/react @types/react-dom @types/jest (기존 jsx프로젝트에서 tsx로 변환)
+
+    ***** ts 컴파일 방법 *****
+    tsc 파일명 (이 방식은 ES6버전으로 저장되지 않음)
+    tsc -w (ts 컴파일)
+
+    tsc --init (tsconfig.json 파일 생성)
+    ctrl + shift + b -> tsconfig build 선택
 */
