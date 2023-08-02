@@ -185,30 +185,34 @@
     npm install -g typescript (npm으로 tyScript 전역적으로 설치)
     npx tsc --init (tsconfig.json 파일 생성)
 
+    ***** React에서 typeScript 사용법 *****
     npx create-react-app my-app --template typescript (react에서 typeScript를 사용하는 my-app 생성)
     yarn create react-app my-app --template typescript (react에서 typeScript를 사용하는 my-app 생성)
 
-    vue add typescript (vue 프로젝트에서 typeScript 사용)
+    npm install --save typescript @types/node @types/react @types/react-dom @types/jest (기존 react 프로젝트에서 tsx로 변환)
+    yarn add --save typescript @types/node @types/react @types/react-dom @types/jest (기존 react 프로젝트에서 tsx로 변환)
 
     npm install typescript --save-dev (프로젝트에 typeScript 설치)
     yarn add typescript --dev (프로젝트에 typeScript 설치)
 
-    npm install --save-dev @types/react (프로젝트에 @types/react 모듈 설치)
-    yarn add --dev @types/react (프로젝트에 @types/react 모듈 설치)
+    npm install @types/react@latest @types/react-dom@latest (프로젝트에 @types/react @types/react-dom 모듈 설치)
+    yarn add @types/react@latest @types/react-dom@latest (프로젝트에 @types/react @types/react-dom 모듈 설치)
 
-    ***** tsconfig.json 파일에 추가 *****
-    "compilerOptions": {
-        "jsx": "react",
-        "jsxFactory": "React.createElement",
-        "jsxFragmentFactory": "React.Fragment"
-    }
+    npm install react-router-dom @types/react-router-dom (프로젝트에 typeScript를 사용하는 React-router-dom 모듈 설치)
+    yarn add react-router-dom @types/react-router-dom (프로젝트에 typeScript를 사용하는 React-router-dom 모듈 설치)
 
-    npm install --save typescript @types/node @types/react @types/react-dom @types/jest (기존 jsx프로젝트에서 tsx로 변환)
+    ***** Vue에서 typeScript 사용법 *****
+    vue add typescript (vue 프로젝트에서 typeScript 사용)
 
-    ***** ts 컴파일 방법 *****
+    <script lang="ts">
+    </script> (이렇게 하면 typeScript 적용 완료 tsconfig.json 파일 생성해야함)
+
+
+    ***** ts확장자를 js확장자로 변환하는 방법 *****
     tsc 파일명 (이 방식은 ES6버전으로 저장되지 않음)
-    tsc -w (ts 컴파일)
+    tsc -w (ts 실시간 컴파일)
 
+    ***** React에서 변환하는 방법 *****
     tsc --init (tsconfig.json 파일 생성)
     ctrl + shift + b -> tsconfig build 선택
 */
