@@ -6,7 +6,7 @@
     5. npm install -g npm@latest (npm 업데이트)
     6. https://mine-it-record.tistory.com/664 (node, npm 최신 업데이트 설명 사이트)
     7. nvm 설치 및 설명 사이트 https://jang8584.tistory.com/295, github nvm 파일 다운로드(nvm-setup.zip) https://github.com/coreybutler/nvm-windows/releases
-    
+
         ********** nvm 명령어 **********
         nvm install lts(node.js 업데이트)
         nvm ls (리스트 확인)
@@ -30,6 +30,18 @@
     4-2. corepack prepare yarn@버전 --activate (yarn 해당 버전 설치하고, CorePack에서 활성화)
 */
 
+/********** sass install **********
+    npm install -g sass  (sass compiler 설치)
+    sass --version (sass 버전 확인)
+    sass 변환할 scss파일명:변환될 css파일명 (내 scss를 사용할 수 있도록 css로 변환)
+    sass --watch 변환할 scss파일명:변환될 css파일명 (실시간으로 컴파일)
+    sass --style compressed 변환할 scss파일명:변환될 css파일명 (css파일 공백 제거)
+    sass --style compressed --watch 변환할 scss파일명:변환될 css파일명 (실시간으로 컴파일 ,css파일 공백 제거)
+
+    ctrl + c (라이브모드 끝내기)
+    중첩 - 한줄짜리 주석 // (js등 프로그래밍 언어에서 주로 쓰임) - css파일을 컴파일 후엔 사라짐
+*/
+
 /********** React install **********
     1-1. npx create-react-app 앱이름(npx를 이용한 react 설치(이거하고 yarn set version stable))
     1-2. yarn create react-app 앱이름(yarn을 이용한 react 설치(이거하고 yarn set version stable))
@@ -39,7 +51,6 @@
 
     3-1. npm start(리액트 서버 열기(생성한 폴더 경로에서))
     3-2. yarn start(리액트 서버 열기(생성한 폴더 경로에서))
-
 
     ********** React에서 sass 사용법 **********
     1-1. npm install sass(리액트 App만든 경로의 터미널에서(sass를 package.json 파일 dependencies 저장))
