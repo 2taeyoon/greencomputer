@@ -221,3 +221,9 @@
     <script lang="ts">
     </script> (이렇게 하면 typeScript 적용 완료 tsconfig.json 파일 생성해야함)
 */
+
+/*
+    ******* Redux *******
+    npm install react-redux (react-redux 설치)
+    npm install @reduxjs/toolkit (reduxjs/toolkit 설치)
+*/
