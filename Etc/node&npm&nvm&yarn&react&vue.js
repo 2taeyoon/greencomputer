@@ -4,8 +4,9 @@
     3. npm cache verify ( 데이터들을 수집하여 삭제하고 무결성을 확인 )
     4. npm -v (npm 버전 확인)
     5. npm install -g npm@latest (npm 업데이트)
-    6. https://mine-it-record.tistory.com/664 (node, npm 최신 업데이트 설명 사이트)
-    7. nvm 설치 및 설명 사이트 https://jang8584.tistory.com/295, github nvm 파일 다운로드(nvm-setup.zip) https://github.com/coreybutler/nvm-windows/releases
+    6. npm install -g npm@10.0.0 (npm 10.0.0으로 업데이트)
+    7. https://mine-it-record.tistory.com/664 (node, npm 최신 업데이트 설명 사이트)
+    8. nvm 설치 및 설명 사이트 https://jang8584.tistory.com/295, github nvm 파일 다운로드(nvm-setup.zip) https://github.com/coreybutler/nvm-windows/releases
 
         ********** nvm 명령어 **********
         nvm install lts(node.js 업데이트)
