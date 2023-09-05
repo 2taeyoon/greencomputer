@@ -1,5 +1,16 @@
 
 /*
+    [ react build 이용시 build 전용 branch 사용법 ]
+    레퍼지토리 생성하고 해당 프로젝트의 경로에서 package.json 파일에 homepage 작성
+    "homepage": "실제 사이트 주소"  // 절대경로 이용시 사용안해도 무관
+
+    package.json 파일의 scripts 하위에 작성
+    "deploy": "gh-pages -d build",  // gh-pages branch에 build된 파일을 배포
+    "predeploy": "npm run build"    // 배포 전에 build가 되어있지 않다면 build부터 실행
+
+    npm install gh-pages    // 프로젝트 경로에서 npm으로 github page 생성을 도와주는 패키지 설치
+    npm run deploy  // build 파일을 gh-pages branch에 배포 성공시 Published
+
     [ git id pw 입력 ]
     git config --global user.name "본인 git 이름"       // 아이디 이름 등록
     git config --global user.email "이메일"             // 이메일 등록
