@@ -202,11 +202,8 @@
     npx create-react-app my-app --template typescript (react에서 typeScript를 사용하는 my-app 생성)
     yarn create react-app my-app --template typescript (react에서 typeScript를 사용하는 my-app 생성)
 
-    npm install --save typescript @types/node @types/react @types/react-dom @types/jest (기존 react 프로젝트에서 tsx로 변환)
-    yarn add --save typescript @types/node @types/react @types/react-dom @types/jest (기존 react 프로젝트에서 tsx로 변환)
-
-    npm install typescript --save-dev (프로젝트에 typeScript 설치)
-    yarn add typescript --dev (프로젝트에 typeScript 설치)
+    npm install typescript @types/node @types/react @types/react-dom @types/jest (기존 react 프로젝트에서 tsx로 변환)
+    yarn add typescript @types/node @types/react @types/react-dom @types/jest (기존 react 프로젝트에서 tsx로 변환)
 
     npm install @types/react@latest @types/react-dom@latest (프로젝트에 @types/react @types/react-dom 모듈 설치)
     yarn add @types/react@latest @types/react-dom@latest (프로젝트에 @types/react @types/react-dom 모듈 설치)
